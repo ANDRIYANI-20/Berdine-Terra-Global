@@ -1,0 +1,252 @@
+import { useState } from "react";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import { Button } from "@/components/ui/button";
+import { Download, Info } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
+
+/**
+ * Products Page - Complete Catalog with Specifications
+ * Design: Organic Minimalism with Earth Tones
+ * - Product categories with filtering
+ * - Detailed product specifications
+ * - Price list
+ * - Download options
+ */
+export default function Products() {
+  const [selectedCategory, setSelectedCategory] = useState("all");
+  const { t } = useLanguage();
+
+  const products = [
+    {
+      id: 1,
+      category: "vanilla",
+      name: t("product.vanilla.gradeA"),
+      image: "/images/daa.jpg",
+      specifications: {
+        origin: t("product.vanilla.origin"),
+        grade: t("product.vanilla.grade"),
+        moisture: t("product.vanilla.moisture"),
+        length: t("product.vanilla.length"),
+        appearance: t("product.vanilla.appearance"),
+        aroma: t("product.vanilla.aroma"),
+        packaging: t("product.vanilla.packaging"),
+      },
+      pricePerKg: "$250-300",
+      minOrder: "10 kg",
+      availability: "Year-round",
+      description: t("product.vanilla.gradeADesc"),
+    },
+    {
+      id: 2,
+      category: "pepper",
+      name: t("product.pepper.whole"),
+      image: "/images/ladda.jpg",
+      specifications: {
+        origin: t("product.pepper.origin"),
+        type: t("product.pepper.type"),
+        size: t("product.pepper.size"),
+        moisture: t("product.pepper.moisture"),
+        pungency: t("product.pepper.pungency"),
+        appearance: t("product.pepper.appearance"),
+        packaging: t("product.pepper.packaging"),
+      },
+      pricePerKg: "$8-12",
+      minOrder: "50 kg",
+      availability: "Year-round",
+      description: t("product.pepper.wholeDesc"),
+    },
+    {
+      id: 3,
+      category: "coffee",
+      name: t("product.coffee.robusta"),
+      image: "/images/kkp.jpeg",
+      specifications: {
+        origin: t("product.coffee.origin"),
+        variety: t("product.coffee.variety"),
+        altitude: t("product.coffee.altitude"),
+        moisture: t("product.coffee.moisture"),
+        defects: t("product.coffee.defects"),
+        cupping: t("product.coffee.cupping"),
+        packaging: t("product.coffee.packaging"),
+      },
+      pricePerKg: "$2.50-3.50",
+      minOrder: "200 kg",
+      availability: "Year-round",
+      description: t("product.coffee.robustaDesc"),
+    },
+  ];
+
+  const categories = [
+    { id: "all", label: t("products.filter.all") },
+    { id: "vanilla", label: t("products.filter.vanilla") },
+    { id: "pepper", label: t("products.filter.pepper") },
+    { id: "coffee", label: t("products.filter.coffee") },
+  ];
+
+  const filteredProducts =
+    selectedCategory === "all"
+      ? products
+      : products.filter((p) => p.category === selectedCategory);
+
+  return (
+    <div className="min-h-screen flex flex-col bg-background dark:bg-slate-950">
+      <Header />
+
+      <main className="flex-1">
+        {/* Hero Section */}
+        <section className="bg-primary text-primary-foreground py-16 md:py-24 dark:bg-slate-900 relative overflow-hidden" style={{ backgroundImage: 'url(/images/aa.jpg)', backgroundSize: 'cover', backgroundPosition: 'center', backgroundBlendMode: 'overlay' }}>
+          <div className="absolute inset-0 bg-primary/70"></div>
+          <div className="container relative z-10">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">
+              {t("products.hero.title")}
+            </h1>
+            <p className="text-lg opacity-90 max-w-2xl">
+              {t("products.hero.subtitle")}
+            </p>
+          </div>
+        </section>
+
+        {/* Category Filter */}
+        <section className="py-8 bg-white dark:bg-slate-900 border-b border-border dark:border-slate-700">
+          <div className="container">
+            <div className="flex flex-wrap gap-3">
+              {categories.map((cat) => (
+                <Button
+                  key={cat.id}
+                  onClick={() => setSelectedCategory(cat.id)}
+                  variant={selectedCategory === cat.id ? "default" : "outline"}
+                  className={
+                    selectedCategory === cat.id
+                      ? "bg-primary text-white"
+                      : "border-border dark:border-slate-700"
+                  }
+                >
+                  {cat.label}
+                </Button>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Products Grid */}
+        <section className="py-16 md:py-24 bg-white dark:bg-slate-900">
+          <div className="container">
+            <div className="grid grid-cols-1 gap-8">
+              {filteredProducts.map((product) => (
+                <div
+                  key={product.id}
+                  className="bg-white dark:bg-slate-800 rounded-lg shadow-sm border border-border dark:border-slate-700 overflow-hidden hover:shadow-md transition-shadow"
+                >
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-0">
+                    {/* Product Image */}
+                    <div className="h-64 md:h-auto bg-muted dark:bg-slate-700 overflow-hidden">
+                      <img
+                        src={product.image}
+                        alt={product.name}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+
+                    {/* Product Info */}
+                    <div className="p-6 md:col-span-2">
+                      <h3 className="text-2xl font-bold mb-2 text-foreground dark:text-white">
+                        {product.name}
+                      </h3>
+                      <p className="text-muted-foreground dark:text-slate-400 mb-6">
+                        {product.description}
+                      </p>
+
+                      {/* Key Details */}
+                      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6 pb-6 border-b border-border dark:border-slate-700">
+                        <div>
+                          <p className="text-xs text-muted-foreground dark:text-slate-400 uppercase font-semibold">
+                            {t("products.price")}
+                          </p>
+                          <p className="text-lg font-bold text-primary">
+                            {product.pricePerKg}
+                          </p>
+                        </div>
+                        <div>
+                          <p className="text-xs text-muted-foreground dark:text-slate-400 uppercase font-semibold">
+                            {t("products.minOrder")}
+                          </p>
+                          <p className="text-lg font-bold text-foreground dark:text-white">
+                            {product.minOrder}
+                          </p>
+                        </div>
+                        <div>
+                          <p className="text-xs text-muted-foreground dark:text-slate-400 uppercase font-semibold">
+                            {t("products.availability")}
+                          </p>
+                          <p className="text-lg font-bold text-foreground dark:text-white">
+                            {product.availability}
+                          </p>
+                        </div>
+                        <div>
+                          <p className="text-xs text-muted-foreground dark:text-slate-400 uppercase font-semibold">
+                            {t("products.origin")}
+                          </p>
+                          <p className="text-lg font-bold text-foreground dark:text-white">
+                            {product.specifications.origin}
+                          </p>
+                        </div>
+                      </div>
+
+                      {/* Specifications */}
+                      <div className="mb-6">
+                        <h4 className="font-bold mb-3 flex items-center gap-2 text-foreground dark:text-white">
+                          <Info className="w-4 h-4" />
+                          {t("products.specifications")}
+                        </h4>
+                        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 text-sm">
+                          {Object.entries(product.specifications).map(
+                            ([key, value]) => (
+                              <div key={key}>
+                                <p className="text-muted-foreground dark:text-slate-400 capitalize">
+                                  {key.replace(/([A-Z])/g, " $1").trim()}
+                                </p>
+                                <p className="font-semibold text-foreground dark:text-white">
+                                  {value}
+                                </p>
+                              </div>
+                            )
+                          )}
+                        </div>
+                      </div>
+
+                      {/* Actions */}
+                      <div className="flex flex-col sm:flex-row gap-3">
+                        {/* Buttons removed as requested */}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Price List Download */}
+        <section className="py-16 md:py-24 bg-secondary/10 dark:bg-slate-800">
+          <div className="container text-center">
+            <h2 className="text-3xl font-bold mb-6 text-foreground dark:text-white">
+              {t("products.priceList")}
+            </h2>
+            <p className="text-lg text-muted-foreground dark:text-slate-400 mb-8 max-w-2xl mx-auto">
+              {t("products.priceListSubtitle")}
+            </p>
+            <a href="/catalog.pdf" download>
+              <Button className="bg-primary hover:bg-primary/90 text-white px-8 py-6">
+                <Download className="w-5 h-5 mr-2" />
+                {t("products.downloadPriceList")}
+              </Button>
+            </a>
+          </div>
+        </section>
+      </main>
+
+      <Footer />
+    </div>
+  );
+}
