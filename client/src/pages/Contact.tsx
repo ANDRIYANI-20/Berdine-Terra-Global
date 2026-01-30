@@ -282,7 +282,7 @@ export default function Contact() {
             <h2 className="text-3xl font-bold mb-8 text-center">{t("contact.location")}</h2>
             <div className="bg-white rounded-lg shadow-sm border border-border overflow-hidden h-96">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.5!2d106.8256!3d-6.2439!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f5d2e764b12d%3A0x3d2ad6e1e0e9bcc8!2sJl.%20Mampang%20Prapatan%20I%20Gg.%20H.%20Marzuki%20No.49A%2C%20Mampang%20Prapatan%2C%20Jakarta%20Selatan%2012790!5e0!3m2!1sen!2sid!4v1703123456789!5m2!1sen!2sid"
+                src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d1983.0808624712085!2d106.82399654394249!3d-6.242405999262102!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2s!5e0!3m2!1sid!2sid!4v1769746793227!5m2!1sid!2sid"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
