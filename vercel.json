@@ -1,8 +1,6 @@
 {
   "version": 2,
-  "packageManager": "pnpm",
   "buildCommand": "pnpm build",
-  "framework": "vite",
   "outputDirectory": "dist/public",
   "rewrites": [
     {
