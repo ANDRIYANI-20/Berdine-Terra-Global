@@ -246,16 +246,16 @@ const translations: Record<Language, Record<string, string>> = {
     // Product Names & Descriptions
     "product.vanilla.gradeAPlus": "Vanilla Beans Grade A+",
     "product.vanilla.gradeAPlusDesc":
-      "Top-tier Indonesian Vanilla Beans with an intense, creamy aroma and superior oil content. Expertly cured and hand-selected for maximum flavor, flexibility, and freshness. Ideal for gourmet applications and premium vanilla extract.",
+      "Top-tier Indonesian Vanilla Beans (Planifolia type) with an intense, creamy aroma and superior oil content. Expertly cured and hand-selected for maximum flavor, flexibility, and freshness. Ideal for gourmet applications and premium vanilla extract.",
     "product.vanilla.gradeA": "Vanilla Beans Grade A",
     "product.vanilla.gradeADesc":
-      "Premium Indonesian Vanilla Beans with a rich, sweet aroma and high quality standards. Carefully cured and hand-selected to ensure consistent flavor, flexible texture, and freshness. Suitable for food, beverage, and vanilla extract production.",
+      "Premium Indonesian Vanilla Beans (Planifolia type) with a rich, sweet aroma and high quality standards. Carefully cured and hand-selected to ensure consistent flavor, flexible texture, and freshness. Suitable for food, beverage, and vanilla extract production.",
     "product.vanilla.gradeB": "Vanilla Beans Grade B",
     "product.vanilla.gradeBDesc":
-      "High-quality Indonesian Vanilla Beans with a pleasant aroma and good quality standards. Cured and selected to provide reliable flavor and texture. Ideal for general food processing and commercial use.",
+      "High-quality Indonesian Vanilla Beans (Planifolia type) with a pleasant aroma and good quality standards. Cured and selected to provide reliable flavor and texture. Ideal for general food processing and commercial use.",
     "product.vanilla.gradeC": "Vanilla Beans Grade C",
     "product.vanilla.gradeCDesc":
-      "Standard Indonesian Vanilla Beans with basic quality standards. Suitable for basic food applications and cost-effective vanilla production.",
+      "Standard Indonesian Vanilla Beans (Planifolia type) with basic quality standards. Suitable for basic food applications and cost-effective vanilla production.",
     "product.pepper.whole": "Black Pepper",
     "product.pepper.wholeDesc":
       "Indonesian Black Pepper features a strong, spicy aroma and sharp pungent taste, making it ideal for culinary use, food processing, and spice manufacturing. Carefully dried and cleaned to meet export quality standards.",
@@ -536,16 +536,16 @@ const translations: Record<Language, Record<string, string>> = {
     // Product Names & Descriptions
     "product.vanilla.gradeAPlus": "Vanilla Utuh Grade A+",
     "product.vanilla.gradeAPlusDesc":
-      "Vanila Indonesia kelas premium tertinggi dengan aroma yang intens, creamy, dan kadar minyak tinggi. Diolah secara ahli dan dipilih manual untuk rasa maksimal, fleksibilitas, dan kesegaran. Ideal untuk aplikasi gourmet dan ekstrak vanila premium.",
+      "Vanila Indonesia (tipe Planifolia) kelas premium tertinggi dengan aroma yang intens, creamy, dan kadar minyak tinggi. Diolah secara ahli dan dipilih manual untuk rasa maksimal, fleksibilitas, dan kesegaran. Ideal untuk aplikasi gourmet dan ekstrak vanila premium.",
     "product.vanilla.gradeA": "Vanilla Utuh Grade A",
     "product.vanilla.gradeADesc":
-      "Vanila Indonesia Premium dengan aroma manis yang kaya dan standar kualitas tinggi. Diolah dengan hati-hati dan dipilih secara manual untuk memastikan rasa yang konsisten, tekstur yang fleksibel, dan kesegaran. Cocok untuk produksi makanan, minuman, dan ekstrak vanila.",
+      "Vanila Indonesia (tipe Planifolia) Premium dengan aroma manis yang kaya dan standar kualitas tinggi. Diolah dengan hati-hati dan dipilih secara manual untuk memastikan rasa yang konsisten, tekstur yang fleksibel, dan kesegaran. Cocok untuk produksi makanan, minuman, dan ekstrak vanila.",
     "product.vanilla.gradeB": "Vanilla Utuh Grade B",
     "product.vanilla.gradeBDesc":
-      "Vanila Indonesia berkualitas tinggi dengan aroma yang menyenangkan dan standar kualitas baik. Diolah dan dipilih untuk memberikan rasa dan tekstur yang andal. Ideal untuk pengolahan makanan umum dan penggunaan komersial.",
+      "Vanila Indonesia (tipe Planifolia) berkualitas tinggi dengan aroma yang menyenangkan dan standar kualitas baik. Diolah dan dipilih untuk memberikan rasa dan tekstur yang andal. Ideal untuk pengolahan makanan umum dan penggunaan komersial.",
     "product.vanilla.gradeC": "Vanilla Utuh Grade C",
     "product.vanilla.gradeCDesc":
-      "Vanila Indonesia standar dengan standar kualitas dasar. Cocok untuk aplikasi makanan dasar dan produksi vanila yang hemat biaya.",
+      "Vanila Indonesia (tipe Planifolia) standar dengan standar kualitas dasar. Cocok untuk aplikasi makanan dasar dan produksi vanila yang hemat biaya.",
     "product.pepper.whole": "Lada Hitam",
     "product.pepper.wholeDesc":
       "Biji Lada Hitam Indonesia memiliki aroma pedas yang kuat dan rasa pedas yang tajam, menjadikannya ideal untuk penggunaan kuliner, pengolahan makanan, dan produksi rempah-rempah. Dihasilkan melalui proses pengeringan dan pembersihan yang teliti untuk memenuhi standar kualitas ekspor.",
