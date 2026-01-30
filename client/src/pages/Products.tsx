@@ -2,7 +2,7 @@ import { useState } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import { Download, Info } from "lucide-react";
+import { Download, Info } from "@/components/icons";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 /**
@@ -25,12 +25,12 @@ export default function Products() {
       image: "/images/daa.jpg",
       specifications: {
         origin: t("product.vanilla.origin"),
-        grade: t("product.vanilla.grade"),
-        moisture: t("product.vanilla.moisture"),
-        length: t("product.vanilla.length"),
-        appearance: t("product.vanilla.appearance"),
-        aroma: t("product.vanilla.aroma"),
-        packaging: t("product.vanilla.packaging"),
+        grade: t("product.vanilla.gradeA.grade"),
+        moisture: t("product.vanilla.gradeA.moisture"),
+        length: t("product.vanilla.gradeA.length"),
+        appearance: t("product.vanilla.gradeA.appearance"),
+        aroma: t("product.vanilla.gradeA.aroma"),
+        packaging: t("product.vanilla.gradeA.packaging"),
       },
       pricePerKg: "$250-300",
       minOrder: "10 kg",
@@ -39,6 +39,44 @@ export default function Products() {
     },
     {
       id: 2,
+      category: "vanilla",
+      name: t("product.vanilla.gradeB"),
+      image: "/images/daa.jpg",
+      specifications: {
+        origin: t("product.vanilla.origin"),
+        grade: t("product.vanilla.gradeB.grade"),
+        moisture: t("product.vanilla.gradeB.moisture"),
+        length: t("product.vanilla.gradeB.length"),
+        appearance: t("product.vanilla.gradeB.appearance"),
+        aroma: t("product.vanilla.gradeB.aroma"),
+        packaging: t("product.vanilla.gradeB.packaging"),
+      },
+      pricePerKg: "$150-200",
+      minOrder: "25 kg",
+      availability: "Year-round",
+      description: t("product.vanilla.gradeBDesc"),
+    },
+    {
+      id: 3,
+      category: "vanilla",
+      name: t("product.vanilla.gradeC"),
+      image: "/images/daa.jpg",
+      specifications: {
+        origin: t("product.vanilla.origin"),
+        grade: t("product.vanilla.gradeC.grade"),
+        moisture: t("product.vanilla.gradeC.moisture"),
+        length: t("product.vanilla.gradeC.length"),
+        appearance: t("product.vanilla.gradeC.appearance"),
+        aroma: t("product.vanilla.gradeC.aroma"),
+        packaging: t("product.vanilla.gradeC.packaging"),
+      },
+      pricePerKg: "$100-150",
+      minOrder: "50 kg",
+      availability: "Year-round",
+      description: t("product.vanilla.gradeCDesc"),
+    },
+    {
+      id: 4,
       category: "pepper",
       name: t("product.pepper.whole"),
       image: "/images/ladda.jpg",
@@ -57,7 +95,7 @@ export default function Products() {
       description: t("product.pepper.wholeDesc"),
     },
     {
-      id: 3,
+      id: 5,
       category: "coffee",
       name: t("product.coffee.robusta"),
       image: "/images/kkp.jpeg",

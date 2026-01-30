@@ -244,9 +244,15 @@ const translations: Record<Language, Record<string, string>> = {
     "footer.allRightsReserved": "All rights reserved.",
 
     // Product Names & Descriptions
-    "product.vanilla.gradeA": "Vanilla Beans",
+    "product.vanilla.gradeA": "Vanilla Beans Grade A",
     "product.vanilla.gradeADesc":
       "Premium Indonesian Vanilla Beans with a rich, sweet aroma and high quality standards. Carefully cured and hand-selected to ensure consistent flavor, flexible texture, and freshness. Suitable for food, beverage, and vanilla extract production.",
+    "product.vanilla.gradeB": "Vanilla Beans Grade B",
+    "product.vanilla.gradeBDesc":
+      "High-quality Indonesian Vanilla Beans with a pleasant aroma and good quality standards. Cured and selected to provide reliable flavor and texture. Ideal for general food processing and commercial use.",
+    "product.vanilla.gradeC": "Vanilla Beans Grade C",
+    "product.vanilla.gradeCDesc":
+      "Standard Indonesian Vanilla Beans with basic quality standards. Suitable for basic food applications and cost-effective vanilla production.",
     "product.pepper.whole": "Black Pepper",
     "product.pepper.wholeDesc":
       "Indonesian Black Pepper features a strong, spicy aroma and sharp pungent taste, making it ideal for culinary use, food processing, and spice manufacturing. Carefully dried and cleaned to meet export quality standards.",
@@ -255,12 +261,24 @@ const translations: Record<Language, Record<string, string>> = {
       "Indonesian Robusta Coffee Beans are known for their strong body, low acidity, and bold earthy flavor. Grown in Indonesia’s tropical highlands, these beans are ideal for instant coffee, espresso blends, and commercial coffee production.",
     // Product Specifications
     "product.vanilla.origin": "Indonesia",
-    "product.vanilla.grade": "Grade A",
-    "product.vanilla.moisture": "25-30%",
-    "product.vanilla.length": "15-20 cm",
-    "product.vanilla.appearance": "Dark brown, oily surface",
-    "product.vanilla.aroma": "Rich, complex vanilla notes",
-    "product.vanilla.packaging": "Vacuum-sealed, 1kg per pack",
+    "product.vanilla.gradeA.grade": "Grade A",
+    "product.vanilla.gradeA.moisture": "25-30%",
+    "product.vanilla.gradeA.length": "15-20 cm",
+    "product.vanilla.gradeA.appearance": "Dark brown, oily surface",
+    "product.vanilla.gradeA.aroma": "Rich, complex vanilla notes",
+    "product.vanilla.gradeA.packaging": "Vacuum-sealed, 1kg per pack",
+    "product.vanilla.gradeB.grade": "Grade B",
+    "product.vanilla.gradeB.moisture": "30-35%",
+    "product.vanilla.gradeB.length": "12-15 cm",
+    "product.vanilla.gradeB.appearance": "Brown, slightly oily surface",
+    "product.vanilla.gradeB.aroma": "Pleasant vanilla notes",
+    "product.vanilla.gradeB.packaging": "Vacuum-sealed, 1kg per pack",
+    "product.vanilla.gradeC.grade": "Grade C",
+    "product.vanilla.gradeC.moisture": "35-40%",
+    "product.vanilla.gradeC.length": "10-12 cm",
+    "product.vanilla.gradeC.appearance": "Light brown, dry surface",
+    "product.vanilla.gradeC.aroma": "Basic vanilla notes",
+    "product.vanilla.gradeC.packaging": "Vacuum-sealed, 1kg per pack",
     "product.pepper.origin": "Indonesia",
     "product.pepper.type": "Whole peppercorns",
     "product.pepper.size": "4-6 mm",
@@ -507,9 +525,15 @@ const translations: Record<Language, Record<string, string>> = {
     "footer.allRightsReserved": "Semua hak dilindungi.",
 
     // Product Names & Descriptions
-    "product.vanilla.gradeA": "Vanilla Utuh",
+    "product.vanilla.gradeA": "Vanilla Utuh Grade A",
     "product.vanilla.gradeADesc":
       "Vanila Indonesia Premium dengan aroma manis yang kaya dan standar kualitas tinggi. Diolah dengan hati-hati dan dipilih secara manual untuk memastikan rasa yang konsisten, tekstur yang fleksibel, dan kesegaran. Cocok untuk produksi makanan, minuman, dan ekstrak vanila.",
+    "product.vanilla.gradeB": "Vanilla Utuh Grade B",
+    "product.vanilla.gradeBDesc":
+      "Vanila Indonesia berkualitas tinggi dengan aroma yang menyenangkan dan standar kualitas baik. Diolah dan dipilih untuk memberikan rasa dan tekstur yang andal. Ideal untuk pengolahan makanan umum dan penggunaan komersial.",
+    "product.vanilla.gradeC": "Vanilla Utuh Grade C",
+    "product.vanilla.gradeCDesc":
+      "Vanila Indonesia standar dengan standar kualitas dasar. Cocok untuk aplikasi makanan dasar dan produksi vanila yang hemat biaya.",
     "product.pepper.whole": "Lada Hitam",
     "product.pepper.wholeDesc":
       "Biji Lada Hitam Indonesia memiliki aroma pedas yang kuat dan rasa pedas yang tajam, menjadikannya ideal untuk penggunaan kuliner, pengolahan makanan, dan produksi rempah-rempah. Dihasilkan melalui proses pengeringan dan pembersihan yang teliti untuk memenuhi standar kualitas ekspor.",
@@ -519,12 +543,24 @@ const translations: Record<Language, Record<string, string>> = {
 
     // Product Specifications
     "product.vanilla.origin": "Indonesia",
-    "product.vanilla.grade": "Grade A",
-    "product.vanilla.moisture": "25-30%",
-    "product.vanilla.length": "15-20 cm",
-    "product.vanilla.appearance": "Permukaan coklat gelap, berminyak",
-    "product.vanilla.aroma": "Aroma vanila yang kaya dan kompleks",
-    "product.vanilla.packaging": "Dikemas vakum, 1kg per paket",
+    "product.vanilla.gradeA.grade": "Grade A",
+    "product.vanilla.gradeA.moisture": "25-30%",
+    "product.vanilla.gradeA.length": "15-20 cm",
+    "product.vanilla.gradeA.appearance": "Permukaan coklat gelap, berminyak",
+    "product.vanilla.gradeA.aroma": "Aroma vanila yang kaya dan kompleks",
+    "product.vanilla.gradeA.packaging": "Dikemas vakum, 1kg per paket",
+    "product.vanilla.gradeB.grade": "Grade B",
+    "product.vanilla.gradeB.moisture": "30-35%",
+    "product.vanilla.gradeB.length": "12-15 cm",
+    "product.vanilla.gradeB.appearance": "Permukaan coklat, sedikit berminyak",
+    "product.vanilla.gradeB.aroma": "Aroma vanila yang menyenangkan",
+    "product.vanilla.gradeB.packaging": "Dikemas vakum, 1kg per paket",
+    "product.vanilla.gradeC.grade": "Grade C",
+    "product.vanilla.gradeC.moisture": "35-40%",
+    "product.vanilla.gradeC.length": "10-12 cm",
+    "product.vanilla.gradeC.appearance": "Permukaan coklat terang, kering",
+    "product.vanilla.gradeC.aroma": "Aroma vanila dasar",
+    "product.vanilla.gradeC.packaging": "Dikemas vakum, 1kg per paket",
     "product.pepper.origin": "Indonesia",
     "product.pepper.type": "Biji lada utuh",
     "product.pepper.size": "4-6 mm",
