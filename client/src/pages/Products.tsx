@@ -121,7 +121,7 @@ export default function Products() {
       specifications: {
         origin: t("product.coffee.origin"),
         variety: t("product.coffee.variety"),
-        altitude: t("product.coffee.altitude"),
+        size: t("product.coffee.size"),
         moisture: t("product.coffee.moisture"),
         defects: t("product.coffee.defects"),
         cupping: t("product.coffee.cupping"),
