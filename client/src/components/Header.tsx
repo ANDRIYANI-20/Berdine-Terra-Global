@@ -33,13 +33,11 @@ export default function Header() {
         {/* Logo */}
         <Link href="/">
           <a className="flex items-center gap-2 hover:opacity-80 transition-opacity">
-            <div className="hidden sm:block">
-              <div className="flex items-center gap-2">
-                <img src="/images/logo.png" alt="Berdine Terra Global Logo" className="h-10 w-10 align-middle" />
-                <h1 className="text-lg font-bold text-primary leading-tight">
-                  BERDINE TERRA GLOBAL
-                </h1>
-              </div>
+            <div className="flex items-center gap-2">
+              <img src="/images/logo.png" alt="Berdine Terra Global Logo" className="h-8 w-8 sm:h-10 sm:w-10 align-middle" />
+              <h1 className="text-sm sm:text-lg font-bold text-primary leading-tight">
+                BERDINE TERRA GLOBAL
+              </h1>
             </div>
           </a>
         </Link>
