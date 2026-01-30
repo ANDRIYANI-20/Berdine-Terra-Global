@@ -1,5 +1,6 @@
 {
   "version": 2,
+  "root": "client",
   "buildCommand": "pnpm build",
   "outputDirectory": "dist/public",
   "rewrites": [
