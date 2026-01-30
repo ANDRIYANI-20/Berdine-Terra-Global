@@ -157,7 +157,7 @@ const translations: Record<Language, Record<string, string>> = {
     // Documentation Guides
     "documentation.guide1.title": "Vanilla Bean Selection Guide",
     "documentation.guide1.description": "Learn how to select and grade vanilla beans, understand quality indicators, and storage best practices.",
-    "documentation.guide1.topic1": "Grade A classification",
+    "documentation.guide1.topic1": "Classification by Grade",
     "documentation.guide1.topic2": "Visual quality indicators",
     "documentation.guide1.topic3": "Aroma assessment",
     "documentation.guide1.topic4": "Proper storage conditions",
