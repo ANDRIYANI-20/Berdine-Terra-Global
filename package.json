@@ -1,15 +1,20 @@
 {
   "name": "berdine-terra-global",
   "version": "1.0.0",
+  "description": "Berdine Terra Global - International spice and agricultural products exporter",
   "type": "module",
   "license": "MIT",
   "scripts": {
     "dev": "vite --host",
-    "build": "vite build && esbuild server/index.ts --platform=node --packages=external --bundle --format=esm --outdir=dist",
+    "build": "vite build",
     "start": "NODE_ENV=production node dist/index.js",
     "preview": "vite preview --host",
     "check": "tsc --noEmit",
     "format": "prettier --write ."
+  },
+  "engines": {
+    "node": ">=18.17.0",
+    "npm": ">=9.0.0"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",
