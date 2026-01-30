@@ -22,7 +22,7 @@ export default function Products() {
       id: 1,
       category: "vanilla",
       name: t("product.vanilla.gradeAPlus"),
-      image: "/images/daa.jpg",
+      image: "/images/waa.jpeg",
       specifications: {
         origin: t("product.vanilla.origin"),
         grade: t("product.vanilla.gradeAPlus.grade"),
@@ -41,7 +41,7 @@ export default function Products() {
       id: 2,
       category: "vanilla",
       name: t("product.vanilla.gradeA"),
-      image: "/images/daa.jpg",
+      image: "/images/waa.jpeg",
       specifications: {
         origin: t("product.vanilla.origin"),
         grade: t("product.vanilla.gradeA.grade"),
@@ -60,7 +60,7 @@ export default function Products() {
       id: 3,
       category: "vanilla",
       name: t("product.vanilla.gradeB"),
-      image: "/images/daa.jpg",
+      image: "/images/waa.jpeg",
       specifications: {
         origin: t("product.vanilla.origin"),
         grade: t("product.vanilla.gradeB.grade"),
@@ -79,7 +79,7 @@ export default function Products() {
       id: 4,
       category: "vanilla",
       name: t("product.vanilla.gradeC"),
-      image: "/images/daa.jpg",
+      image: "/images/waa.jpeg",
       specifications: {
         origin: t("product.vanilla.origin"),
         grade: t("product.vanilla.gradeC.grade"),
@@ -98,7 +98,7 @@ export default function Products() {
       id: 5,
       category: "pepper",
       name: t("product.pepper.whole"),
-      image: "/images/ladda.jpg",
+      image: "/images/laaa.jpg",
       specifications: {
         origin: t("product.pepper.origin"),
         type: t("product.pepper.type"),
@@ -117,7 +117,7 @@ export default function Products() {
       id: 6,
       category: "coffee",
       name: t("product.coffee.robusta"),
-      image: "/images/kkp.jpeg",
+      image: "/images/kopie.jpeg",
       specifications: {
         origin: t("product.coffee.origin"),
         variety: t("product.coffee.variety"),

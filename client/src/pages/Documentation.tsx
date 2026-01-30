@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { ChevronDown } from "lucide-react";
+import { ChevronDown } from "@/components/icons";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 /**

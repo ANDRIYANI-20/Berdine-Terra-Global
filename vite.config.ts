@@ -168,8 +168,8 @@ export default defineConfig({
   },
   server: {
     port: 3000,
-    strictPort: false, // Will find next available port if 3000 is busy
-    host: true,
+    strictPort: false,
+    host: "0.0.0.0", // Allow access from other devices
     allowedHosts: [
       ".manuspre.computer",
       ".manus.computer",
@@ -178,6 +178,7 @@ export default defineConfig({
       ".manusvm.computer",
       "localhost",
       "127.0.0.1",
+      ".local",
     ],
     fs: {
       strict: true,

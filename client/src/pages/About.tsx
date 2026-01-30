@@ -1,6 +1,6 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { CheckCircle } from "lucide-react";
+import { CheckCircle } from "@/components/icons";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 /**

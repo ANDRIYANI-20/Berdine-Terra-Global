@@ -1,6 +1,6 @@
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Leaf, Globe, Award } from "lucide-react";
+import { ArrowRight, Leaf, Globe, Award } from "@/components/icons";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { useLanguage } from "@/contexts/LanguageContext";
@@ -20,21 +20,21 @@ export default function Home() {
     {
       id: 1,
       name: t("product.vanilla.gradeA"),
-      image: "/images/daa.jpg",
+      image: "/images/waa.jpeg",
       description: t("product.vanilla.gradeADesc"),
       href: "/products?category=vanilla",
     },
     {
       id: 2,
       name: t("product.pepper.whole"),
-      image: "/images/ladda.jpg",
+      image: "/images/laaa.jpg",
       description: t("product.pepper.wholeDesc"),
       href: "/products?category=pepper",
     },
     {
       id: 3,
       name: t("product.coffee.robusta"),
-      image: "/images/kkp.jpeg",
+      image: "/images/kopie.jpeg",
       description: t("product.coffee.robustaDesc"),
       href: "/products?category=coffee",
     },
