@@ -21,6 +21,25 @@ export default function Products() {
     {
       id: 1,
       category: "vanilla",
+      name: t("product.vanilla.gradeAPlus"),
+      image: "/images/daa.jpg",
+      specifications: {
+        origin: t("product.vanilla.origin"),
+        grade: t("product.vanilla.gradeAPlus.grade"),
+        moisture: t("product.vanilla.gradeAPlus.moisture"),
+        length: t("product.vanilla.gradeAPlus.length"),
+        appearance: t("product.vanilla.gradeAPlus.appearance"),
+        aroma: t("product.vanilla.gradeAPlus.aroma"),
+        packaging: t("product.vanilla.gradeAPlus.packaging"),
+      },
+      pricePerKg: "$320-380",
+      minOrder: "5 kg",
+      availability: "Year-round",
+      description: t("product.vanilla.gradeAPlusDesc"),
+    },
+    {
+      id: 2,
+      category: "vanilla",
       name: t("product.vanilla.gradeA"),
       image: "/images/daa.jpg",
       specifications: {
@@ -38,7 +57,7 @@ export default function Products() {
       description: t("product.vanilla.gradeADesc"),
     },
     {
-      id: 2,
+      id: 3,
       category: "vanilla",
       name: t("product.vanilla.gradeB"),
       image: "/images/daa.jpg",
@@ -57,7 +76,7 @@ export default function Products() {
       description: t("product.vanilla.gradeBDesc"),
     },
     {
-      id: 3,
+      id: 4,
       category: "vanilla",
       name: t("product.vanilla.gradeC"),
       image: "/images/daa.jpg",
@@ -76,7 +95,7 @@ export default function Products() {
       description: t("product.vanilla.gradeCDesc"),
     },
     {
-      id: 4,
+      id: 5,
       category: "pepper",
       name: t("product.pepper.whole"),
       image: "/images/ladda.jpg",
@@ -95,7 +114,7 @@ export default function Products() {
       description: t("product.pepper.wholeDesc"),
     },
     {
-      id: 5,
+      id: 6,
       category: "coffee",
       name: t("product.coffee.robusta"),
       image: "/images/kkp.jpeg",
