@@ -1,8 +1,7 @@
 {
   "version": 2,
-  "root": "client",
-  "buildCommand": "pnpm build",
-  "outputDirectory": "dist/public",
+  "buildCommand": "cd client && pnpm build",
+  "outputDirectory": "client/dist/public",
   "rewrites": [
     {
       "source": "/(.*)",
