@@ -1,6 +1,5 @@
 {
   "version": 2,
-  "root": "client",
   "buildCommand": "npm run build",
   "framework": "vite",
   "outputDirectory": "dist/public",
