@@ -293,7 +293,7 @@ export default function Products() {
             <p className="text-lg text-muted-foreground dark:text-slate-400 mb-8 max-w-2xl mx-auto">
               {t("products.priceListSubtitle")}
             </p>
-            <a href="/catalog.pdf" download>
+            <a href="/catalogg.pdf" download>
               <Button className="bg-primary hover:bg-primary/90 text-white px-8 py-6">
                 <Download className="w-5 h-5 mr-2" />
                 {t("products.downloadPriceList")}
