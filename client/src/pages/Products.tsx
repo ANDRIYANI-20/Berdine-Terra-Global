@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "wouter";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -23,6 +24,7 @@ export default function Products() {
       category: "vanilla",
       name: t("product.vanilla.gradeAPlus"),
       image: "/images/waa.jpeg",
+      variant: t("product.vanilla.varian"),
       specifications: {
         origin: t("product.vanilla.origin"),
         grade: t("product.vanilla.gradeAPlus.grade"),
@@ -30,11 +32,13 @@ export default function Products() {
         length: t("product.vanilla.gradeAPlus.length"),
         appearance: t("product.vanilla.gradeAPlus.appearance"),
         aroma: t("product.vanilla.gradeAPlus.aroma"),
+        texture: t("product.vanilla.gradeAPlus.texture"),
+        defect: t("product.vanilla.gradeAPlus.defect"),
         packaging: t("product.vanilla.gradeAPlus.packaging"),
       },
       pricePerKg: "$320-380",
       minOrder: "50 kg",
-      availability: "Year-round",
+      availability: "Pre-Order",
       description: t("product.vanilla.gradeAPlusDesc"),
     },
     {
@@ -42,6 +46,7 @@ export default function Products() {
       category: "vanilla",
       name: t("product.vanilla.gradeA"),
       image: "/images/waa.jpeg",
+      variant: t("product.vanilla.varian"),
       specifications: {
         origin: t("product.vanilla.origin"),
         grade: t("product.vanilla.gradeA.grade"),
@@ -49,88 +54,34 @@ export default function Products() {
         length: t("product.vanilla.gradeA.length"),
         appearance: t("product.vanilla.gradeA.appearance"),
         aroma: t("product.vanilla.gradeA.aroma"),
+        texture: t("product.vanilla.gradeA.texture"),
+        defect: t("product.vanilla.gradeA.defect"),
         packaging: t("product.vanilla.gradeA.packaging"),
       },
       pricePerKg: "$250-300",
       minOrder: "50 kg",
-      availability: "Year-round",
+      availability: "Pre-Order",
       description: t("product.vanilla.gradeADesc"),
-    },
-    {
-      id: 3,
-      category: "vanilla",
-      name: t("product.vanilla.gradeB"),
-      image: "/images/waa.jpeg",
-      specifications: {
-        origin: t("product.vanilla.origin"),
-        grade: t("product.vanilla.gradeB.grade"),
-        moisture: t("product.vanilla.gradeB.moisture"),
-        length: t("product.vanilla.gradeB.length"),
-        appearance: t("product.vanilla.gradeB.appearance"),
-        aroma: t("product.vanilla.gradeB.aroma"),
-        packaging: t("product.vanilla.gradeB.packaging"),
-      },
-      pricePerKg: "$150-200",
-      minOrder: "50 kg",
-      availability: "Year-round",
-      description: t("product.vanilla.gradeBDesc"),
-    },
-    {
-      id: 4,
-      category: "vanilla",
-      name: t("product.vanilla.gradeC"),
-      image: "/images/waa.jpeg",
-      specifications: {
-        origin: t("product.vanilla.origin"),
-        grade: t("product.vanilla.gradeC.grade"),
-        moisture: t("product.vanilla.gradeC.moisture"),
-        length: t("product.vanilla.gradeC.length"),
-        appearance: t("product.vanilla.gradeC.appearance"),
-        aroma: t("product.vanilla.gradeC.aroma"),
-        packaging: t("product.vanilla.gradeC.packaging"),
-      },
-      pricePerKg: "$100-150",
-      minOrder: "50 kg",
-      availability: "Year-round",
-      description: t("product.vanilla.gradeCDesc"),
     },
     {
       id: 5,
       category: "pepper",
       name: t("product.pepper.whole"),
       image: "/images/laaa.jpg",
+      grade: t("product.pepper.grade"),
       specifications: {
         origin: t("product.pepper.origin"),
         type: t("product.pepper.type"),
         size: t("product.pepper.size"),
         moisture: t("product.pepper.moisture"),
-        pungency: t("product.pepper.pungency"),
+        garbledLevel: t("product.pepper.garbledLevel"),
         appearance: t("product.pepper.appearance"),
         packaging: t("product.pepper.packaging"),
       },
       pricePerKg: "$8-12",
-      minOrder: "50 kg",
-      availability: "Year-round",
+      minOrder: "100 kg",
+      availability: "Pre-Order",
       description: t("product.pepper.wholeDesc"),
-    },
-    {
-      id: 6,
-      category: "coffee",
-      name: t("product.coffee.robusta"),
-      image: "/images/kopie.jpeg",
-      specifications: {
-        origin: t("product.coffee.origin"),
-        variety: t("product.coffee.variety"),
-        size: t("product.coffee.size"),
-        moisture: t("product.coffee.moisture"),
-        defects: t("product.coffee.defects"),
-        cupping: t("product.coffee.cupping"),
-        packaging: t("product.coffee.packaging"),
-      },
-      pricePerKg: "$2.50-3.50",
-      minOrder: "200 kg",
-      availability: "Year-round",
-      description: t("product.coffee.robustaDesc"),
     },
   ];
 
@@ -138,7 +89,6 @@ export default function Products() {
     { id: "all", label: t("products.filter.all") },
     { id: "vanilla", label: t("products.filter.vanilla") },
     { id: "pepper", label: t("products.filter.pepper") },
-    { id: "coffee", label: t("products.filter.coffee") },
   ];
 
   const filteredProducts =
@@ -150,22 +100,38 @@ export default function Products() {
     <div className="min-h-screen flex flex-col bg-background dark:bg-slate-950">
       <Header />
 
-      <main className="flex-1">
+      <main id="main-content" className="flex-1">
         {/* Hero Section */}
-        <section className="bg-primary text-primary-foreground py-16 md:py-24 dark:bg-slate-900 relative overflow-hidden" style={{ backgroundImage: 'url(/images/aa.jpg)', backgroundSize: 'cover', backgroundPosition: 'center', backgroundBlendMode: 'overlay' }}>
-          <div className="absolute inset-0 bg-primary/70"></div>
-          <div className="container relative z-10">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">
+        <section className="relative overflow-hidden">
+          <div className="absolute inset-0">
+            <img
+              src="/images/MA.png"
+              alt={t("products.hero.imageAlt")}
+              className="w-full h-full object-cover"
+              loading="eager"
+              decoding="async"
+            />
+            <div className="absolute inset-0 bg-primary/70"></div>
+          </div>
+          <div className="container section-tight relative z-10">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">
               {t("products.hero.title")}
             </h1>
-            <p className="text-lg opacity-90 max-w-2xl">
+            <p className="text-lg opacity-90 max-w-2xl text-white">
               {t("products.hero.subtitle")}
             </p>
+            <div className="flex flex-col sm:flex-row gap-4 mt-8">
+              <a href="/Catalog_Berdine.pdf" download>
+                <Button className="bg-white text-primary hover:bg-white/90 px-6 py-3">
+                  {t("products.downloadPriceList")}
+                </Button>
+              </a>
+            </div>
           </div>
         </section>
 
         {/* Category Filter */}
-        <section className="py-8 bg-white dark:bg-slate-900 border-b border-border dark:border-slate-700">
+        <section className="section-tight bg-white dark:bg-slate-900 border-b border-border dark:border-slate-700">
           <div className="container">
             <div className="flex flex-wrap gap-3">
               {categories.map((cat) => (
@@ -187,13 +153,26 @@ export default function Products() {
         </section>
 
         {/* Products Grid */}
-        <section className="py-16 md:py-24 bg-white dark:bg-slate-900">
+        <section className="section bg-white dark:bg-slate-900">
           <div className="container">
             <div className="grid grid-cols-1 gap-8">
-              {filteredProducts.map((product) => (
+              {filteredProducts.map((product) => {
+                const detailLabel =
+                  product.category === "pepper" || product.category === "coffee"
+                    ? t("products.grade")
+                    : t("products.origin");
+
+                const detailValue =
+                  product.category === "pepper" || product.category === "coffee"
+                    ? product.grade
+                    : product.specifications.origin;
+
+                const showDetail = product.category !== "vanilla";
+
+                return (
                 <div
                   key={product.id}
-                  className="bg-white dark:bg-slate-800 rounded-lg shadow-sm border border-border dark:border-slate-700 overflow-hidden hover:shadow-md transition-shadow"
+                  className="surface-card overflow-hidden"
                 >
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-0">
                     {/* Product Image */}
@@ -202,6 +181,8 @@ export default function Products() {
                         src={product.image}
                         alt={product.name}
                         className="w-full h-full object-cover"
+                        loading="lazy"
+                        decoding="async"
                       />
                     </div>
 
@@ -240,14 +221,36 @@ export default function Products() {
                             {product.availability}
                           </p>
                         </div>
-                        <div>
-                          <p className="text-xs text-muted-foreground dark:text-slate-400 uppercase font-semibold">
-                            {t("products.origin")}
-                          </p>
-                          <p className="text-lg font-bold text-foreground dark:text-white">
-                            {product.specifications.origin}
-                          </p>
-                        </div>
+                        {showDetail ? (
+                          <div>
+                            <p className="text-xs text-muted-foreground dark:text-slate-400 uppercase font-semibold">
+                              {detailLabel}
+                            </p>
+                            <p className="text-lg font-bold text-foreground dark:text-white">
+                              {detailValue}
+                            </p>
+                          </div>
+                        ) : null}
+                        {product.category === "coffee" ? (
+                          <div>
+                            <p className="text-xs text-muted-foreground dark:text-slate-400 uppercase font-semibold">
+                              {t("products.origin")}
+                            </p>
+                            <p className="text-lg font-bold text-foreground dark:text-white">
+                              {product.specifications.origin}
+                            </p>
+                          </div>
+                        ) : null}
+                        {product.category === "vanilla" && product.variant ? (
+                          <div>
+                            <p className="text-xs text-muted-foreground dark:text-slate-400 uppercase font-semibold">
+                              {t("products.varian")}
+                            </p>
+                            <p className="text-lg font-bold text-foreground dark:text-white">
+                              {product.variant}
+                            </p>
+                          </div>
+                        ) : null}
                       </div>
 
                       {/* Specifications */}
@@ -272,20 +275,17 @@ export default function Products() {
                         </div>
                       </div>
 
-                      {/* Actions */}
-                      <div className="flex flex-col sm:flex-row gap-3">
-                        {/* Buttons removed as requested */}
-                      </div>
                     </div>
                   </div>
                 </div>
-              ))}
+              );
+              })}
             </div>
           </div>
         </section>
 
         {/* Price List Download */}
-        <section className="py-16 md:py-24 bg-secondary/10 dark:bg-slate-800">
+        <section className="section surface-muted">
           <div className="container text-center">
             <h2 className="text-3xl font-bold mb-6 text-foreground dark:text-white">
               {t("products.priceList")}
@@ -293,7 +293,7 @@ export default function Products() {
             <p className="text-lg text-muted-foreground dark:text-slate-400 mb-8 max-w-2xl mx-auto">
               {t("products.priceListSubtitle")}
             </p>
-            <a href="/Product-Catalog.pdf" download>
+            <a href="/Catalog_Berdine.pdf" download>
               <Button className="bg-primary hover:bg-primary/90 text-white px-8 py-6">
                 <Download className="w-5 h-5 mr-2" />
                 {t("products.downloadPriceList")}

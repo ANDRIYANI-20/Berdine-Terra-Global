@@ -37,22 +37,31 @@ export default function About() {
     <div className="min-h-screen flex flex-col bg-background dark:bg-slate-950">
       <Header />
 
-      <main className="flex-1">
+      <main id="main-content" className="flex-1">
         {/* Hero Section */}
-        <section className="bg-primary text-primary-foreground py-16 md:py-24 dark:bg-slate-900 relative overflow-hidden" style={{ backgroundImage: 'url(/images/be.jpeg)', backgroundSize: 'cover', backgroundPosition: 'center', backgroundBlendMode: 'overlay' }}>
-          <div className="absolute inset-0 bg-primary/70"></div>
-          <div className="container relative z-10">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">
+        <section className="relative overflow-hidden">
+          <div className="absolute inset-0">
+            <img
+              src="/images/be.jpeg"
+              alt={t("about.hero.imageAlt")}
+              className="w-full h-full object-cover"
+              loading="eager"
+              decoding="async"
+            />
+            <div className="absolute inset-0 bg-primary/70"></div>
+          </div>
+          <div className="container section-tight relative z-10">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">
               {t("about.hero.title")}
             </h1>
-            <p className="text-lg opacity-90 max-w-2xl">
+            <p className="text-lg opacity-90 max-w-2xl text-white">
               {t("about.hero.subtitle")}
             </p>
           </div>
         </section>
 
         {/* Company Overview */}
-        <section className="py-16 md:py-24 bg-white dark:bg-slate-900">
+        <section className="section bg-white dark:bg-slate-900">
           <div className="container">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
               <div>
@@ -65,7 +74,7 @@ export default function About() {
                 <p className="text-lg text-muted-foreground dark:text-slate-400 mb-4">
                   {t("about.whoAreWeText2")}
                 </p>
-                <p className="text-lg text-muted-foreground dark:text-slate-400">
+                <p className="text-lg text-muted-foreground dark:text-slate-400 mb-4">
                   {t("about.whoAreWeText3")}
                 </p>
               </div>
@@ -74,7 +83,13 @@ export default function About() {
                   {t("about.byTheNumbers")}
                 </h3>
                 <div className="flex justify-center">
-                  <img src="/images/kp.jpeg" alt="Berdine Terra Global Logo" className="w-full h-auto max-h-64 object-contain" />
+                  <img
+                    src="/images/ba.jpeg"
+                    alt={t("about.hero.imageAlt")}
+                    className="w-full max-w-sm rounded-lg object-cover shadow-sm"
+                    loading="lazy"
+                    decoding="async"
+                  />
                 </div>
               </div>
             </div>
@@ -82,31 +97,50 @@ export default function About() {
         </section>
 
         {/* Mission & Vision */}
-        <section className="py-16 md:py-24 bg-secondary/10 dark:bg-slate-800">
+        <section className="section surface-muted">
           <div className="container">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
               <div className="bg-white dark:bg-slate-900 p-8 rounded-lg shadow-sm border border-border dark:border-slate-700">
-                <h3 className="text-2xl font-bold mb-4 text-primary">
-                  {t("about.mission")}
+                <h3 className="text-2xl font-bold mb-6 text-primary">
+                  {t("about.vision")}
                 </h3>
-                <p className="text-lg text-muted-foreground dark:text-slate-400">
-                  {t("about.missionText")}
+                <p className="text-lg text-muted-foreground dark:text-slate-400 leading-relaxed">
+                  {t("about.visionText")}
                 </p>
               </div>
               <div className="bg-white dark:bg-slate-900 p-8 rounded-lg shadow-sm border border-border dark:border-slate-700">
-                <h3 className="text-2xl font-bold mb-4 text-primary">
-                  {t("about.vision")}
+                <h3 className="text-2xl font-bold mb-6 text-primary">
+                  {t("about.mission")}
                 </h3>
-                <p className="text-lg text-muted-foreground dark:text-slate-400">
-                  {t("about.visionText")}
-                </p>
+                <ol className="space-y-3 text-lg text-muted-foreground dark:text-slate-400">
+                  <li className="flex gap-3">
+                    <span className="font-bold text-primary flex-shrink-0">1.</span>
+                    <span>{t("about.missionText1")}</span>
+                  </li>
+                  <li className="flex gap-3">
+                    <span className="font-bold text-primary flex-shrink-0">2.</span>
+                    <span>{t("about.missionText2")}</span>
+                  </li>
+                  <li className="flex gap-3">
+                    <span className="font-bold text-primary flex-shrink-0">3.</span>
+                    <span>{t("about.missionText3")}</span>
+                  </li>
+                  <li className="flex gap-3">
+                    <span className="font-bold text-primary flex-shrink-0">4.</span>
+                    <span>{t("about.missionText4")}</span>
+                  </li>
+                  <li className="flex gap-3">
+                    <span className="font-bold text-primary flex-shrink-0">5.</span>
+                    <span>{t("about.missionText5")}</span>
+                  </li>
+                </ol>
               </div>
             </div>
           </div>
         </section>
 
         {/* Core Values */}
-        <section className="py-16 md:py-24 bg-white dark:bg-slate-900">
+        <section className="section bg-white dark:bg-slate-900">
           <div className="container">
             <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center text-foreground dark:text-white">
               {t("about.coreValues")}
@@ -130,7 +164,7 @@ export default function About() {
         </section>
 
         {/* Certifications */}
-        <section className="py-16 md:py-24 bg-secondary/10 dark:bg-slate-800">
+        <section className="section surface-muted">
           <div className="container">
             <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center text-foreground dark:text-white">
               {t("about.certifications")}

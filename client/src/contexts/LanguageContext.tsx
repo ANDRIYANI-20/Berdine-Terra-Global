@@ -21,26 +21,59 @@ const translations: Record<Language, Record<string, string>> = {
     "nav.documentation": "Documentation",
     "nav.contact": "Contact",
     "nav.getQuote": "Get Quote",
+    "nav.skip": "Skip to content",
+    "nav.tagline": "Indonesian Natural Produce Exporter",
 
     // Home Page
-    "home.hero.title": "Indonesia's Premium Produce Exports",
+    "home.hero.eyebrow": "Trusted Indonesian Exporter",
+    "home.hero.title": "Premium Indonesian Vanilla & Pepper for Global Buyers",
     "home.hero.subtitle":
-      "Born from Earth, Built with Trust.",
+      "Export-ready supply backed by traceable sourcing, quality assurance, and dependable logistics.",
     "home.hero.viewCatalog": "View Catalog",
-    "home.hero.getQuote": "Get Quote",
-    "home.highlights.globalExport": "Global Export",
-    "home.highlights.globalExportDesc":
-      "Serving importers and distributors across 50+ countries",
-    "home.highlights.premiumQuality": "Premium Quality",
-    "home.highlights.premiumQualityDesc":
-      "Certified organic and fair-trade natural products",
-    "home.highlights.sustainable": "Sustainable",
-    "home.highlights.sustainableDesc":
-      "Committed to eco-friendly and ethical sourcing practices",
+    "home.hero.getQuote": "Request a Quote",
+    "home.hero.downloadCatalog": "Download Catalog",
+    "home.hero.trust1": "Export documentation ready",
+    "home.hero.trust2": "QA & moisture control",
+    "home.hero.trust3": "Verified source",
+    "home.hero.imageAlt": "Export-ready vanilla and black pepper",
+    "home.hero.badgeLabel": "Typical lead time",
+    "home.hero.badgeValue": "21-30 days FOB",
+    "home.highlights.qualityControl": "Quality-Controlled Supply Chain",
+    "home.highlights.qualityControlDesc":
+      "Quality standards from upstream to delivery with complete documentation.",
+    "home.highlights.documentation": "Export-Ready Documentation",
+    "home.highlights.documentationDesc":
+      "COO, Phytosanitary Certificate, PEB, and supporting documents available.",
+    "home.highlights.suppliers": "Verified Local Suppliers",
+    "home.highlights.suppliersDesc":
+      "Partnerships with producers and farmers who have undergone verification process.",
+    "home.highlights.capacity": "Flexible Production Capacity",
+    "home.highlights.capacityDesc":
+      "Supply scale can be adjusted according to buyer needs.",
     "home.products.title": "Our Products",
     "home.products.subtitle":
       "Discover our premium selection of natural products, carefully sourced and processed to meet international standards.",
     "home.products.learnMore": "Learn More",
+    "home.stats.countries": "Countries served",
+    "home.stats.buyers": "Buyer partnerships",
+    "home.stats.volume": "Annual export volume (tons)",
+    "home.stats.sourcing": "Sourcing partners",
+    "home.assurance.eyebrow": "Why global buyers choose us",
+    "home.assurance.title": "Built for consistent, compliant supply",
+    "home.assurance.subtitle":
+      "From origin to shipment, we provide the documentation, quality controls, and logistics support global importers expect.",
+    "home.assurance.qc": "QC-led grading",
+    "home.assurance.qcDesc":
+      "Each batch is inspected for moisture, size, and visual quality with documented results.",
+    "home.assurance.docs": "Export documentation",
+    "home.assurance.docsDesc":
+      "COO, phytosanitary, COA, packing list, and invoice prepared to destination requirements.",
+    "home.assurance.trace": "Verified source",
+    "home.assurance.traceDesc":
+      "Direct partnerships with farmers and MSMEs ensure supply continuity and transparency.",
+    "home.assurance.logistics": "Logistics coordination",
+    "home.assurance.logisticsDesc":
+      "Flexible shipping options with clear timelines and proactive communication.",
     "home.cta.title": "Ready to Partner With Us?",
     "home.cta.subtitle":
       "Contact our team to discuss your requirements and get a customized quote for your business.",
@@ -50,59 +83,70 @@ const translations: Record<Language, Record<string, string>> = {
     "about.hero.title": "About Berdine Terra Global",
     "about.hero.subtitle":
       "Born from Earth, Built with Trust.",
+    "about.hero.imageAlt": "Berdine Terra Global team and sourcing network",
     "about.whoAreWe": "Who We Are",
     "about.whoAreWeText1":
-      "Berdine Terra Global is an Indonesian natural resource export company focused on developing local farmers and SMEs through sustainable partnerships.",
+      "Berdine Terra Global is an exporter of premium commodities from Indonesia focusing on vanilla beans and black pepper. Based on the value 'Born from Earth, Built with Trust', we build a supply chain that connects international buyer needs with the welfare of local farmers.",
     "about.whoAreWeText2":
-      "We are here to bridge the potential of Indonesia's natural wealth with global market demand, ensuring that every product is professionally managed, high-quality, and meets international trade standards.",
+      "We work through direct partnerships with farmers to ensure quality, traceability, and sustainability of every product. With controlled processing, standardized quality control, and complete export documentation, we provide consistent and reliable commodities.",
     "about.whoAreWeText3":
-      "By leveraging local resources and building long-term relationships with farmers and SME operators, Berdine Terra Global is committed to creating sustainable value, not only for the international market but also for local communities as the cornerstone of our supply chain.",
+      "Our goal is to deliver value to the global market while making a real impact on the farmers who are the main foundation of this company.",
     "about.byTheNumbers": "BERDINE TERRA GLOBAL",
     "about.countriesServed": "Countries Served",
     "about.satisfiedClients": "Satisfied Clients Worldwide",
     "about.tonsExported": "Tons Exported Annually",
-    "about.mission": "Our Mission",
-    "about.missionText":
-      "To become Indonesia's leading natural-produce export company, recognized globally for its commitment to quality, sustainability, and high ethical business standards.",
-    "about.vision": "Our Vision",
+    "about.mission": "Mission",
+    "about.missionText1":
+      "Build a trust-based supply chain through direct partnerships with farmers.",
+    "about.missionText2":
+      "Provide vanilla beans and black pepper with consistent and standardized quality.",
+    "about.missionText3":  
+      "Strengthen local agricultural MSMEs to compete in international markets.",
+    "about.missionText4": 
+      "Ensure every export meets official standards and documentation.",
+    "about.missionText5":
+      "Promote sustainable production practices.",
+    "about.vision": "Vision",
     "about.visionText":
-      "Berdine Terra Global is committed to providing premium agricultural products that meet international export standards through mutually beneficial partnerships with local farmers, the implementation of sustainable business practices from upstream to downstream, and the expansion of global markets to strengthen the positive image of Indonesian products.",
+      "To become a trusted agricultural exporter capable of delivering quality commodities to the global market, while strengthening the welfare and independence of local farmers through a transparent, sustainable, and integrity-driven supply chain.",
     "about.coreValues": "Our Core Values",
-    "about.qualityExcellence": "Quality Excellence",
+    "about.qualityExcellence": "Quality",
     "about.qualityExcellenceDesc":
-      "We maintain the highest standards in sourcing, processing, and quality control of all our products.",
+      "Every product is selected through a rigorous process, including visual inspection, grade sorting, and batch documentation to ensure consistency.",
     "about.sustainability": "Sustainability",
     "about.sustainabilityDesc":
-      "Committed to environmentally responsible practices and fair-trade partnerships with our suppliers.",
+      "We work with local suppliers using fair-partnership principles to create equitable economic benefits from upstream to downstream.",
     "about.reliability": "Reliability",
     "about.reliabilityDesc":
-      "Consistent delivery, transparent communication, and dependable partnerships with our clients.",
-    "about.innovation": "Innovation",
+      "Clear communication, on-time delivery, and specification compliance are our focus in building trust with international buyers.",
+    "about.innovation": "Market Development",
     "about.innovationDesc":
-      "Continuously improving our processes and exploring new opportunities in the natural products market.",
-    "about.certifications": "Certifications & Standards",
-    "about.organicCertified": "Organic Certified",
+      "We actively identify new market opportunities and adapt products based on global demand trends.",
+    "about.certifications": "Standards & Documentation",
+    "about.organicCertified": "Certificate of Analysis (COA)",
     "about.organicCertifiedDesc":
-      "Ensure that all agricultural products are free from pests, diseases, and harmful organisms.",
-    "about.fairTrade": "Certificate of Origin",
+      "Laboratory test documents that confirm the product meets quality specifications and standards.",
+    "about.fairTrade": "Quality Inspection / QC Report",
     "about.fairTradeDesc":
-      "Certificate of Origin (COO) verifies the country of origin of the product and confirms its authenticity.",
-    "about.isoCompliant": "Quality Control & Inspection",
+      "Inspection and quality control report that documents product condition, specifications, and compliance prior to shipment.",
+    "about.isoCompliant": "Export Documentation",
     "about.isoCompliantDesc":
-      "Our quality control procedures include laboratory testing, visual inspection, and documentation of all products.",
+      "Includes Packing List, Commercial Invoice, Phytosanitary Certificate, and COO (Certificate of Origin).",
 
     // Products Page
     "products.hero.title": "Product Catalog",
     "products.hero.subtitle":
-      "Explore our complete range of premium natural products with detailed specifications and pricing.",
+      "Explore our export-grade product range with transparent specs, pricing bands, and minimum order quantities.",
+    "products.hero.imageAlt": "Berdine Terra Global product catalog",
     "products.filter.all": "All Products",
     "products.filter.vanilla": "Vanilla Beans",
     "products.filter.pepper": "Black Pepper",
-    "products.filter.coffee": "Green Coffee",
     "products.price": "Price",
     "products.minOrder": "Min Order",
     "products.availability": "Availability",
     "products.origin": "Origin",
+    "products.varian": "Variant",
+    "products.grade": "Grade",
     "products.specifications": "Specifications",
     "products.requestQuote": "Request Quote",
     "products.downloadSpecs": "Download Specs",
@@ -110,6 +154,10 @@ const translations: Record<Language, Record<string, string>> = {
     "products.priceListSubtitle":
       "Download our comprehensive product catalog with all products, specifications, and current pricing information.",
     "products.downloadPriceList": "Download Product Catalog (PDF)",
+
+    // Product Specifications
+    "product.vanilla.origin": "Indonesia",
+    "product.pepper.origin": "Indonesia",
 
     // Portfolio Page
     "portfolio.hero.title": "Our Portfolio",
@@ -132,6 +180,7 @@ const translations: Record<Language, Record<string, string>> = {
     "documentation.hero.title": "Documentation & Guides",
     "documentation.hero.subtitle":
       "Comprehensive resources to help you understand our products, ordering process, and best practices.",
+    "documentation.hero.imageAlt": "Export documentation and buyer guides",
     "documentation.guides": "Product Guides",
     "documentation.faq": "Frequently Asked Questions",
     "documentation.orderingProcess": "Ordering Process",
@@ -162,7 +211,7 @@ const translations: Record<Language, Record<string, string>> = {
     "documentation.guide1.topic3": "Aroma assessment",
     "documentation.guide1.topic4": "Proper storage conditions",
     "documentation.guide1.topic5": "Shelf life and handling",
-    "documentation.guide2.title": "Black Pepper Processing & Quality",
+    "documentation.guide2.title": "Black Pepper Selection Guide",
     "documentation.guide2.description": "Comprehensive guide to black pepper varieties, processing methods, and quality standards.",
     "documentation.guide2.topic1": "Pepper varieties and origins",
     "documentation.guide2.topic2": "Processing methods",
@@ -186,7 +235,7 @@ const translations: Record<Language, Record<string, string>> = {
 
     // Documentation FAQ
     "documentation.faq1.question": "What is the minimum order quantity?",
-    "documentation.faq1.answer": "Minimum order quantities vary by product. Vanilla beans: 10kg, Black pepper: 50kg, Green coffee: 100kg. We can discuss custom arrangements for larger orders.",
+    "documentation.faq1.answer": "Minimum order quantities vary by product. Vanilla beans 50kg and Black pepper 100kg. We can discuss custom arrangements for larger orders.",
     "documentation.faq2.question": "Do you offer organic and fair-trade products?",
     "documentation.faq2.answer": "Yes, all our products are certified organic and sourced through fair-trade partnerships. We maintain full traceability from farm to export.",
     "documentation.faq3.question": "What payment methods do you accept?",
@@ -206,6 +255,7 @@ const translations: Record<Language, Record<string, string>> = {
     "contact.hero.title": "Contact Us",
     "contact.hero.subtitle":
       "Have questions about our products or ready to place an order? We would love to hear from you.",
+    "contact.hero.imageAlt": "Berdine Terra Global contact and support",
     "contact.contactInfo": "Contact Information",
     "contact.sendMessage": "Send us a Message",
     "contact.fullName": "Full Name",
@@ -224,84 +274,66 @@ const translations: Record<Language, Record<string, string>> = {
     "contact.email": "Email",
     "contact.whatsapp": "Telephone",
     "contact.businessHours": "Business Hours",
-    "contact.businessHours.monFri": "Monday - Friday: 9:00 AM - 6:00 PM",
-    "contact.businessHours.sat": "Saturday: 10:00 AM - 4:00 PM",
-    "contact.businessHours.sun": "Sunday: Closed",
+    "contact.businessHours.monFri": "Monday - Friday : 9:00 AM - 6:00 PM",
+    "contact.businessHours.sat": "Saturday : 10:00 AM - 4:00 PM",
+    "contact.businessHours.sun": "Sunday : Closed",
     "contact.location": "Our Location",
     "contact.orContactVia": "Or contact us via",
     "contact.contactWhatsApp": "Contact via WhatsApp",
 
     // Footer
     "footer.companyDesc":
-      "Premium natural products exporter specializing in vanilla beans, black pepper, and green coffee beans.",
+      "Export-ready Indonesian natural products for global buyers, specializing in vanilla beans and black pepper.",
     "footer.quickLinks": "Quick Links",
     "footer.resources": "Resources",
     "footer.documentation": "Documentation",
     "footer.specifications": "Specifications",
     "footer.faq": "FAQ",
+    "footer.shipping": "Shipping & Incoterms",
+    "footer.trust.docReady": "Export docs ready",
+    "footer.trust.qc": "QC reports",
+    "footer.trust.traceable": "Verified source",
+    "footer.trust.global": "Global shipping",
     "footer.privacyPolicy": "Privacy Policy",
     "footer.termsOfService": "Terms of Service",
     "footer.allRightsReserved": "All rights reserved.",
 
     // Product Names & Descriptions
-    "product.vanilla.gradeAPlus": "Vanilla Beans Grade A+",
+    "product.vanilla.gradeAPlus": "Vanilla Beans Gourmet Premium A+",
     "product.vanilla.gradeAPlusDesc":
-      "Top-tier Indonesian Vanilla Beans (Planifolia) with an intense, creamy aroma and superior oil content. Expertly cured and hand-selected for maximum flavor, flexibility, and freshness. Ideal for gourmet applications and premium vanilla extract.",
+      "The highest quality Indonesian Vanilla Planifolia (Gourmet A+) with an intense, creamy, sweet and very rich aroma. Hand-picked from the ripest fruits and put through a highly selective drying process. Each pod is manually selected based on length, oil content, texture and visual perfection. Longer drying and tighter moisture control results in a very oily, shiny and fleshy pod. Ideal for products that require high clarity of flavour and intensity of aroma.",
     "product.vanilla.gradeA": "Vanilla Beans Grade A",
     "product.vanilla.gradeADesc":
-      "Premium Indonesian Vanilla Beans (Planifolia) with a rich, sweet aroma and high quality standards. Carefully cured and hand-selected to ensure consistent flavor, flexible texture, and freshness. Suitable for food, beverage, and vanilla extract production.",
-    "product.vanilla.gradeB": "Vanilla Beans Grade B",
-    "product.vanilla.gradeBDesc":
-      "High-quality Indonesian Vanilla Beans (Planifolia) with a pleasant aroma and good quality standards. Cured and selected to provide reliable flavor and texture. Ideal for general food processing and commercial use.",
-    "product.vanilla.gradeC": "Vanilla Beans Grade C",
-    "product.vanilla.gradeCDesc":
-      "Standard Indonesian Vanilla Beans (Planifolia) with basic quality standards. Suitable for basic food applications and cost-effective vanilla production.",
+      "Grade A Indonesian Vanilla Planifolia is a premium quality export product processed through a professional drying process to produce a strong sweet and creamy aroma with a stable flavour character. The pods are long with an oily surface and a uniform dark brown-black colour. The texture is moist and pliable, making it ideal for the food and beverage industry, flavour extraction and other products.",
     "product.pepper.whole": "Black Pepper",
     "product.pepper.wholeDesc":
       "Indonesian Black Pepper features a strong, spicy aroma and sharp pungent taste, making it ideal for culinary use, food processing, and spice manufacturing. Carefully dried and cleaned to meet export quality standards.",
-    "product.coffee.robusta": "Green Coffee Beans - Robusta",
-    "product.coffee.robustaDesc":
-      "Indonesian Robusta Coffee Beans are known for their strong body, low acidity, and bold earthy flavor. Grown in Indonesia’s tropical highlands, these beans are ideal for instant coffee, espresso blends, and commercial coffee production.",
     // Product Specifications
-    "product.vanilla.origin": "Indonesia",
-    "product.vanilla.gradeAPlus.grade": "Grade A+",
-    "product.vanilla.gradeAPlus.moisture": "25-35%",
-    "product.vanilla.gradeAPlus.length": "18-23 cm",
-    "product.vanilla.gradeAPlus.appearance": "Dark brown, very oily surface",
-    "product.vanilla.gradeAPlus.aroma": "Intense, creamy vanilla notes",
-    "product.vanilla.gradeAPlus.packaging": "Vacuum-sealed, 1kg per pack",
+    "product.vanilla.varian": "Planifolia",
+    "product.vanilla.gradeAPlus.grade": "Gourmet Premium A+",
+    "product.vanilla.gradeAPlus.moisture": "30-35%",
+    "product.vanilla.gradeAPlus.length": "20-25 cm",
+    "product.vanilla.gradeAPlus.texture": "Moist, pliable, meaty (flexible, not easily broken)",
+    "product.vanilla.gradeAPlus.defect": "≤2%",
+    "product.vanilla.gradeAPlus.appearance": "Deep black colour, glossy and very oily surface",
+    "product.vanilla.gradeAPlus.aroma": "Intense, creamy, sweet-complex",
+    "product.vanilla.gradeAPlus.packaging": "Vacuum-sealed",
     "product.vanilla.gradeA.grade": "Grade A",
-    "product.vanilla.gradeA.moisture": "25-35%",
-    "product.vanilla.gradeA.length": "18-23 cm",
-    "product.vanilla.gradeA.appearance": "Dark brown, oily surface",
-    "product.vanilla.gradeA.aroma": "Rich, complex vanilla notes",
-    "product.vanilla.gradeA.packaging": "Vacuum-sealed, 1kg per pack",
-    "product.vanilla.gradeB.grade": "Grade B",
-    "product.vanilla.gradeB.moisture": "20-30%",
-    "product.vanilla.gradeB.length": "18-20 cm",
-    "product.vanilla.gradeB.appearance": "Brown, slightly oily surface",
-    "product.vanilla.gradeB.aroma": "Pleasant vanilla notes",
-    "product.vanilla.gradeB.packaging": "Vacuum-sealed, 1kg per pack",
-    "product.vanilla.gradeC.grade": "Grade C",
-    "product.vanilla.gradeC.moisture": "10-15%",
-    "product.vanilla.gradeC.length": "All Sizes",
-    "product.vanilla.gradeC.appearance": "Light brown, dry surface",
-    "product.vanilla.gradeC.aroma": "Basic vanilla notes",
-    "product.vanilla.gradeC.packaging": "Vacuum-sealed, 1kg per pack",
-    "product.pepper.origin": "Indonesia",
+    "product.vanilla.gradeA.moisture": "25-30%",
+    "product.vanilla.gradeA.length": "16-20 cm",
+    "product.vanilla.gradeA.texture": "Moist, oily, pliable",
+    "product.vanilla.gradeA.defect": "≤5%",
+    "product.vanilla.gradeA.appearance": "Dark brown colour and oily surface",
+    "product.vanilla.gradeA.aroma": "Strong, sweet-creamy",
+    "product.vanilla.gradeA.packaging": "Vacuum-sealed",
+    "product.pepper.grade": "Grade A",
     "product.pepper.type": "Whole peppercorns",
-    "product.pepper.size": "4-6 mm",
-    "product.pepper.moisture": "12-14%",
-    "product.pepper.pungency": "High (Scoville: 30,000-40,000)",
+    "product.pepper.size": "3,5mm-4,5mm",
+    "product.pepper.moisture": "12-13%",
+    "product.pepper.garbledLevel": "550",
     "product.pepper.appearance": "Black, glossy, uniform",
-    "product.pepper.packaging": "25kg bags",
-    "product.coffee.origin": "Indonesia",
-    "product.coffee.variety": "Robusta",
-    "product.coffee.size": "6-7mm",
-    "product.coffee.moisture": "11-13%",
-    "product.coffee.defects": "Grade A",
-    "product.coffee.cupping": "80+ points",
-    "product.coffee.packaging": "60kg bags",  },
+    "product.pepper.packaging": "60kg bags",
+  },
   id: {
     // Navigation
     "nav.home": "Beranda",
@@ -311,26 +343,59 @@ const translations: Record<Language, Record<string, string>> = {
     "nav.documentation": "Dokumentasi",
     "nav.contact": "Kontak",
     "nav.getQuote": "Dapatkan Penawaran",
+    "nav.skip": "Lewati ke konten",
+    "nav.tagline": "Eksportir Hasil Alam Indonesia",
 
     // Home Page
-    "home.hero.title": "Ekspor Hasil Bumi Premium Indonesia",
+    "home.hero.eyebrow": "Eksportir Indonesia Tepercaya",
+    "home.hero.title": "Vanilla & Lada Hitam Indonesia untuk Buyer Global",
     "home.hero.subtitle":
-      "Lahir dari Bumi, Dibangun dengan Kepercayaan.",
+      "Pasokan siap ekspor dengan asal-usul terverifikasi, quality assurance, dan logistik yang andal.",
     "home.hero.viewCatalog": "Lihat Katalog",
-    "home.hero.getQuote": "Kontak Kami",
-    "home.highlights.globalExport": "Ekspor Global",
-    "home.highlights.globalExportDesc":
-      "Melayani importir dan distributor di lebih dari 50 negara",
-    "home.highlights.premiumQuality": "Kualitas Premium",
-    "home.highlights.premiumQualityDesc":
-      "Produk alami bersertifikat organik dan fair-trade",
-    "home.highlights.sustainable": "Berkelanjutan",
-    "home.highlights.sustainableDesc":
-      "Berkomitmen pada praktik ramah lingkungan dan etis",
+    "home.hero.getQuote": "Minta Penawaran",
+    "home.hero.downloadCatalog": "Unduh Katalog",
+    "home.hero.trust1": "Dokumen ekspor siap",
+    "home.hero.trust2": "QC & kontrol kadar air",
+    "home.hero.trust3": "Asal Terverifikasi",
+    "home.hero.imageAlt": "Vanilla dan lada hitam siap ekspor",
+    "home.hero.badgeLabel": "Estimasi lead time",
+    "home.hero.badgeValue": "21-30 hari FOB",
+    "home.highlights.qualityControl": "Rantai Pasokan Terkontrol Kualitas",
+    "home.highlights.qualityControlDesc":
+      "Standar mutu dari hulu hingga pengiriman dengan dokumentasi lengkap.",
+    "home.highlights.documentation": "Dokumentasi Siap Ekspor",
+    "home.highlights.documentationDesc":
+      "COO, Phytosanitary Certificate, PEB, dan dokumen pendukung tersedia.",
+    "home.highlights.suppliers": "Supplier Lokal Terverifikasi",
+    "home.highlights.suppliersDesc":
+      "Kemitraan dengan produsen dan petani yang sudah melalui proses verifikasi.",
+    "home.highlights.capacity": "Kapasitas Produksi Fleksibel",
+    "home.highlights.capacityDesc":
+      "Skala pasokan dapat disesuaikan sesuai kebutuhan buyer.",
     "home.products.title": "Produk Kami",
     "home.products.subtitle":
       "Temukan pilihan premium produk alami kami yang dikurasi dengan cermat dan diproses sesuai standar internasional.",
     "home.products.learnMore": "Pelajari Lebih Lanjut",
+    "home.stats.countries": "Negara tujuan",
+    "home.stats.buyers": "Kemitraan buyer",
+    "home.stats.volume": "Volume ekspor tahunan (ton)",
+    "home.stats.sourcing": "Mitra pemasok",
+    "home.assurance.eyebrow": "Alasan buyer global memilih kami",
+    "home.assurance.title": "Dibangun untuk pasokan konsisten dan patuh",
+    "home.assurance.subtitle":
+      "Dari hulu ke pengiriman, kami menyediakan dokumen ekspor, kontrol kualitas, dan dukungan logistik yang buyer internasional butuhkan.",
+    "home.assurance.qc": "Grading berbasis QC",
+    "home.assurance.qcDesc":
+      "Setiap batch diperiksa kadar air, ukuran, dan kualitas visual dengan laporan tertulis.",
+    "home.assurance.docs": "Dokumentasi ekspor",
+    "home.assurance.docsDesc":
+      "COO, phytosanitary, COA, packing list, dan invoice disiapkan sesuai kebutuhan tujuan.",
+    "home.assurance.trace": "Traceable sourcing",
+    "home.assurance.traceDesc":
+      "Kemitraan langsung dengan petani dan UMKM untuk kesinambungan pasokan dan transparansi.",
+    "home.assurance.logistics": "Koordinasi logistik",
+    "home.assurance.logisticsDesc":
+      "Opsi pengiriman fleksibel dengan timeline jelas dan komunikasi proaktif.",
     "home.cta.title": "Siap Bermitra Dengan Kami?",
     "home.cta.subtitle":
       "Hubungi tim kami untuk mendiskusikan kebutuhan Anda dan temukan cara kami dapat melayani Anda.",
@@ -340,59 +405,70 @@ const translations: Record<Language, Record<string, string>> = {
     "about.hero.title": "Tentang Berdine Terra Global",
     "about.hero.subtitle":
       "Lahir dari Bumi, Dibangun dengan Kepercayaan.",
+    "about.hero.imageAlt": "Tim dan jaringan sourcing Berdine Terra Global",
     "about.whoAreWe": "Siapa Kami",
     "about.whoAreWeText1":
-      "Berdine Terra Global adalah perusahaan ekspor hasil alam Indonesia yang berfokus pada pengembangan petani dan UMKM lokal melalui kemitraan yang berkelanjutan.",
+      "Berdine Terra Global adalah eksportir komoditas unggulan dari Indonesia dengan fokus pada vanilla beans dan black pepper. Berlandaskan nilai \"Lahir dari Bumi, Dibangun dengan Kepercayaan\", kami membangun rantai pasok yang menghubungkan kebutuhan buyer internasional dengan kesejahteraan petani lokal.",
     "about.whoAreWeText2":
-      "Kami hadir untuk menjembatani potensi kekayaan alam Indonesia dengan kebutuhan pasar global, dengan memastikan setiap produk dikelola secara profesional, berkualitas, dan memenuhi standar perdagangan internasional.",
+      "Kami bekerja melalui kemitraan langsung dengan petani untuk memastikan kualitas, ketelusuran, dan keberlanjutan setiap produk. Dengan proses pengolahan terkontrol, quality control terstandarisasi, dan dokumentasi ekspor lengkap, kami menyediakan komoditas yang konsisten dan dapat diandalkan.",
     "about.whoAreWeText3":
-      "Dengan memanfaatkan sumber daya lokal dan membangun hubungan jangka panjang dengan para petani serta pelaku UMKM, Berdine Terra Global berkomitmen menciptakan nilai tambah yang berkelanjutan, tidak hanya bagi pasar internasional tetapi juga bagi komunitas lokal sebagai fondasi utama rantai pasok kami.",
+      "Tujuan kami yaitu menghadirkan nilai bagi pasar global sekaligus memberi dampak nyata bagi para petani yang menjadi fondasi utama perusahaan ini.",
     "about.byTheNumbers": "BERDINE TERRA GLOBAL",
     "about.countriesServed": "Negara yang Dilayani",
     "about.satisfiedClients": "Klien Puas di Seluruh Dunia",
     "about.tonsExported": "Ton Diekspor Per Tahun",
-    "about.mission": "Misi Kami",
-    "about.missionText":
-      "Menjadi perusahaan ekspor hasil bumi terkemuka di Indonesia yang dikenal secara global karena komitmennya terhadap kualitas, keberlanjutan, dan etika bisnis yang tinggi.",
-    "about.vision": "Visi Kami",
+    "about.mission": "Misi",
+    "about.missionText1":
+      "Membangun rantai pasok berbasis kepercayaan melalui kemitraan langsung dengan petani.",
+    "about.missionText2":
+      "Menyediakan vanilla beans dan black pepper dengan kualitas konsisten dan terstandarisasi.",
+    "about.missionText3":
+      "Menguatkan UMKM pertanian lokal agar mampu bersaing di pasar internasional.",
+    "about.missionText4":
+      "Memastikan setiap ekspor memenuhi standar dan dokumentasi resmi.",
+    "about.missionText5":
+      "Mendorong praktik produksi yang berkelanjutan.",
+    "about.vision": "Visi",
     "about.visionText":
-      "Berdine Terra Global berkomitmen menyediakan produk hasil bumi premium berstandar ekspor internasional melalui kemitraan yang saling menguntungkan dengan petani lokal, penerapan praktik bisnis berkelanjutan dari hulu ke hilir, serta perluasan pasar global untuk memperkuat citra positif produk Indonesia.",
+      "Menjadi eksportir agrikultur tepercaya yang mampu menghadirkan komoditas berkualitas ke pasar global, sekaligus memperkuat kesejahteraan dan kemandirian petani lokal melalui rantai pasok yang transparan, berkelanjutan, dan berintegritas.",
     "about.coreValues": "Nilai-Nilai Inti Kami",
-    "about.qualityExcellence": "Keunggulan Kualitas",
+    "about.qualityExcellence": "Kualitas",
     "about.qualityExcellenceDesc":
-      "Kami mempertahankan standar tertinggi dalam sourcing, pemrosesan, dan kontrol kualitas semua produk kami.",
+      "Setiap produk dipilih melalui proses seleksi ketat, termasuk pemeriksaan visual, sortasi grade, dan dokumentasi batch untuk menjamin konsistensi.",
     "about.sustainability": "Keberlanjutan",
     "about.sustainabilityDesc":
-      "Berkomitmen pada praktik ramah lingkungan dan kemitraan fair-trade dengan pemasok kami.",
+      "Kami bekerja dengan pemasok lokal menggunakan prinsip fair partnership untuk menciptakan manfaat ekonomi yang merata dari hulu ke hilir.",
     "about.reliability": "Keandalan",
     "about.reliabilityDesc":
-      "Pengiriman konsisten, komunikasi transparan, dan kemitraan yang dapat diandalkan dengan klien kami.",
-    "about.innovation": "Inovasi",
+      "Komunikasi jelas, pengiriman tepat waktu, dan pemenuhan spesifikasi menjadi fokus utama kami dalam membangun kepercayaan buyer internasional.",
+    "about.innovation": "Pengembangan Pasar",
     "about.innovationDesc":
-      "Terus meningkatkan proses kami dan mengeksplorasi peluang baru di pasar produk alami.",
-    "about.certifications": "Sertifikasi & Standar",
-    "about.organicCertified": "Bersertifikat Organik",
+      "Kami aktif mengidentifikasi peluang pasar baru dan menyesuaikan produk berdasarkan tren permintaan global.",
+    "about.certifications": "Standar & Dokumentasi",
+    "about.organicCertified": "Certificate of Analysis (COA)",
     "about.organicCertifiedDesc":
-      "memastikan bahwa semua produk pertanian bebas dari hama, penyakit, dan organisme berbahaya.",
-    "about.fairTrade": "Sertifikat Asal (Certificate of Origin)",
+      "Dokumen hasil uji laboratorium yang memastikan produk memenuhi spesifikasi dan standar yang berkualitas.",
+    "about.fairTrade": "Quality Inspection / QC Report",
     "about.fairTradeDesc":
-      "Sertifikat Asal (COO) memverifikasi negara asal produk dan menegaskan keasliannya.",
-    "about.isoCompliant": "Kontrol Mutu & Inspeksi",
+      "Laporan inspeksi dan kontrol kualitas yang mencatat kondisi, spesifikasi, dan kepatuhan produk sebelum pengiriman.",
+    "about.isoCompliant": "Export Documentation",
     "about.isoCompliantDesc":
-      "Prosedur kontrol mutu kami meliputi pengujian laboratorium, inspeksi visual, dan pendokumentasian semua produk. ",
+      "Mencakup Packing List, Commercial Invoice, Phytosanitary dan COO (Certificate of Origin)",
 
     // Products Page
     "products.hero.title": "Katalog Produk",
     "products.hero.subtitle":
-      "Jelajahi rangkaian lengkap produk alami premium kami dengan spesifikasi detail dan harga.",
+      "Jelajahi produk siap ekspor dengan spesifikasi jelas, kisaran harga, dan minimum order.",
+    "products.hero.imageAlt": "Katalog produk Berdine Terra Global",
     "products.filter.all": "Semua Produk",
     "products.filter.vanilla": "Vanilla Beans",
     "products.filter.pepper": "Black Pepper",
-    "products.filter.coffee": "Green Coffee",
     "products.price": "Harga",
     "products.minOrder": "Pesanan Min",
     "products.availability": "Ketersediaan",
     "products.origin": "Asal",
+    "products.varian": "Varian",
+    "products.grade": "Grade",
     "products.specifications": "Spesifikasi",
     "products.requestQuote": "Minta Penawaran",
     "products.downloadSpecs": "Unduh Spesifikasi",
@@ -422,6 +498,7 @@ const translations: Record<Language, Record<string, string>> = {
     "documentation.hero.title": "Dokumentasi & Panduan",
     "documentation.hero.subtitle":
       "Sumber daya komprehensif untuk membantu Anda memahami produk, proses pemesanan, dan praktik terbaik kami.",
+    "documentation.hero.imageAlt": "Dokumentasi ekspor dan panduan buyer",
     "documentation.guides": "Panduan Produk",
     "documentation.faq": "Pertanyaan yang Sering Diajukan",
     "documentation.orderingProcess": "Proses Pemesanan",
@@ -452,7 +529,7 @@ const translations: Record<Language, Record<string, string>> = {
     "documentation.guide1.topic3": "Penilaian aroma",
     "documentation.guide1.topic4": "Kondisi penyimpanan yang tepat",
     "documentation.guide1.topic5": "Umur simpan dan penanganan",
-    "documentation.guide2.title": "Pengolahan & Kualitas Lada Hitam",
+    "documentation.guide2.title": "Panduan Pemilihan Lada Hitam",
     "documentation.guide2.description": "Panduan komprehensif tentang varietas lada hitam, metode pengolahan, dan standar kualitas.",
     "documentation.guide2.topic1": "Varietas lada dan asal",
     "documentation.guide2.topic2": "Metode pengolahan",
@@ -476,7 +553,7 @@ const translations: Record<Language, Record<string, string>> = {
 
     // Documentation FAQ
     "documentation.faq1.question": "Berapa kuantitas pesanan minimum?",
-    "documentation.faq1.answer": "Kuantitas pesanan minimum bervariasi per produk. Vanilla beans: 10kg, Black pepper: 50kg, Green coffee: 100kg. Kami dapat mendiskusikan pengaturan khusus untuk pesanan yang lebih besar.",
+    "documentation.faq1.answer": "Kuantitas pesanan minimum bervariasi per produk. Vanilla beans 50kg dan Black pepper 100kg. Kami dapat mendiskusikan pengaturan khusus untuk pesanan yang lebih besar.",
     "documentation.faq2.question": "Apakah Anda menawarkan produk organik dan fair-trade?",
     "documentation.faq2.answer": "Ya, semua produk kami bersertifikat organik dan bersumber dari kemitraan fair-trade. Kami menjaga pelacakan penuh dari petani hingga ekspor.",
     "documentation.faq3.question": "Metode pembayaran apa yang Anda terima?",
@@ -496,6 +573,7 @@ const translations: Record<Language, Record<string, string>> = {
     "contact.hero.title": "Hubungi Kami",
     "contact.hero.subtitle":
       "Punya pertanyaan tentang produk kami atau siap melakukan pesanan? Kami ingin mendengar dari Anda.",
+    "contact.hero.imageAlt": "Kontak dan dukungan Berdine Terra Global",
     "contact.contactInfo": "Informasi Kontak",
     "contact.sendMessage": "Kirim Pesan Kami",
     "contact.fullName": "Nama Lengkap",
@@ -514,85 +592,68 @@ const translations: Record<Language, Record<string, string>> = {
     "contact.email": "Email",
     "contact.whatsapp": "Telepon",
     "contact.businessHours": "Jam Kerja",
-    "contact.businessHours.monFri": "Senin - Jumat: 9:00 AM - 6:00 PM",
-    "contact.businessHours.sat": "Sabtu: 10:00 AM - 4:00 PM",
-    "contact.businessHours.sun": "Minggu: Tutup",
+    "contact.businessHours.monFri": "Senin - Jumat : 9:00 AM - 6:00 PM",
+    "contact.businessHours.sat": "Sabtu : 10:00 AM - 4:00 PM",
+    "contact.businessHours.sun": "Minggu : Tutup",
     "contact.location": "Lokasi Kami",
     "contact.orContactVia": "Atau hubungi kami via",
     "contact.contactWhatsApp": "Hubungi via WhatsApp",
 
     // Footer
     "footer.companyDesc":
-      "Eksportir produk alami premium yang khusus dalam vanilla beans, black pepper, dan green coffee beans.",
+      "Produk alami Indonesia siap ekspor untuk buyer global, fokus pada vanilla beans dan black pepper.",
     "footer.quickLinks": "Tautan Cepat",
     "footer.resources": "Sumber Daya",
     "footer.documentation": "Dokumentasi",
     "footer.specifications": "Spesifikasi",
     "footer.faq": "FAQ",
+    "footer.shipping": "Pengiriman & Incoterms",
+    "footer.trust.docReady": "Dokumen ekspor siap",
+    "footer.trust.qc": "Laporan QC",
+    "footer.trust.traceable": "Traceable sourcing",
+    "footer.trust.global": "Pengiriman global",
     "footer.privacyPolicy": "Kebijakan Privasi",
     "footer.termsOfService": "Syarat Layanan",
     "footer.allRightsReserved": "Semua hak dilindungi.",
 
     // Product Names & Descriptions
-    "product.vanilla.gradeAPlus": "Vanilla Utuh Grade A+",
+    "product.vanilla.gradeAPlus": "Vanilla Utuh Premium Gourmet A+",
     "product.vanilla.gradeAPlusDesc":
-      "Vanila Indonesia (Planifolia) kelas premium tertinggi dengan aroma yang intens, creamy, dan kadar minyak tinggi. Diolah secara ahli dan dipilih manual untuk rasa maksimal, fleksibilitas, dan kesegaran. Ideal untuk aplikasi gourmet dan ekstrak vanila premium.",
+      "Vanilla Planifolia Indonesia berkualitas tertinggi (Gourmet A+) dengan aroma yang intens, creamy, manis, dan sangat kaya. Dipetik secara manual dari buah yang paling matang dan melalui proses pengeringan yang sangat selektif. Setiap pod dipilih secara manual berdasarkan panjang, kandungan minyak, tekstur, dan kesempurnaan visual. Pengeringan yang lebih lama dan pengendalian kelembapan yang lebih ketat menghasilkan pod yang sangat berminyak, berkilau, dan berdaging. Ideal untuk produk yang membutuhkan kejernihan rasa dan intensitas aroma yang tinggi.",
     "product.vanilla.gradeA": "Vanilla Utuh Grade A",
     "product.vanilla.gradeADesc":
-      "Vanila Indonesia (Planifolia) Premium dengan aroma manis yang kaya dan standar kualitas tinggi. Diolah dengan hati-hati dan dipilih secara manual untuk memastikan rasa yang konsisten, tekstur yang fleksibel, dan kesegaran. Cocok untuk produksi makanan, minuman, dan ekstrak vanila.",
-    "product.vanilla.gradeB": "Vanilla Utuh Grade B",
-    "product.vanilla.gradeBDesc":
-      "Vanila Indonesia (Planifolia) berkualitas tinggi dengan aroma yang menyenangkan dan standar kualitas baik. Diolah dan dipilih untuk memberikan rasa dan tekstur yang andal. Ideal untuk pengolahan makanan umum dan penggunaan komersial.",
-    "product.vanilla.gradeC": "Vanilla Utuh Grade C",
-    "product.vanilla.gradeCDesc":
-      "Vanila Indonesia (Planifolia) standar dengan standar kualitas dasar. Cocok untuk aplikasi makanan dasar dan produksi vanila yang hemat biaya.",
+      "Vanilla Planifolia Indonesia Grade A merupakan produk ekspor berkualitas premium yang diolah melalui proses pengeringan profesional untuk menghasilkan aroma manis dan creamy yang kuat dengan karakter rasa yang stabil. Polongnya panjang dengan permukaan berminyak dan warna cokelat gelap-hitam yang seragam. Teksturnya lembap dan lentur, menjadikannya ideal untuk industri makanan dan minuman, ekstraksi rasa, serta produk lainnya.",
     "product.pepper.whole": "Lada Hitam",
     "product.pepper.wholeDesc":
       "Biji Lada Hitam Indonesia memiliki aroma pedas yang kuat dan rasa pedas yang tajam, menjadikannya ideal untuk penggunaan kuliner, pengolahan makanan, dan produksi rempah-rempah. Dihasilkan melalui proses pengeringan dan pembersihan yang teliti untuk memenuhi standar kualitas ekspor.",
-    "product.coffee.robusta": "Green Coffee Beans - Robusta",
-    "product.coffee.robustaDesc":
-      "Biji kopi Robusta Indonesia dikenal karena tubuhnya yang kuat, keasaman yang rendah, dan rasa tanah yang kaya. Ditanam di dataran tinggi tropis Indonesia, bijih kopi ini ideal untuk kopi instan, campuran espresso, dan produksi kopi komersial.",
 
     // Product Specifications
     "product.vanilla.origin": "Indonesia",
-    "product.vanilla.gradeAPlus.grade": "Grade A+",
-    "product.vanilla.gradeAPlus.moisture": "25-35%",
-    "product.vanilla.gradeAPlus.length": "18-23 cm",
-    "product.vanilla.gradeAPlus.appearance": "Permukaan coklat gelap, sangat berminyak",
-    "product.vanilla.gradeAPlus.aroma": "Aroma vanila intens dan creamy",
-    "product.vanilla.gradeAPlus.packaging": "Dikemas vakum, 1kg per paket",
+    "product.vanilla.varian": "Planifolia",
+    "product.vanilla.gradeAPlus.grade": "Premium Gourmet A+",
+    "product.vanilla.gradeAPlus.moisture": "30-35%",
+    "product.vanilla.gradeAPlus.length": "20-25 cm",
+    "product.vanilla.gradeAPlus.texture": "Lembab, lentur, berdaging (fleksibel, tidak mudah patah)",
+    "product.vanilla.gradeAPlus.defect": "≤2%",
+    "product.vanilla.gradeAPlus.appearance": "Warna hitam pekat, permukaan berkilau dan sangat berminyak",
+    "product.vanilla.gradeAPlus.aroma": "Aroma vanila kuat dan creamy",
+    "product.vanilla.gradeAPlus.packaging": "Dikemas vakum",
     "product.vanilla.gradeA.grade": "Grade A",
-    "product.vanilla.gradeA.moisture": "25-35%",
-    "product.vanilla.gradeA.length": "18-23 cm",
-    "product.vanilla.gradeA.appearance": "Permukaan coklat gelap, berminyak",
+    "product.vanilla.gradeA.moisture": "25-30%",
+    "product.vanilla.gradeA.length": "16-20 cm",
+    "product.vanilla.gradeA.texture": "Lembap, berminyak, lentur",
+    "product.vanilla.gradeA.defect": "≤5%",
+    "product.vanilla.gradeA.appearance": "Warna coklat gelap dan berminyak",
     "product.vanilla.gradeA.aroma": "Aroma vanila yang kaya dan kompleks",
-    "product.vanilla.gradeA.packaging": "Dikemas vakum, 1kg per paket",
-    "product.vanilla.gradeB.grade": "Grade B",
-    "product.vanilla.gradeB.moisture": "20-30%",
-    "product.vanilla.gradeB.length": "18-20 cm",
-    "product.vanilla.gradeB.appearance": "Permukaan coklat, sedikit berminyak",
-    "product.vanilla.gradeB.aroma": "Aroma vanila yang menyenangkan",
-    "product.vanilla.gradeB.packaging": "Dikemas vakum, 1kg per paket",
-    "product.vanilla.gradeC.grade": "Grade C",
-    "product.vanilla.gradeC.moisture": "10-15%",
-    "product.vanilla.gradeC.length": "Semua Ukuran",
-    "product.vanilla.gradeC.appearance": "Permukaan coklat terang, kering",
-    "product.vanilla.gradeC.aroma": "Aroma vanila dasar",
-    "product.vanilla.gradeC.packaging": "Dikemas vakum, 1kg per paket",
+    "product.vanilla.gradeA.packaging": "Dikemas vakum",
     "product.pepper.origin": "Indonesia",
+    "product.pepper.grade": "Grade A",
     "product.pepper.type": "Biji lada utuh",
-    "product.pepper.size": "4-6 mm",
-    "product.pepper.moisture": "12-14%",
-    "product.pepper.pungency": "Tinggi (Scoville: 30,000-40,000)",
+    "product.pepper.size": "3,5mm-4,5mm",
+    "product.pepper.moisture": "12-13%",
+    "product.pepper.garbledLevel": "550",
     "product.pepper.appearance": "Hitam, berkilau, seragam",
-    "product.pepper.packaging": "Kantong 25kg",
-    "product.coffee.origin": "Indonesia",
-    "product.coffee.variety": "Robusta",
-    "product.coffee.size": "6-7mm",
-    "product.coffee.moisture": "11-13%",
-    "product.coffee.defects": "Grade A",
-    "product.coffee.cupping": "80+ poin",
-    "product.coffee.packaging": "Kantong 60kg",
+    "product.pepper.packaging": "Kantong 60kg",
   },
 };
 

@@ -19,42 +19,47 @@ export default function Home() {
   const products = [
     {
       id: 1,
+      name: t("product.vanilla.gradeAPlus"),
+      image: "/images/waa.jpeg",
+      description: t("product.vanilla.gradeAPlusDesc"),
+      href: "/products?category=vanilla",
+    },
+    {
+      id: 2,
       name: t("product.vanilla.gradeA"),
       image: "/images/waa.jpeg",
       description: t("product.vanilla.gradeADesc"),
       href: "/products?category=vanilla",
     },
     {
-      id: 2,
+      id: 3,
       name: t("product.pepper.whole"),
       image: "/images/laaa.jpg",
       description: t("product.pepper.wholeDesc"),
       href: "/products?category=pepper",
     },
-    {
-      id: 3,
-      name: t("product.coffee.robusta"),
-      image: "/images/kopie.jpeg",
-      description: t("product.coffee.robustaDesc"),
-      href: "/products?category=coffee",
-    },
   ];
 
   const highlights = [
     {
-      icon: Globe,
-      title: t("home.highlights.globalExport"),
-      description: t("home.highlights.globalExportDesc"),
+      icon: Award,
+      title: t("home.highlights.qualityControl"),
+      description: t("home.highlights.qualityControlDesc"),
     },
     {
-      icon: Award,
-      title: t("home.highlights.premiumQuality"),
-      description: t("home.highlights.premiumQualityDesc"),
+      icon: Globe,
+      title: t("home.highlights.documentation"),
+      description: t("home.highlights.documentationDesc"),
     },
     {
       icon: Leaf,
-      title: t("home.highlights.sustainable"),
-      description: t("home.highlights.sustainableDesc"),
+      title: t("home.highlights.suppliers"),
+      description: t("home.highlights.suppliersDesc"),
+    },
+    {
+      icon: ArrowRight,
+      title: t("home.highlights.capacity"),
+      description: t("home.highlights.capacityDesc"),
     },
   ];
 
@@ -68,7 +73,7 @@ export default function Home() {
           <div
             className="absolute inset-0 bg-cover bg-center"
             style={{
-              backgroundImage: "url('/images/qa.jpeg')",
+              backgroundImage: "url('/images/CA.png')",
               backgroundPosition: "center",
             }}
           >
@@ -76,11 +81,11 @@ export default function Home() {
           </div>
 
           <div className="relative container py-20 md:py-32 flex items-center min-h-[500px]">
-            <div className="max-w-2xl">
+            <div className="max-w-4xl">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
                 {t("home.hero.title")}
               </h1>
-              <p className="text-lg md:text-xl text-white/90 mb-8 max-w-xl">
+              <p className="text-lg md:text-xl text-white/90 mb-8 max-w-3xl">
                 {t("home.hero.subtitle")}
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
@@ -89,6 +94,13 @@ export default function Home() {
                     <Button className="bg-primary hover:bg-primary/90 text-white px-8 py-6 text-lg">
                       {t("home.hero.viewCatalog")}
                       <ArrowRight className="w-5 h-5 ml-2" />
+                    </Button>
+                  </a>
+                </Link>
+                <Link href="/contact">
+                  <a>
+                    <Button variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-primary px-8 py-6 text-lg">
+                      {t("home.hero.getQuote")}
                     </Button>
                   </a>
                 </Link>
@@ -113,18 +125,18 @@ export default function Home() {
         {/* Highlights Section */}
         <section className="py-16 md:py-24 bg-white dark:bg-slate-900">
           <div className="container">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {highlights.map((highlight, idx) => {
                 const Icon = highlight.icon;
                 return (
-                  <div key={idx} className="text-center">
-                    <div className="inline-flex items-center justify-center w-16 h-16 bg-secondary dark:bg-slate-800 rounded-lg mb-4">
-                      <Icon className="w-8 h-8 text-primary" />
+                  <div key={idx} className="bg-white dark:bg-slate-800 p-6 rounded-lg shadow-sm border border-border dark:border-slate-700 hover:shadow-md transition-shadow">
+                    <div className="inline-flex items-center justify-center w-12 h-12 bg-secondary dark:bg-slate-700 rounded-lg mb-4">
+                      <Icon className="w-6 h-6 text-primary" />
                     </div>
-                    <h3 className="text-xl font-bold mb-2 text-foreground dark:text-white">
+                    <h3 className="text-lg font-bold mb-2 text-foreground dark:text-white">
                       {highlight.title}
                     </h3>
-                    <p className="text-muted-foreground dark:text-slate-400">
+                    <p className="text-sm text-muted-foreground dark:text-slate-400">
                       {highlight.description}
                     </p>
                   </div>
@@ -159,12 +171,9 @@ export default function Home() {
                         />
                       </div>
                       <div className="p-6">
-                        <h3 className="text-xl font-bold mb-2 text-foreground dark:text-white">
+                        <h3 className="text-xl font-bold mb-4 text-foreground dark:text-white">
                           {product.name}
                         </h3>
-                        <p className="text-muted-foreground dark:text-slate-400 mb-4">
-                          {product.description}
-                        </p>
                         <div className="flex items-center text-primary font-semibold group-hover:gap-2 transition-all">
                           {t("home.products.learnMore")}
                           <ArrowRight className="w-4 h-4 ml-2" />

@@ -40,17 +40,6 @@ export default function Documentation() {
       ],
     },
     {
-      title: t("documentation.guide3.title"),
-      description: t("documentation.guide3.description"),
-      topics: [
-        t("documentation.guide3.topic1"),
-        t("documentation.guide3.topic2"),
-        t("documentation.guide3.topic3"),
-        t("documentation.guide3.topic4"),
-        t("documentation.guide3.topic5"),
-      ],
-    },
-    {
       title: t("documentation.guide4.title"),
       description: t("documentation.guide4.description"),
       topics: [
@@ -125,22 +114,31 @@ export default function Documentation() {
     <div className="min-h-screen flex flex-col bg-background dark:bg-slate-950">
       <Header />
 
-      <main className="flex-1">
+      <main id="main-content" className="flex-1">
         {/* Hero Section */}
-        <section className="bg-primary text-primary-foreground py-16 md:py-24 dark:bg-slate-900 relative overflow-hidden" style={{ backgroundImage: 'url(/images/produk.png)', backgroundSize: 'cover', backgroundPosition: 'center', backgroundBlendMode: 'overlay' }}>
-          <div className="absolute inset-0 bg-primary/70"></div>
-          <div className="container relative z-10">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">
+        <section className="relative overflow-hidden">
+          <div className="absolute inset-0">
+            <img
+              src="/images/BA.png"
+              alt={t("documentation.hero.imageAlt")}
+              className="w-full h-full object-cover"
+              loading="eager"
+              decoding="async"
+            />
+            <div className="absolute inset-0 bg-primary/70"></div>
+          </div>
+          <div className="container section-tight relative z-10">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">
               {t("documentation.hero.title")}
             </h1>
-            <p className="text-lg opacity-90 max-w-2xl">
+            <p className="text-lg opacity-90 max-w-2xl text-white">
               {t("documentation.hero.subtitle")}
             </p>
           </div>
         </section>
 
         {/* Guides Section */}
-        <section className="py-16 md:py-24 bg-white dark:bg-slate-900">
+        <section className="section bg-white dark:bg-slate-900">
           <div className="container">
             <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center text-foreground dark:text-white">
               {t("documentation.guides")}
@@ -182,7 +180,7 @@ export default function Documentation() {
         </section>
 
         {/* FAQ Section */}
-        <section className="py-16 md:py-24 bg-secondary/10 dark:bg-slate-800">
+        <section className="section surface-muted">
           <div className="container">
             <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center text-foreground dark:text-white">
               {t("documentation.faq")}
@@ -222,7 +220,7 @@ export default function Documentation() {
         </section>
 
         {/* Ordering Process */}
-        <section className="py-16 md:py-24 bg-white dark:bg-slate-900">
+        <section className="section bg-white dark:bg-slate-900">
           <div className="container">
             <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center text-foreground dark:text-white">
               {t("documentation.orderingProcess")}
@@ -251,7 +249,7 @@ export default function Documentation() {
         </section>
 
         {/* Support Section */}
-        <section className="py-16 md:py-24 bg-secondary/10 dark:bg-slate-800">
+        <section className="section surface-muted">
           <div className="container text-center">
             <h2 className="text-3xl font-bold mb-6 text-foreground dark:text-white">
               {t("documentation.needHelp")}

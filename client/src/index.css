@@ -1,5 +1,6 @@
 @import "tailwindcss";
 @import "tw-animate-css";
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Sora:wght@300;400;500;600;700&display=swap");
 
 @custom-variant dark (&:is(.dark *));
 
@@ -43,41 +44,40 @@
 }
 
 :root {
-  /* Berdine Terra Global - Organic Minimalism with Earth Tones */
-  /* Primary: Forest Green #2d5016 | Secondary: Sage Green #a8b89e | Background: Off-white #f9f8f6 | Accent: Warm Brown #8b7355 */
-  --primary: oklch(0.38 0.095 142.5);
-  --primary-foreground: oklch(0.98 0.001 286.375);
-  --sidebar-primary: oklch(0.38 0.095 142.5);
-  --sidebar-primary-foreground: oklch(0.98 0.001 286.375);
-  --chart-1: oklch(0.55 0.08 142.5);
-  --chart-2: oklch(0.45 0.09 142.5);
-  --chart-3: oklch(0.38 0.095 142.5);
-  --chart-4: oklch(0.32 0.08 142.5);
-  --chart-5: oklch(0.28 0.07 142.5);
-  --radius: 0.65rem;
-  --background: oklch(0.988 0.001 286.375);
-  --foreground: oklch(0.235 0.015 65);
+  /* Berdine Terra Global - Global Buyer Focused Palette */
+  --primary: oklch(0.33 0.09 150);
+  --primary-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.33 0.09 150);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --chart-1: oklch(0.62 0.08 150);
+  --chart-2: oklch(0.52 0.09 150);
+  --chart-3: oklch(0.43 0.1 150);
+  --chart-4: oklch(0.36 0.08 150);
+  --chart-5: oklch(0.3 0.06 150);
+  --radius: 0.9rem;
+  --background: oklch(0.985 0.004 90);
+  --foreground: oklch(0.2 0.03 70);
   --card: oklch(1 0 0);
-  --card-foreground: oklch(0.235 0.015 65);
+  --card-foreground: oklch(0.2 0.03 70);
   --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.235 0.015 65);
-  --secondary: oklch(0.65 0.04 142.5);
-  --secondary-foreground: oklch(0.985 0 0);
-  --muted: oklch(0.92 0.003 286.375);
-  --muted-foreground: oklch(0.552 0.016 285.938);
-  --accent: oklch(0.55 0.08 30);
+  --popover-foreground: oklch(0.2 0.03 70);
+  --secondary: oklch(0.84 0.03 140);
+  --secondary-foreground: oklch(0.2 0.03 70);
+  --muted: oklch(0.94 0.01 90);
+  --muted-foreground: oklch(0.45 0.02 80);
+  --accent: oklch(0.62 0.12 50);
   --accent-foreground: oklch(0.985 0 0);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.985 0 0);
-  --border: oklch(0.92 0.004 286.32);
-  --input: oklch(0.92 0.004 286.32);
-  --ring: oklch(0.38 0.095 142.5);
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.235 0.015 65);
-  --sidebar-accent: oklch(0.65 0.04 142.5);
-  --sidebar-accent-foreground: oklch(0.985 0 0);
-  --sidebar-border: oklch(0.92 0.004 286.32);
-  --sidebar-ring: oklch(0.38 0.095 142.5);
+  --border: oklch(0.88 0.01 90);
+  --input: oklch(0.88 0.01 90);
+  --ring: oklch(0.33 0.09 150);
+  --sidebar: oklch(0.99 0.002 90);
+  --sidebar-foreground: oklch(0.2 0.03 70);
+  --sidebar-accent: oklch(0.86 0.03 140);
+  --sidebar-accent-foreground: oklch(0.2 0.03 70);
+  --sidebar-border: oklch(0.88 0.01 90);
+  --sidebar-ring: oklch(0.33 0.09 150);
 }
 
 .dark {
@@ -125,14 +125,16 @@
   }
   body {
     @apply bg-background text-foreground;
-    font-family: 'Inter', sans-serif;
+    font-family: "Sora", system-ui, -apple-system, "Segoe UI", sans-serif;
     font-size: 16px;
-    line-height: 1.6;
+    line-height: 1.65;
+    background-image: radial-gradient(1200px 800px at 80% -10%, rgba(56, 91, 33, 0.08), transparent 60%),
+      radial-gradient(900px 600px at -10% 10%, rgba(122, 110, 74, 0.08), transparent 55%);
   }
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Playfair Display', serif;
-    font-weight: 700;
-    line-height: 1.2;
+    font-family: "Fraunces", "Times New Roman", serif;
+    font-weight: 600;
+    line-height: 1.18;
     margin-bottom: 1rem;
   }
   h1 {
@@ -151,6 +153,18 @@
   }
   p {
     margin-bottom: 1rem;
+  }
+  img {
+    display: block;
+    max-width: 100%;
+  }
+  a:focus-visible,
+  button:focus-visible,
+  input:focus-visible,
+  select:focus-visible,
+  textarea:focus-visible {
+    outline: 2px solid var(--ring);
+    outline-offset: 2px;
   }
   button:not(:disabled),
   [role="button"]:not([aria-disabled="true"]),
@@ -187,6 +201,51 @@
     padding-right: 1rem;
   }
 
+  .section {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
+  .section-tight {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
+  .surface-card {
+    background: color-mix(in oklab, white 92%, transparent);
+    border: 1px solid var(--border);
+    box-shadow: 0 10px 30px rgba(23, 34, 16, 0.08);
+    border-radius: 1.25rem;
+  }
+
+  .surface-muted {
+    background: linear-gradient(180deg, rgba(240, 241, 234, 0.6), rgba(249, 248, 244, 0.9));
+  }
+
+  .eyebrow {
+    font-size: 0.75rem;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--muted-foreground);
+  }
+
+  .pill {
+    border-radius: 999px;
+    padding: 0.35rem 0.85rem;
+    border: 1px solid var(--border);
+    background: rgba(255, 255, 255, 0.7);
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--foreground);
+  }
+
+  .hero-shell {
+    background: radial-gradient(1200px 600px at 10% 0%, rgba(47, 82, 31, 0.2), transparent 60%),
+      radial-gradient(900px 600px at 90% 10%, rgba(130, 104, 64, 0.22), transparent 55%),
+      linear-gradient(180deg, rgba(245, 244, 238, 0.85) 0%, rgba(255, 255, 255, 0.95) 70%);
+  }
+
   .flex {
     min-height: 0;
     min-width: 0;
@@ -210,6 +269,14 @@
     }
     h2 {
       font-size: 2.5rem;
+    }
+    .section {
+      padding-top: 6rem;
+      padding-bottom: 6rem;
+    }
+    .section-tight {
+      padding-top: 4rem;
+      padding-bottom: 4rem;
     }
   }
 }
