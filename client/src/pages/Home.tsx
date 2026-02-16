@@ -20,14 +20,14 @@ export default function Home() {
     {
       id: 1,
       name: t("product.vanilla.gradeAPlus"),
-      image: "/images/waa.jpeg",
+      image: "/images/ka.jpeg",
       description: t("product.vanilla.gradeAPlusDesc"),
       href: "/products?category=vanilla",
     },
     {
       id: 2,
       name: t("product.vanilla.gradeA"),
-      image: "/images/waa.jpeg",
+      image: "/images/la.jpeg",
       description: t("product.vanilla.gradeADesc"),
       href: "/products?category=vanilla",
     },

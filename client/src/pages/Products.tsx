@@ -23,7 +23,7 @@ export default function Products() {
       id: 1,
       category: "vanilla",
       name: t("product.vanilla.gradeAPlus"),
-      image: "/images/waa.jpeg",
+      image: "/images/ka.jpeg",
       variant: t("product.vanilla.varian"),
       specifications: {
         origin: t("product.vanilla.origin"),
@@ -45,7 +45,7 @@ export default function Products() {
       id: 2,
       category: "vanilla",
       name: t("product.vanilla.gradeA"),
-      image: "/images/waa.jpeg",
+      image: "/images/la.jpeg",
       variant: t("product.vanilla.varian"),
       specifications: {
         origin: t("product.vanilla.origin"),
