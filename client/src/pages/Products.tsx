@@ -121,7 +121,7 @@ export default function Products() {
               {t("products.hero.subtitle")}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 mt-8">
-              <a href="/Catalog_Berdine.pdf" download>
+              <a href="/Catalog.pdf" download>
                 <Button className="bg-white text-primary hover:bg-white/90 px-6 py-3">
                   {t("products.downloadPriceList")}
                 </Button>
@@ -293,7 +293,7 @@ export default function Products() {
             <p className="text-lg text-muted-foreground dark:text-slate-400 mb-8 max-w-2xl mx-auto">
               {t("products.priceListSubtitle")}
             </p>
-            <a href="/Catalog_Berdine.pdf" download>
+            <a href="/Catalog.pdf" download>
               <Button className="bg-primary hover:bg-primary/90 text-white px-8 py-6">
                 <Download className="w-5 h-5 mr-2" />
                 {t("products.downloadPriceList")}
