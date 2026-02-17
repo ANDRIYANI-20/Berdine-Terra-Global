@@ -150,10 +150,10 @@ const translations: Record<Language, Record<string, string>> = {
     "products.specifications": "Specifications",
     "products.requestQuote": "Request Quote",
     "products.downloadSpecs": "Download Specs",
-    "products.priceList": "Digital Product Catalog",
+    "products.priceList": "Documentation & Guides",
     "products.priceListSubtitle":
-      "Download our comprehensive product catalog with all products, specifications, and current pricing information.",
-    "products.downloadPriceList": "Download Product Catalog (PDF)",
+      "Comprehensive resources to help you understand our products, ordering process, and best practices.",
+    "products.downloadPriceList": "View The Documentation",
 
     // Product Specifications
     "product.vanilla.origin": "Indonesia",
@@ -472,10 +472,10 @@ const translations: Record<Language, Record<string, string>> = {
     "products.specifications": "Spesifikasi",
     "products.requestQuote": "Minta Penawaran",
     "products.downloadSpecs": "Unduh Spesifikasi",
-    "products.priceList": "Katalog Produk Digital",
+    "products.priceList": "Dokumentasi & Panduan",
     "products.priceListSubtitle":
-      "Unduh katalog produk digital komprehensif kami dengan semua produk, spesifikasi, dan informasi terkini.",
-    "products.downloadPriceList": "Unduh Katalog Produk (PDF)",
+      "Sumber daya komprehensif untuk membantu Anda memahami produk, proses pemesanan, dan praktik terbaik kami.",
+    "products.downloadPriceList": "Lihat Dokumentasi",
 
     // Portfolio Page
     "portfolio.hero.title": "Portofolio Kami",
