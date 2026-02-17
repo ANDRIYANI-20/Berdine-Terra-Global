@@ -153,7 +153,7 @@ const translations: Record<Language, Record<string, string>> = {
     "products.priceList": "Documentation & Guides",
     "products.priceListSubtitle":
       "Comprehensive resources to help you understand our products, ordering process, and best practices.",
-    "products.downloadPriceList": "Download Catalog PDF",
+    "products.downloadPriceList": "Download Catalog",
     "products.viewDocumentation": "View The Documentation",
 
     // Product Specifications
@@ -476,7 +476,7 @@ const translations: Record<Language, Record<string, string>> = {
     "products.priceList": "Dokumentasi & Panduan",
     "products.priceListSubtitle":
       "Sumber daya komprehensif untuk membantu Anda memahami produk, proses pemesanan, dan praktik terbaik kami.",
-    "products.downloadPriceList": "Unduh Katalog PDF",
+    "products.downloadPriceList": "Unduh Katalog",
     "products.viewDocumentation": "Lihat Dokumentasi",
 
     // Portfolio Page
