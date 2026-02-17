@@ -51,7 +51,7 @@ export default function Header() {
               <span className="text-sm sm:text-lg font-semibold text-white leading-none tracking-wide" style={{ fontFamily: 'Zen Serif, serif' }}>
                 BERDINE TERRA GLOBAL
               </span>
-              <span className="text-xs text-white/80 hidden sm:block">
+              <span className="text-xs text-white/80">
                 {t("nav.tagline")}
               </span>
             </div>
