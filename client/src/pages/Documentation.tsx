@@ -161,58 +161,6 @@ export default function Documentation() {
           </div>
         </section>
 
-        {/* Payment Terms Section */}
-        <section className="section bg-white dark:bg-slate-900">
-          <div className="container">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground dark:text-white">
-                {t("documentation.paymentTerms")}
-              </h2>
-              <p className="text-muted-foreground dark:text-slate-400 max-w-2xl mx-auto">
-                {t("documentation.paymentTermsSubtitle")}
-              </p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
-              {[
-                t("documentation.payment.tt5050"),
-                t("documentation.payment.ttFull"),
-                t("documentation.payment.lc"),
-              ].map((payment, idx) => (
-                <div
-                  key={idx}
-                  className="bg-white dark:bg-slate-800 p-6 rounded-lg border-2 border-border dark:border-slate-700 hover:border-primary dark:hover:border-primary hover:shadow-lg transition-all text-center"
-                >
-                  <div className="flex items-center justify-center w-12 h-12 bg-primary/10 dark:bg-primary/20 rounded-full mx-auto mb-4">
-                    <span className="text-2xl font-bold text-primary">{idx + 1}</span>
-                  </div>
-                  <p className="text-sm font-semibold text-foreground dark:text-white leading-relaxed">
-                    {payment}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Samples Section */}
-        <section className="section surface-muted">
-          <div className="container max-w-4xl">
-            <div className="bg-white dark:bg-slate-900 p-8 md:p-12 rounded-lg shadow-sm border border-border dark:border-slate-700">
-              <div className="text-center mb-6">
-                <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground dark:text-white">
-                  {t("documentation.samples")}
-                </h2>
-                <p className="text-sm text-muted-foreground dark:text-slate-400 mb-6">
-                  {t("documentation.samplesSubtitle")}
-                </p>
-              </div>
-              <p className="text-muted-foreground dark:text-slate-400 leading-relaxed text-center">
-                {t("documentation.samplesDesc")}
-              </p>
-            </div>
-          </div>
-        </section>
-
         {/* Guides Section */}
         <section className="section bg-white dark:bg-slate-900">
           <div className="container">
@@ -294,6 +242,58 @@ export default function Documentation() {
                   )}
                 </div>
               ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Payment Terms Section */}
+        <section className="section surface-muted">
+          <div className="container">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground dark:text-white">
+                {t("documentation.paymentTerms")}
+              </h2>
+              <p className="text-muted-foreground dark:text-slate-400 max-w-2xl mx-auto">
+                {t("documentation.paymentTermsSubtitle")}
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+              {[
+                t("documentation.payment.tt5050"),
+                t("documentation.payment.ttFull"),
+                t("documentation.payment.lc"),
+              ].map((payment, idx) => (
+                <div
+                  key={idx}
+                  className="bg-white dark:bg-slate-900 p-6 rounded-lg border-2 border-border dark:border-slate-700 hover:border-primary dark:hover:border-primary hover:shadow-lg transition-all text-center"
+                >
+                  <div className="flex items-center justify-center w-12 h-12 bg-primary/10 dark:bg-primary/20 rounded-full mx-auto mb-4">
+                    <span className="text-2xl font-bold text-primary">{idx + 1}</span>
+                  </div>
+                  <p className="text-sm font-semibold text-foreground dark:text-white leading-relaxed">
+                    {payment}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Samples Section */}
+        <section className="section bg-white dark:bg-slate-900">
+          <div className="container max-w-4xl">
+            <div className="bg-white dark:bg-slate-900 p-8 md:p-12 rounded-lg shadow-sm border border-border dark:border-slate-700">
+              <div className="text-center mb-6">
+                <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground dark:text-white">
+                  {t("documentation.samples")}
+                </h2>
+                <p className="text-sm text-muted-foreground dark:text-slate-400 mb-6">
+                  {t("documentation.samplesSubtitle")}
+                </p>
+              </div>
+              <p className="text-muted-foreground dark:text-slate-400 leading-relaxed text-center">
+                {t("documentation.samplesDesc")}
+              </p>
             </div>
           </div>
         </section>
