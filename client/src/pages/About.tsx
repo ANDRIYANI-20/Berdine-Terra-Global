@@ -106,40 +106,58 @@ export default function About() {
 
         {/* Mission & Vision */}
         <section className="section surface-muted">
-          <div className="container">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-              <div className="bg-white dark:bg-slate-900 p-8 rounded-lg shadow-sm border border-border dark:border-slate-700">
-                <h3 className="text-2xl font-bold mb-6 text-primary">
-                  {t("about.vision")}
-                </h3>
-                <p className="text-lg text-muted-foreground dark:text-slate-400 leading-relaxed">
+          <div className="container max-w-5xl">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground dark:text-white">
+                Mission & Vision
+              </h2>
+            </div>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              {/* Vision Card */}
+              <div className="bg-white dark:bg-slate-900 p-8 rounded-lg shadow-lg border-t-4 border-primary">
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="flex items-center justify-center w-12 h-12 bg-primary/10 rounded-lg">
+                    <span className="text-2xl">🎯</span>
+                  </div>
+                  <h3 className="text-2xl font-bold text-primary">
+                    {t("about.vision")}
+                  </h3>
+                </div>
+                <p className="text-base text-foreground dark:text-white leading-relaxed">
                   {t("about.visionText")}
                 </p>
               </div>
-              <div className="bg-white dark:bg-slate-900 p-8 rounded-lg shadow-sm border border-border dark:border-slate-700">
-                <h3 className="text-2xl font-bold mb-6 text-primary">
-                  {t("about.mission")}
-                </h3>
-                <ol className="space-y-3 text-lg text-muted-foreground dark:text-slate-400">
-                  <li className="flex gap-3">
-                    <span className="font-bold text-primary flex-shrink-0">1.</span>
-                    <span>{t("about.missionText1")}</span>
+
+              {/* Mission Card */}
+              <div className="bg-white dark:bg-slate-900 p-8 rounded-lg shadow-lg border-t-4 border-primary">
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="flex items-center justify-center w-12 h-12 bg-primary/10 rounded-lg">
+                    <span className="text-2xl">🚀</span>
+                  </div>
+                  <h3 className="text-2xl font-bold text-primary">
+                    {t("about.mission")}
+                  </h3>
+                </div>
+                <ol className="space-y-4">
+                  <li className="flex gap-3 items-start">
+                    <span className="flex items-center justify-center w-8 h-8 bg-primary text-white rounded-full font-bold text-sm flex-shrink-0">1</span>
+                    <span className="text-base text-foreground dark:text-white leading-relaxed pt-1">{t("about.missionText1")}</span>
                   </li>
-                  <li className="flex gap-3">
-                    <span className="font-bold text-primary flex-shrink-0">2.</span>
-                    <span>{t("about.missionText2")}</span>
+                  <li className="flex gap-3 items-start">
+                    <span className="flex items-center justify-center w-8 h-8 bg-primary text-white rounded-full font-bold text-sm flex-shrink-0">2</span>
+                    <span className="text-base text-foreground dark:text-white leading-relaxed pt-1">{t("about.missionText2")}</span>
                   </li>
-                  <li className="flex gap-3">
-                    <span className="font-bold text-primary flex-shrink-0">3.</span>
-                    <span>{t("about.missionText3")}</span>
+                  <li className="flex gap-3 items-start">
+                    <span className="flex items-center justify-center w-8 h-8 bg-primary text-white rounded-full font-bold text-sm flex-shrink-0">3</span>
+                    <span className="text-base text-foreground dark:text-white leading-relaxed pt-1">{t("about.missionText3")}</span>
                   </li>
-                  <li className="flex gap-3">
-                    <span className="font-bold text-primary flex-shrink-0">4.</span>
-                    <span>{t("about.missionText4")}</span>
+                  <li className="flex gap-3 items-start">
+                    <span className="flex items-center justify-center w-8 h-8 bg-primary text-white rounded-full font-bold text-sm flex-shrink-0">4</span>
+                    <span className="text-base text-foreground dark:text-white leading-relaxed pt-1">{t("about.missionText4")}</span>
                   </li>
-                  <li className="flex gap-3">
-                    <span className="font-bold text-primary flex-shrink-0">5.</span>
-                    <span>{t("about.missionText5")}</span>
+                  <li className="flex gap-3 items-start">
+                    <span className="flex items-center justify-center w-8 h-8 bg-primary text-white rounded-full font-bold text-sm flex-shrink-0">5</span>
+                    <span className="text-base text-foreground dark:text-white leading-relaxed pt-1">{t("about.missionText5")}</span>
                   </li>
                 </ol>
               </div>
