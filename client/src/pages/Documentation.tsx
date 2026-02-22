@@ -348,23 +348,12 @@ export default function Documentation() {
             <p className="text-lg text-white/90 mb-8 max-w-2xl mx-auto">
               {t("documentation.cta.subtitle")}
             </p>
-            <div className="flex flex-col sm:flex-row justify-center gap-4">
+            <div className="flex justify-center">
               <Link href="/contact">
                 <Button className="bg-white text-primary hover:bg-white/90 px-8 py-3 text-lg font-semibold shadow-lg hover:shadow-xl transition-all">
                   {t("documentation.cta.requestQuote")}
                 </Button>
               </Link>
-              <a
-                href="mailto:Partner@berdineterraglobal.com"
-                className="inline-flex"
-              >
-                <Button
-                  variant="outline"
-                  className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-primary px-8 py-3 text-lg font-semibold"
-                >
-                  {t("documentation.cta.contactTeam")}
-                </Button>
-              </a>
             </div>
           </div>
         </section>
