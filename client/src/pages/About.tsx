@@ -167,21 +167,30 @@ export default function About() {
 
         {/* Core Values */}
         <section className="section bg-white dark:bg-slate-900">
-          <div className="container">
-            <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center text-foreground dark:text-white">
-              {t("about.coreValues")}
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="container max-w-6xl">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground dark:text-white">
+                {t("about.coreValues")}
+              </h2>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {values.map((value, idx) => (
-                <div key={idx} className="flex gap-4">
-                  <CheckCircle className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
-                  <div>
-                    <h3 className="text-xl font-bold mb-2 text-foreground dark:text-white">
-                      {value.title}
-                    </h3>
-                    <p className="text-muted-foreground dark:text-slate-400">
-                      {value.description}
-                    </p>
+                <div 
+                  key={idx} 
+                  className="bg-secondary/10 dark:bg-slate-800 p-6 rounded-lg border border-border dark:border-slate-700 hover:shadow-lg hover:border-primary/30 transition-all"
+                >
+                  <div className="flex items-start gap-4">
+                    <div className="flex items-center justify-center w-12 h-12 bg-primary/10 rounded-lg flex-shrink-0">
+                      <CheckCircle className="w-6 h-6 text-primary" />
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="text-xl font-bold mb-3 text-foreground dark:text-white">
+                        {value.title}
+                      </h3>
+                      <p className="text-base text-foreground dark:text-white leading-relaxed">
+                        {value.description}
+                      </p>
+                    </div>
                   </div>
                 </div>
               ))}
@@ -191,35 +200,49 @@ export default function About() {
 
         {/* Certifications */}
         <section className="section surface-muted">
-          <div className="container">
-            <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center text-foreground dark:text-white">
-              {t("about.certifications")}
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="bg-white dark:bg-slate-900 p-8 rounded-lg shadow-sm border border-border dark:border-slate-700 text-center">
-                <div className="text-4xl font-bold text-primary mb-2">✓</div>
-                <h3 className="text-xl font-bold mb-2 text-foreground dark:text-white">
+          <div className="container max-w-6xl">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground dark:text-white">
+                {t("about.certifications")}
+              </h2>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div className="bg-white dark:bg-slate-900 p-8 rounded-lg shadow-lg border-t-4 border-primary hover:shadow-xl transition-shadow">
+                <div className="flex justify-center mb-4">
+                  <div className="flex items-center justify-center w-16 h-16 bg-primary/10 rounded-full">
+                    <div className="text-3xl font-bold text-primary">✓</div>
+                  </div>
+                </div>
+                <h3 className="text-lg font-bold mb-3 text-foreground dark:text-white text-center">
                   {t("about.organicCertified")}
                 </h3>
-                <p className="text-muted-foreground dark:text-slate-400">
+                <p className="text-sm text-foreground dark:text-white text-center leading-relaxed">
                   {t("about.organicCertifiedDesc")}
                 </p>
               </div>
-              <div className="bg-white dark:bg-slate-900 p-8 rounded-lg shadow-sm border border-border dark:border-slate-700 text-center">
-                <div className="text-4xl font-bold text-primary mb-2">✓</div>
-                <h3 className="text-xl font-bold mb-2 text-foreground dark:text-white">
+              <div className="bg-white dark:bg-slate-900 p-8 rounded-lg shadow-lg border-t-4 border-primary hover:shadow-xl transition-shadow">
+                <div className="flex justify-center mb-4">
+                  <div className="flex items-center justify-center w-16 h-16 bg-primary/10 rounded-full">
+                    <div className="text-3xl font-bold text-primary">✓</div>
+                  </div>
+                </div>
+                <h3 className="text-lg font-bold mb-3 text-foreground dark:text-white text-center">
                   {t("about.fairTrade")}
                 </h3>
-                <p className="text-muted-foreground dark:text-slate-400">
+                <p className="text-sm text-foreground dark:text-white text-center leading-relaxed">
                   {t("about.fairTradeDesc")}
                 </p>
               </div>
-              <div className="bg-white dark:bg-slate-900 p-8 rounded-lg shadow-sm border border-border dark:border-slate-700 text-center">
-                <div className="text-4xl font-bold text-primary mb-2">✓</div>
-                <h3 className="text-xl font-bold mb-2 text-foreground dark:text-white">
+              <div className="bg-white dark:bg-slate-900 p-8 rounded-lg shadow-lg border-t-4 border-primary hover:shadow-xl transition-shadow">
+                <div className="flex justify-center mb-4">
+                  <div className="flex items-center justify-center w-16 h-16 bg-primary/10 rounded-full">
+                    <div className="text-3xl font-bold text-primary">✓</div>
+                  </div>
+                </div>
+                <h3 className="text-lg font-bold mb-3 text-foreground dark:text-white text-center">
                   {t("about.isoCompliant")}
                 </h3>
-                <p className="text-muted-foreground dark:text-slate-400">
+                <p className="text-sm text-foreground dark:text-white text-center leading-relaxed">
                   {t("about.isoCompliantDesc")}
                 </p>
               </div>
