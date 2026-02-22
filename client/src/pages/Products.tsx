@@ -127,7 +127,7 @@ export default function Products() {
                   {t("products.downloadPriceList")}
                 </Button>
               </a>
-              <Link href="/contact#rfq">
+              <Link href="/contact">
                 <Button variant="outline" className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-primary px-8 py-6 text-lg font-semibold">
                   Request Quote
                 </Button>
