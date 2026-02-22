@@ -47,7 +47,13 @@ const translations: Record<Language, Record<string, string>> = {
     "home.quickFacts.leadTime": "Lead time: 1–3 weeks",
     "home.quickFacts.leadTimeDesc": "Typical processing and loading time 1-3 weeks from order confirmation, depending on product availability and volume.",
     "home.documents.title": "Documents You'll Receive",
-    "home.highlights.qualityControlDesc":
+    "home.documents.subtitle": "Complete export documentation for hassle-free customs clearance",
+    "home.documents.commercial": "Commercial Invoice & Packing List",
+    "home.documents.coo": "Certificate of Origin (COO)",
+    "home.documents.phyto": "Phytosanitary Certificate (when required)",
+    "home.documents.export": "Export declaration & supporting documents",
+    "home.documents.coa": "COA / QC report (batch-based, available on request)",
+    "home.highlights.qualityControl": "Quality-Controlled Supply Chain",
       "Quality standards from upstream to delivery with complete documentation.",
     "home.highlights.documentation": "Export-Ready Documentation",
     "home.highlights.documentationDesc":
@@ -442,7 +448,13 @@ const translations: Record<Language, Record<string, string>> = {
     "home.quickFacts.leadTime": "Lead time: 1–3 minggu",
     "home.quickFacts.leadTimeDesc": "Waktu pemrosesan dan loading tipikal 1-3 minggu dari konfirmasi pesanan, tergantung ketersediaan produk dan volume.",
     "home.documents.title": "Dokumen yang Akan Anda Terima",
-    "home.highlights.qualityControlDesc":
+    "home.documents.subtitle": "Dokumentasi ekspor lengkap untuk bea cukai tanpa hambatan",
+    "home.documents.commercial": "Commercial Invoice & Packing List",
+    "home.documents.coo": "Certificate of Origin (COO)",
+    "home.documents.phyto": "Phytosanitary Certificate (bila diperlukan)",
+    "home.documents.export": "Deklarasi ekspor & dokumen pendukung",
+    "home.documents.coa": "COA / Laporan QC (per batch, tersedia atas permintaan)",
+    "home.highlights.qualityControl": "Rantai Pasokan Terkontrol Kualitas",
       "Standar mutu dari hulu hingga pengiriman dengan dokumentasi lengkap.",
     "home.highlights.documentation": "Dokumentasi Siap Ekspor",
     "home.highlights.documentationDesc":
