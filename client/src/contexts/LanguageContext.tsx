@@ -135,29 +135,37 @@ const translations: Record<Language, Record<string, string>> = {
 
     // Compliance & Certifications
     "about.compliance.title": "Compliance & Certifications",
+    "about.compliance.subtitle": "Flexible certification arrangements based on your market requirements",
     "about.compliance.text":
       "We are a legally registered Indonesian company. Product certifications and additional compliance requirements can be arranged based on buyer needs and destination market requirements. COA/QC documentation can be provided per batch upon request.",
 
     // Quality Control Workflow
     "about.qcWorkflow.title": "Quality Control Workflow",
+    "about.qcWorkflow.subtitle": "Our 5-step process ensures consistent quality from farm to shipment",
     "about.qcWorkflow.step1": "Sourcing & Traceability",
-    "about.qcWorkflow.step1Desc": "Direct partnerships with verified farmers ensuring full origin transparency",
+    "about.qcWorkflow.step1Desc": "Direct partnerships with verified farmers ensuring full origin transparency and sustainable sourcing practices",
     "about.qcWorkflow.step2": "Sorting & Grading",
-    "about.qcWorkflow.step2Desc": "Visual inspection and classification by size, moisture, and quality grade",
+    "about.qcWorkflow.step2Desc": "Professional visual inspection and classification by size, moisture content, and quality grade standards",
     "about.qcWorkflow.step3": "Moisture Control & Batch Preparation",
-    "about.qcWorkflow.step3Desc": "Controlled drying and storage to meet export specifications",
+    "about.qcWorkflow.step3Desc": "Controlled drying and storage facilities to meet exact export specifications and prevent spoilage",
     "about.qcWorkflow.step4": "Packing (Vacuum/Bags)",
-    "about.qcWorkflow.step4Desc": "Professional packaging to preserve quality during transit",
+    "about.qcWorkflow.step4Desc": "Professional packaging using vacuum sealing or specialized bags to preserve quality during international transit",
     "about.qcWorkflow.step5": "Pre-shipment QC + COA (upon request)",
-    "about.qcWorkflow.step5Desc": "Final quality inspection with documentation available for buyers",
+    "about.qcWorkflow.step5Desc": "Final quality inspection with detailed documentation and Certificate of Analysis available for all buyers",
 
     // Key Capabilities
     "about.capabilities.title": "Key Capabilities",
+    "about.capabilities.subtitle": "Essential information for procurement planning and logistics",
     "about.capabilities.port": "FOB Port Panjang (Lampung)",
+    "about.capabilities.portDesc": "Main export gateway with efficient customs clearance and container handling",
     "about.capabilities.leadTime": "Lead time 1–3 weeks",
+    "about.capabilities.leadTimeDesc": "Fast turnaround from order confirmation to shipment readiness",
     "about.capabilities.coa": "COA available",
+    "about.capabilities.coaDesc": "Certificate of Analysis provided per batch with detailed lab test results",
     "about.capabilities.payment": "T/T & L/C supported",
+    "about.capabilities.paymentDesc": "Flexible payment terms including Telegraphic Transfer and Letter of Credit",
     "about.capabilities.moq": "MOQ: Vanilla 50 kg, Pepper 100 kg",
+    "about.capabilities.moqDesc": "Accessible minimum order quantities suitable for both trial and bulk orders",
 
     // Products Page
     "products.hero.title": "Product Catalog",
@@ -484,29 +492,37 @@ const translations: Record<Language, Record<string, string>> = {
 
     // Compliance & Certifications
     "about.compliance.title": "Kepatuhan & Sertifikasi",
+    "about.compliance.subtitle": "Pengaturan sertifikasi fleksibel berdasarkan persyaratan pasar Anda",
     "about.compliance.text":
       "Kami adalah perusahaan Indonesia yang terdaftar secara resmi. Sertifikasi produk dan persyaratan kepatuhan tambahan dapat diatur berdasarkan kebutuhan pembeli dan persyaratan pasar tujuan. Dokumentasi COA/QC dapat disediakan per batch sesuai permintaan.",
 
     // Quality Control Workflow
     "about.qcWorkflow.title": "Alur Kontrol Kualitas",
+    "about.qcWorkflow.subtitle": "Proses 5 langkah kami memastikan kualitas konsisten dari petani hingga pengiriman",
     "about.qcWorkflow.step1": "Pengadaan & Ketertelusuran",
-    "about.qcWorkflow.step1Desc": "Kemitraan langsung dengan petani terverifikasi memastikan transparansi asal-usul penuh",
+    "about.qcWorkflow.step1Desc": "Kemitraan langsung dengan petani terverifikasi memastikan transparansi asal-usul penuh dan praktik pengadaan berkelanjutan",
     "about.qcWorkflow.step2": "Penyortiran & Penilaian",
-    "about.qcWorkflow.step2Desc": "Pemeriksaan visual dan klasifikasi berdasarkan ukuran, kelembaban, dan tingkat kualitas",
+    "about.qcWorkflow.step2Desc": "Pemeriksaan visual profesional dan klasifikasi berdasarkan ukuran, kadar kelembaban, dan standar tingkat kualitas",
     "about.qcWorkflow.step3": "Kontrol Kelembaban & Persiapan Batch",
-    "about.qcWorkflow.step3Desc": "Pengeringan dan penyimpanan terkontrol untuk memenuhi spesifikasi ekspor",
+    "about.qcWorkflow.step3Desc": "Fasilitas pengeringan dan penyimpanan terkontrol untuk memenuhi spesifikasi ekspor yang tepat dan mencegah kerusakan",
     "about.qcWorkflow.step4": "Pengemasan (Vakum/Kantong)",
-    "about.qcWorkflow.step4Desc": "Pengemasan profesional untuk mempertahankan kualitas selama transit",
+    "about.qcWorkflow.step4Desc": "Pengemasan profesional menggunakan penyegelan vakum atau kantong khusus untuk mempertahankan kualitas selama transit internasional",
     "about.qcWorkflow.step5": "QC Pra-pengiriman + COA (sesuai permintaan)",
-    "about.qcWorkflow.step5Desc": "Inspeksi kualitas akhir dengan dokumentasi tersedia untuk pembeli",
+    "about.qcWorkflow.step5Desc": "Inspeksi kualitas akhir dengan dokumentasi terperinci dan Certificate of Analysis tersedia untuk semua pembeli",
 
     // Key Capabilities
     "about.capabilities.title": "Kemampuan Utama",
+    "about.capabilities.subtitle": "Informasi penting untuk perencanaan pengadaan dan logistik",
     "about.capabilities.port": "FOB Pelabuhan Panjang (Lampung)",
+    "about.capabilities.portDesc": "Gerbang ekspor utama dengan bea cukai yang efisien dan penanganan kontainer",
     "about.capabilities.leadTime": "Lead time 1–3 minggu",
+    "about.capabilities.leadTimeDesc": "Waktu penyelesaian cepat dari konfirmasi pesanan hingga kesiapan pengiriman",
     "about.capabilities.coa": "COA tersedia",
+    "about.capabilities.coaDesc": "Certificate of Analysis disediakan per batch dengan hasil uji laboratorium terperinci",
     "about.capabilities.payment": "T/T & L/C didukung",
+    "about.capabilities.paymentDesc": "Syarat pembayaran fleksibel termasuk Telegraphic Transfer dan Letter of Credit",
     "about.capabilities.moq": "MOQ: Vanilla 50 kg, Lada 100 kg",
+    "about.capabilities.moqDesc": "Kuantitas pesanan minimum yang dapat diakses cocok untuk pesanan percobaan dan dalam jumlah besar",
 
     // Products Page
     "products.hero.title": "Katalog Produk",

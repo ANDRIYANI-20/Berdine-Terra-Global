@@ -23,7 +23,25 @@ export default function Contact() {
     message: "",
   });
 
+  const [rfqData, setRfqData] = useState({
+    product: "",
+    gradeSpec: "",
+    quantity: "",
+    incoterms: "",
+    destinationPort: "",
+    country: "",
+    targetDeliveryDate: "",
+    companyName: "",
+    website: "",
+    email: "",
+    phoneWhatsapp: "",
+    requirements: "",
+  });
+
   const [submitted, setSubmitted] = useState(false);
+  const [rfqSubmitted, setRfqSubmitted] = useState(false);
+  const [showCopySuccess, setShowCopySuccess] = useState(false);
+  const [rfqErrors, setRfqErrors] = useState<Record<string, string>>({});
   const { t } = useLanguage();
 
   const handleChange = (
@@ -70,6 +88,134 @@ export default function Contact() {
 
   const handleWhatsApp = () => {
     window.open("https://wa.me/6288975742032", "_blank");
+  };
+
+  // RFQ handlers
+  const handleRfqChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
+  ) => {
+    const { name, value } = e.target;
+    setRfqData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+    // Clear error when user starts typing
+    if (rfqErrors[name]) {
+      setRfqErrors((prev) => {
+        const newErrors = { ...prev };
+        delete newErrors[name];
+        return newErrors;
+      });
+    }
+  };
+
+  const validateRfqForm = (): boolean => {
+    const errors: Record<string, string> = {};
+    
+    if (!rfqData.product) errors.product = t("contact.rfq.requiredField");
+    if (!rfqData.gradeSpec) errors.gradeSpec = t("contact.rfq.requiredField");
+    if (!rfqData.quantity) errors.quantity = t("contact.rfq.requiredField");
+    if (!rfqData.incoterms) errors.incoterms = t("contact.rfq.requiredField");
+    if (!rfqData.destinationPort) errors.destinationPort = t("contact.rfq.requiredField");
+    if (!rfqData.country) errors.country = t("contact.rfq.requiredField");
+    if (!rfqData.email) errors.email = t("contact.rfq.requiredField");
+    
+    setRfqErrors(errors);
+    return Object.keys(errors).length === 0;
+  };
+
+  const formatRfqBody = (): string => {
+    return `REQUEST FOR QUOTATION (RFQ)
+
+PRODUCT DETAILS:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Product: ${rfqData.product}
+Grade/Specification: ${rfqData.gradeSpec}
+Quantity: ${rfqData.quantity} kg
+Incoterms: ${rfqData.incoterms}
+
+SHIPPING DETAILS:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Destination Port: ${rfqData.destinationPort}
+Country: ${rfqData.country}
+Target Delivery Date: ${rfqData.targetDeliveryDate || "As soon as possible"}
+
+BUYER INFORMATION:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Company Name: ${rfqData.companyName || "Not provided"}
+Website: ${rfqData.website || "Not provided"}
+Email: ${rfqData.email}
+Phone/WhatsApp: ${rfqData.phoneWhatsapp || "Not provided"}
+
+ADDITIONAL REQUIREMENTS:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+${rfqData.requirements || "No additional requirements specified"}
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+This RFQ was submitted via Berdine Terra Global website.`;
+  };
+
+  const handleRfqSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    if (!validateRfqForm()) {
+      return;
+    }
+
+    const subject = `RFQ - ${rfqData.product} - ${rfqData.quantity}kg - ${rfqData.incoterms}`;
+    const body = formatRfqBody();
+
+    const mailtoUrl = `mailto:Partner@berdineterraglobal.com?subject=${encodeURIComponent(
+      subject
+    )}&body=${encodeURIComponent(body)}`;
+
+    window.open(mailtoUrl, "_blank");
+
+    setRfqSubmitted(true);
+    setTimeout(() => {
+      setRfqData({
+        product: "",
+        gradeSpec: "",
+        quantity: "",
+        incoterms: "",
+        destinationPort: "",
+        country: "",
+        targetDeliveryDate: "",
+        companyName: "",
+        website: "",
+        email: "",
+        phoneWhatsapp: "",
+        requirements: "",
+      });
+      setRfqSubmitted(false);
+    }, 5000);
+  };
+
+  const handleCopyRfq = async () => {
+    const rfqText = formatRfqBody();
+    
+    try {
+      await navigator.clipboard.writeText(rfqText);
+      setShowCopySuccess(true);
+      setTimeout(() => setShowCopySuccess(false), 3000);
+    } catch (err) {
+      // Fallback for older browsers
+      const textArea = document.createElement("textarea");
+      textArea.value = rfqText;
+      textArea.style.position = "fixed";
+      textArea.style.left = "-999999px";
+      document.body.appendChild(textArea);
+      textArea.focus();
+      textArea.select();
+      try {
+        document.execCommand('copy');
+        setShowCopySuccess(true);
+        setTimeout(() => setShowCopySuccess(false), 3000);
+      } catch (err) {
+        console.error('Failed to copy', err);
+      }
+      document.body.removeChild(textArea);
+    }
   };
 
   const contactInfo = [
@@ -292,6 +438,269 @@ export default function Contact() {
                   )}
                 </div>
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* RFQ Form Section */}
+        <section id="rfq" className="section bg-white dark:bg-slate-950">
+          <div className="container max-w-4xl">
+            <div className="text-center mb-8">
+              <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground dark:text-white">
+                {t("contact.rfq.title")}
+              </h2>
+              <p className="text-lg text-muted-foreground dark:text-slate-400">
+                {t("contact.rfq.helper")}
+              </p>
+            </div>
+
+            <div className="bg-white dark:bg-slate-900 p-8 rounded-lg shadow-sm border border-border dark:border-slate-700">
+              {rfqSubmitted ? (
+                <div className="bg-secondary/20 border border-secondary p-6 rounded-lg text-center">
+                  <p className="text-lg font-semibold text-primary mb-2">
+                    {t("contact.rfq.emailDraftOpened")}
+                  </p>
+                  <p className="text-muted-foreground dark:text-slate-400">
+                    {t("contact.thankYouText")}
+                  </p>
+                </div>
+              ) : (
+                <form onSubmit={handleRfqSubmit} className="space-y-6">
+                  {/* Product */}
+                  <div>
+                    <label className="block text-sm font-semibold mb-2 text-foreground dark:text-white">
+                      {t("contact.rfq.product")} *
+                    </label>
+                    <select
+                      name="product"
+                      value={rfqData.product}
+                      onChange={handleRfqChange}
+                      className={`w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary bg-white dark:bg-slate-800 text-foreground dark:text-white ${
+                        rfqErrors.product ? "border-red-500" : "border-border dark:border-slate-700"
+                      }`}
+                    >
+                      <option value="">{t("contact.rfq.selectProduct")}</option>
+                      <option value="Vanilla Beans">{t("contact.rfq.vanilla")}</option>
+                      <option value="Black Pepper">{t("contact.rfq.pepper")}</option>
+                    </select>
+                    {rfqErrors.product && (
+                      <p className="text-red-500 text-sm mt-1">{rfqErrors.product}</p>
+                    )}
+                  </div>
+
+                  {/* Grade/Spec */}
+                  <div>
+                    <label className="block text-sm font-semibold mb-2 text-foreground dark:text-white">
+                      {t("contact.rfq.gradeSpec")} *
+                    </label>
+                    <input
+                      type="text"
+                      name="gradeSpec"
+                      value={rfqData.gradeSpec}
+                      onChange={handleRfqChange}
+                      placeholder={t("contact.rfq.gradeSpecPlaceholder")}
+                      className={`w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary bg-white dark:bg-slate-800 text-foreground dark:text-white ${
+                        rfqErrors.gradeSpec ? "border-red-500" : "border-border dark:border-slate-700"
+                      }`}
+                    />
+                    {rfqErrors.gradeSpec && (
+                      <p className="text-red-500 text-sm mt-1">{rfqErrors.gradeSpec}</p>
+                    )}
+                  </div>
+
+                  {/* Quantity */}
+                  <div>
+                    <label className="block text-sm font-semibold mb-2 text-foreground dark:text-white">
+                      {t("contact.rfq.quantity")} (kg) *
+                    </label>
+                    <input
+                      type="number"
+                      name="quantity"
+                      value={rfqData.quantity}
+                      onChange={handleRfqChange}
+                      placeholder={t("contact.rfq.quantityPlaceholder")}
+                      min="1"
+                      className={`w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary bg-white dark:bg-slate-800 text-foreground dark:text-white ${
+                        rfqErrors.quantity ? "border-red-500" : "border-border dark:border-slate-700"
+                      }`}
+                    />
+                    {rfqErrors.quantity && (
+                      <p className="text-red-500 text-sm mt-1">{rfqErrors.quantity}</p>
+                    )}
+                  </div>
+
+                  {/* Incoterms */}
+                  <div>
+                    <label className="block text-sm font-semibold mb-2 text-foreground dark:text-white">
+                      {t("contact.rfq.incoterms")} *
+                    </label>
+                    <select
+                      name="incoterms"
+                      value={rfqData.incoterms}
+                      onChange={handleRfqChange}
+                      className={`w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary bg-white dark:bg-slate-800 text-foreground dark:text-white ${
+                        rfqErrors.incoterms ? "border-red-500" : "border-border dark:border-slate-700"
+                      }`}
+                    >
+                      <option value="">{t("contact.rfq.selectIncoterms")}</option>
+                      <option value="FOB">{t("contact.rfq.fob")}</option>
+                      <option value="CIF">{t("contact.rfq.cif")}</option>
+                    </select>
+                    {rfqErrors.incoterms && (
+                      <p className="text-red-500 text-sm mt-1">{rfqErrors.incoterms}</p>
+                    )}
+                  </div>
+
+                  {/* Destination Port and Country */}
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                      <label className="block text-sm font-semibold mb-2 text-foreground dark:text-white">
+                        {t("contact.rfq.destinationPort")} *
+                      </label>
+                      <input
+                        type="text"
+                        name="destinationPort"
+                        value={rfqData.destinationPort}
+                        onChange={handleRfqChange}
+                        placeholder={t("contact.rfq.destinationPortPlaceholder")}
+                        className={`w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary bg-white dark:bg-slate-800 text-foreground dark:text-white ${
+                          rfqErrors.destinationPort ? "border-red-500" : "border-border dark:border-slate-700"
+                        }`}
+                      />
+                      {rfqErrors.destinationPort && (
+                        <p className="text-red-500 text-sm mt-1">{rfqErrors.destinationPort}</p>
+                      )}
+                    </div>
+                    <div>
+                      <label className="block text-sm font-semibold mb-2 text-foreground dark:text-white">
+                        {t("contact.rfq.country")} *
+                      </label>
+                      <input
+                        type="text"
+                        name="country"
+                        value={rfqData.country}
+                        onChange={handleRfqChange}
+                        placeholder={t("contact.rfq.countryPlaceholder")}
+                        className={`w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary bg-white dark:bg-slate-800 text-foreground dark:text-white ${
+                          rfqErrors.country ? "border-red-500" : "border-border dark:border-slate-700"
+                        }`}
+                      />
+                      {rfqErrors.country && (
+                        <p className="text-red-500 text-sm mt-1">{rfqErrors.country}</p>
+                      )}
+                    </div>
+                  </div>
+
+                  {/* Target Delivery Date */}
+                  <div>
+                    <label className="block text-sm font-semibold mb-2 text-foreground dark:text-white">
+                      {t("contact.rfq.targetDeliveryDate")} {t("contact.rfq.optional")}
+                    </label>
+                    <input
+                      type="date"
+                      name="targetDeliveryDate"
+                      value={rfqData.targetDeliveryDate}
+                      onChange={handleRfqChange}
+                      className="w-full px-4 py-2 border border-border dark:border-slate-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary bg-white dark:bg-slate-800 text-foreground dark:text-white"
+                    />
+                  </div>
+
+                  {/* Company Name and Website */}
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                      <label className="block text-sm font-semibold mb-2 text-foreground dark:text-white">
+                        {t("contact.rfq.companyName")} {t("contact.rfq.optional")}
+                      </label>
+                      <input
+                        type="text"
+                        name="companyName"
+                        value={rfqData.companyName}
+                        onChange={handleRfqChange}
+                        placeholder={t("contact.rfq.companyNamePlaceholder")}
+                        className="w-full px-4 py-2 border border-border dark:border-slate-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary bg-white dark:bg-slate-800 text-foreground dark:text-white"
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-sm font-semibold mb-2 text-foreground dark:text-white">
+                        {t("contact.rfq.website")} {t("contact.rfq.optional")}
+                      </label>
+                      <input
+                        type="url"
+                        name="website"
+                        value={rfqData.website}
+                        onChange={handleRfqChange}
+                        placeholder={t("contact.rfq.websitePlaceholder")}
+                        className="w-full px-4 py-2 border border-border dark:border-slate-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary bg-white dark:bg-slate-800 text-foreground dark:text-white"
+                      />
+                    </div>
+                  </div>
+
+                  {/* Email and Phone */}
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                      <label className="block text-sm font-semibold mb-2 text-foreground dark:text-white">
+                        {t("contact.rfq.email")} *
+                      </label>
+                      <input
+                        type="email"
+                        name="email"
+                        value={rfqData.email}
+                        onChange={handleRfqChange}
+                        placeholder={t("contact.rfq.emailPlaceholder")}
+                        className={`w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary bg-white dark:bg-slate-800 text-foreground dark:text-white ${
+                          rfqErrors.email ? "border-red-500" : "border-border dark:border-slate-700"
+                        }`}
+                      />
+                      {rfqErrors.email && (
+                        <p className="text-red-500 text-sm mt-1">{rfqErrors.email}</p>
+                      )}
+                    </div>
+                    <div>
+                      <label className="block text-sm font-semibold mb-2 text-foreground dark:text-white">
+                        {t("contact.rfq.phoneWhatsapp")} {t("contact.rfq.optional")}
+                      </label>
+                      <input
+                        type="tel"
+                        name="phoneWhatsapp"
+                        value={rfqData.phoneWhatsapp}
+                        onChange={handleRfqChange}
+                        placeholder={t("contact.rfq.phoneWhatsappPlaceholder")}
+                        className="w-full px-4 py-2 border border-border dark:border-slate-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary bg-white dark:bg-slate-800 text-foreground dark:text-white"
+                      />
+                    </div>
+                  </div>
+
+                  {/* Requirements */}
+                  <div>
+                    <label className="block text-sm font-semibold mb-2 text-foreground dark:text-white">
+                      {t("contact.rfq.requirements")}
+                    </label>
+                    <textarea
+                      name="requirements"
+                      value={rfqData.requirements}
+                      onChange={handleRfqChange}
+                      rows={5}
+                      placeholder={t("contact.rfq.requirementsPlaceholder")}
+                      className="w-full px-4 py-2 border border-border dark:border-slate-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary bg-white dark:bg-slate-800 text-foreground dark:text-white"
+                    />
+                  </div>
+
+                  {/* Submit Buttons */}
+                  <div className="flex flex-col sm:flex-row gap-4">
+                    <Button type="submit" className="flex-1 bg-primary hover:bg-primary/90 text-white py-3 text-lg">
+                      {t("contact.rfq.submitBtn")}
+                    </Button>
+                    <Button
+                      type="button"
+                      variant="outline"
+                      onClick={handleCopyRfq}
+                      className="flex-1 border-primary text-primary hover:bg-primary/10 py-3 text-lg"
+                    >
+                      {showCopySuccess ? t("contact.rfq.copied") : t("contact.rfq.copyBtn")}
+                    </Button>
+                  </div>
+                </form>
+              )}
             </div>
           </div>
         </section>

@@ -122,10 +122,16 @@ export default function Products() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 mt-8">
               <a href="/images/Berdine Catalog.pdf" download>
-                <Button className="bg-white text-primary hover:bg-white/90 px-6 py-3">
+                <Button className="bg-white text-primary hover:bg-white/90 px-8 py-6 text-lg font-semibold shadow-lg hover:shadow-xl transition-all">
+                  <Download className="w-5 h-5 mr-2" />
                   {t("products.downloadPriceList")}
                 </Button>
               </a>
+              <Link href="/contact#rfq">
+                <Button variant="outline" className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-primary px-8 py-6 text-lg font-semibold">
+                  Request Quote
+                </Button>
+              </Link>
             </div>
           </div>
         </section>
@@ -196,9 +202,9 @@ export default function Products() {
                       </p>
 
                       {/* Key Details */}
-                      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6 pb-6 border-b border-border dark:border-slate-700">
+                      <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-6 pb-6 border-b border-border dark:border-slate-700">
                         <div>
-                          <p className="text-xs text-muted-foreground dark:text-slate-400 uppercase font-semibold">
+                          <p className="text-xs text-muted-foreground dark:text-slate-400 uppercase font-semibold mb-1">
                             {t("products.price")}
                           </p>
                           <p className="text-lg font-bold text-primary">
@@ -206,7 +212,7 @@ export default function Products() {
                           </p>
                         </div>
                         <div>
-                          <p className="text-xs text-muted-foreground dark:text-slate-400 uppercase font-semibold">
+                          <p className="text-xs text-muted-foreground dark:text-slate-400 uppercase font-semibold mb-1">
                             {t("products.minOrder")}
                           </p>
                           <p className="text-lg font-bold text-foreground dark:text-white">
@@ -214,16 +220,25 @@ export default function Products() {
                           </p>
                         </div>
                         <div>
-                          <p className="text-xs text-muted-foreground dark:text-slate-400 uppercase font-semibold">
+                          <p className="text-xs text-muted-foreground dark:text-slate-400 uppercase font-semibold mb-1">
                             {t("products.availability")}
                           </p>
                           <p className="text-lg font-bold text-foreground dark:text-white">
                             {product.availability}
                           </p>
                         </div>
-                        {showDetail ? (
+                        {product.category === "vanilla" && product.variant ? (
                           <div>
-                            <p className="text-xs text-muted-foreground dark:text-slate-400 uppercase font-semibold">
+                            <p className="text-xs text-muted-foreground dark:text-slate-400 uppercase font-semibold mb-1">
+                              {t("products.varian")}
+                            </p>
+                            <p className="text-lg font-bold text-foreground dark:text-white">
+                              {product.variant}
+                            </p>
+                          </div>
+                        ) : showDetail ? (
+                          <div>
+                            <p className="text-xs text-muted-foreground dark:text-slate-400 uppercase font-semibold mb-1">
                               {detailLabel}
                             </p>
                             <p className="text-lg font-bold text-foreground dark:text-white">
@@ -231,39 +246,19 @@ export default function Products() {
                             </p>
                           </div>
                         ) : null}
-                        {product.category === "coffee" ? (
-                          <div>
-                            <p className="text-xs text-muted-foreground dark:text-slate-400 uppercase font-semibold">
-                              {t("products.origin")}
-                            </p>
-                            <p className="text-lg font-bold text-foreground dark:text-white">
-                              {product.specifications.origin}
-                            </p>
-                          </div>
-                        ) : null}
-                        {product.category === "vanilla" && product.variant ? (
-                          <div>
-                            <p className="text-xs text-muted-foreground dark:text-slate-400 uppercase font-semibold">
-                              {t("products.varian")}
-                            </p>
-                            <p className="text-lg font-bold text-foreground dark:text-white">
-                              {product.variant}
-                            </p>
-                          </div>
-                        ) : null}
                       </div>
 
                       {/* Specifications */}
                       <div className="mb-6">
-                        <h4 className="font-bold mb-3 flex items-center gap-2 text-foreground dark:text-white">
-                          <Info className="w-4 h-4" />
+                        <h4 className="font-bold mb-4 flex items-center gap-2 text-foreground dark:text-white">
+                          <Info className="w-5 h-5 text-primary" />
                           {t("products.specifications")}
                         </h4>
-                        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 text-sm">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-4 text-sm">
                           {Object.entries(product.specifications).map(
                             ([key, value]) => (
-                              <div key={key}>
-                                <p className="text-muted-foreground dark:text-slate-400 capitalize">
+                              <div key={key} className="border-l-2 border-primary/30 pl-3">
+                                <p className="text-muted-foreground dark:text-slate-400 capitalize text-xs mb-1">
                                   {key.replace(/([A-Z])/g, " $1").trim()}
                                 </p>
                                 <p className="font-semibold text-foreground dark:text-white">
