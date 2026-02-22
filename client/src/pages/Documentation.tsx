@@ -172,9 +172,8 @@ export default function Documentation() {
                 {t("documentation.paymentTermsSubtitle")}
               </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
               {[
-                t("documentation.payment.tt3070"),
                 t("documentation.payment.tt5050"),
                 t("documentation.payment.ttFull"),
                 t("documentation.payment.lc"),
