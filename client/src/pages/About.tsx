@@ -1,6 +1,6 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { CheckCircle } from "@/components/icons";
+import { CheckCircle, FileText, ArrowRight } from "@/components/icons";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 /**
@@ -197,6 +197,82 @@ export default function About() {
                   {t("about.isoCompliantDesc")}
                 </p>
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Compliance & Certifications */}
+        <section className="section bg-white dark:bg-slate-900">
+          <div className="container max-w-4xl">
+            <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center text-foreground dark:text-white">
+              {t("about.compliance.title")}
+            </h2>
+            <div className="bg-secondary/20 dark:bg-slate-800 p-8 rounded-lg border border-border dark:border-slate-700">
+              <div className="flex gap-4 items-start">
+                <FileText className="w-8 h-8 text-primary flex-shrink-0 mt-1" />
+                <p className="text-lg text-muted-foreground dark:text-slate-400 leading-relaxed">
+                  {t("about.compliance.text")}
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Quality Control Workflow */}
+        <section className="section surface-muted">
+          <div className="container">
+            <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center text-foreground dark:text-white">
+              {t("about.qcWorkflow.title")}
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
+              {[1, 2, 3, 4, 5].map((step) => (
+                <div key={step} className="relative">
+                  <div className="bg-white dark:bg-slate-900 p-6 rounded-lg shadow-sm border border-border dark:border-slate-700 h-full">
+                    <div className="flex items-center justify-center w-12 h-12 bg-primary text-white rounded-full font-bold text-xl mb-4 mx-auto">
+                      {step}
+                    </div>
+                    <h3 className="text-base font-bold mb-3 text-foreground dark:text-white text-center">
+                      {t(`about.qcWorkflow.step${step}`)}
+                    </h3>
+                    <p className="text-sm text-muted-foreground dark:text-slate-400 text-center">
+                      {t(`about.qcWorkflow.step${step}Desc`)}
+                    </p>
+                  </div>
+                  {step < 5 && (
+                    <div className="hidden md:block absolute top-12 -right-3 z-10">
+                      <ArrowRight className="w-6 h-6 text-primary" />
+                    </div>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Key Capabilities */}
+        <section className="section bg-white dark:bg-slate-900">
+          <div className="container max-w-4xl">
+            <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center text-foreground dark:text-white">
+              {t("about.capabilities.title")}
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {[
+                { key: "port", icon: "📍" },
+                { key: "leadTime", icon: "⏱️" },
+                { key: "coa", icon: "📄" },
+                { key: "payment", icon: "💳" },
+                { key: "moq", icon: "📦" },
+              ].map((item) => (
+                <div
+                  key={item.key}
+                  className="bg-secondary/10 dark:bg-slate-800 p-6 rounded-lg border border-border dark:border-slate-700 text-center"
+                >
+                  <div className="text-3xl mb-3">{item.icon}</div>
+                  <p className="text-base font-semibold text-foreground dark:text-white">
+                    {t(`about.capabilities.${item.key}`)}
+                  </p>
+                </div>
+              ))}
             </div>
           </div>
         </section>

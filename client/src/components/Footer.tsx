@@ -150,10 +150,10 @@ export default function Footer() {
               <li className="flex items-center gap-3">
                 <Mail className="w-4 h-4 flex-shrink-0" />
                 <a
-                  href="mailto:Partner@berdineterraglobal.com"
+                  href="mailto:Partner@berdineterra.co.id"
                   className="hover:text-background transition-colors"
                 >
-                  Partner@berdineterraglobal.com
+                  Partner@berdineterra.co.id
                 </a>
               </li>
             </ul>
