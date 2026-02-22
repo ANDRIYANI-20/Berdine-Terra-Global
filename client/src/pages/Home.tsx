@@ -103,7 +103,7 @@ export default function Home() {
                     </Button>
                   </a>
                 </Link>
-                <a href="/catalog.pdf" download>
+                <a href="/berdine catalog.pdf" download>
                   <Button variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-primary px-8 py-6 text-lg">
                     {t("home.hero.downloadCatalog")}
                   </Button>
