@@ -16,6 +16,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
  */
 export default function Documentation() {
   const [expandedFaq, setExpandedFaq] = useState<number | null>(0);
+  const [expandedGuide, setExpandedGuide] = useState<number | null>(null);
   const { t } = useLanguage();
 
   const guides = [
@@ -29,6 +30,13 @@ export default function Documentation() {
         t("documentation.guide1.topic4"),
         t("documentation.guide1.topic5"),
       ],
+      details: [
+        t("documentation.guide1.detail1"),
+        t("documentation.guide1.detail2"),
+        t("documentation.guide1.detail3"),
+        t("documentation.guide1.detail4"),
+        t("documentation.guide1.detail5"),
+      ],
     },
     {
       title: t("documentation.guide2.title"),
@@ -40,6 +48,13 @@ export default function Documentation() {
         t("documentation.guide2.topic4"),
         t("documentation.guide2.topic5"),
       ],
+      details: [
+        t("documentation.guide2.detail1"),
+        t("documentation.guide2.detail2"),
+        t("documentation.guide2.detail3"),
+        t("documentation.guide2.detail4"),
+        t("documentation.guide2.detail5"),
+      ],
     },
     {
       title: t("documentation.guide4.title"),
@@ -50,6 +65,13 @@ export default function Documentation() {
         t("documentation.guide4.topic3"),
         t("documentation.guide4.topic4"),
         t("documentation.guide4.topic5"),
+      ],
+      details: [
+        t("documentation.guide4.detail1"),
+        t("documentation.guide4.detail2"),
+        t("documentation.guide4.detail3"),
+        t("documentation.guide4.detail4"),
+        t("documentation.guide4.detail5"),
       ],
     },
   ];
@@ -210,42 +232,67 @@ export default function Documentation() {
                   <p className="text-muted-foreground dark:text-slate-400 mb-6">
                     {guide.description}
                   </p>
-                  <div className="space-y-2 mb-6 flex-grow">
-                    <p className="text-sm font-semibold text-foreground dark:text-white mb-3">
-                      {t("documentation.topicsCovered")}
-                    </p>
-                    <ul className="space-y-2">
-                      {guide.topics.map((topic, i) => (
-                        <li
-                          key={i}
-                          className="flex items-start gap-2 text-sm"
-                        >
-                          <span className="text-primary font-bold">•</span>
-                          <span className="text-muted-foreground dark:text-slate-400">
-                            {topic}
-                          </span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                  <div className="flex gap-3 mt-auto">
-                    <Button
-                      variant="outline"
-                      className="flex-1 border-primary text-primary hover:bg-primary/10"
-                    >
-                      {t("documentation.openGuide")}
-                    </Button>
-                    {/* TODO: Add actual PDF links when available */}
-                    <a 
-                      href={`/docs/${idx === 0 ? 'vanilla' : idx === 1 ? 'pepper' : 'ordering'}-guide.pdf`}
-                      download
-                      className="flex-1"
-                    >
-                      <Button className="w-full bg-primary hover:bg-primary/90">
-                        {t("documentation.downloadPdf")}
+                  
+                  {expandedGuide !== idx ? (
+                    <>
+                      <div className="space-y-2 mb-6 flex-grow">
+                        <p className="text-sm font-semibold text-foreground dark:text-white mb-3">
+                          {t("documentation.topicsCovered")}
+                        </p>
+                        <ul className="space-y-2">
+                          {guide.topics.map((topic, i) => (
+                            <li
+                              key={i}
+                              className="flex items-start gap-2 text-sm"
+                            >
+                              <span className="text-primary font-bold">•</span>
+                              <span className="text-muted-foreground dark:text-slate-400">
+                                {topic}
+                              </span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                      <Button
+                        onClick={() => setExpandedGuide(idx)}
+                        className="w-full bg-primary hover:bg-primary/90"
+                      >
+                        {t("documentation.openGuide")}
                       </Button>
-                    </a>
-                  </div>
+                    </>
+                  ) : (
+                    <>
+                      <div className="space-y-4 mb-6 flex-grow">
+                        <div className="bg-primary/5 dark:bg-primary/10 border-l-4 border-primary p-4 rounded">
+                          <p className="text-sm font-semibold text-primary mb-2">
+                            📋 {t("documentation.topicsCovered")}
+                          </p>
+                        </div>
+                        {guide.details.map((detail, i) => (
+                          <div
+                            key={i}
+                            className="bg-secondary/20 dark:bg-slate-700 p-4 rounded-lg"
+                          >
+                            <div className="flex items-start gap-3">
+                              <div className="flex-shrink-0 flex items-center justify-center w-6 h-6 bg-primary text-white rounded-full text-xs font-bold">
+                                {i + 1}
+                              </div>
+                              <p className="text-sm text-foreground dark:text-white leading-relaxed">
+                                {detail}
+                              </p>
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                      <Button
+                        onClick={() => setExpandedGuide(null)}
+                        variant="outline"
+                        className="w-full border-primary text-primary hover:bg-primary/10"
+                      >
+                        {t("documentation.closeGuide")}
+                      </Button>
+                    </>
+                  )}
                 </div>
               ))}
             </div>
