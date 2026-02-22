@@ -269,12 +269,6 @@ export default function Home() {
                         )}
                       </div>
                       <div className="p-6">
-                        <h3 className="text-xl font-bold mb-3 text-foreground dark:text-white">
-                          {product.name}
-                        </h3>
-                        <p className="text-sm text-muted-foreground dark:text-slate-400 mb-4 line-clamp-3">
-                          {product.description}
-                        </p>
                         <div className="flex items-center text-primary font-semibold group-hover:gap-2 transition-all">
                           {t("home.products.learnMore")}
                           <ArrowRight className="w-4 h-4 ml-2" />
