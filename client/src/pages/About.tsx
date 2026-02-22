@@ -115,10 +115,7 @@ export default function About() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               {/* Vision Card */}
               <div className="bg-white dark:bg-slate-900 p-8 rounded-lg shadow-lg border-t-4 border-primary">
-                <div className="flex items-center gap-3 mb-6">
-                  <div className="flex items-center justify-center w-12 h-12 bg-primary/10 rounded-lg">
-                    <span className="text-2xl">🎯</span>
-                  </div>
+                <div className="mb-6">
                   <h3 className="text-2xl font-bold text-primary">
                     {t("about.vision")}
                   </h3>
@@ -130,10 +127,7 @@ export default function About() {
 
               {/* Mission Card */}
               <div className="bg-white dark:bg-slate-900 p-8 rounded-lg shadow-lg border-t-4 border-primary">
-                <div className="flex items-center gap-3 mb-6">
-                  <div className="flex items-center justify-center w-12 h-12 bg-primary/10 rounded-lg">
-                    <span className="text-2xl">🚀</span>
-                  </div>
+                <div className="mb-6">
                   <h3 className="text-2xl font-bold text-primary">
                     {t("about.mission")}
                   </h3>

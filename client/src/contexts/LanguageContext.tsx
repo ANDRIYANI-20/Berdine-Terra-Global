@@ -40,8 +40,8 @@ const translations: Record<Language, Record<string, string>> = {
     "home.hero.badgeValue": "21-30 days FOB",
     "home.quickFacts.pricing": "Pricing: USD/kg",
     "home.quickFacts.pricingDesc": "Competitive export pricing quoted in USD per kilogram. Final rates vary by grade, volume, and destination.",
-    "home.quickFacts.incoterms": "Incoterms: FOB / CIF",
-    "home.quickFacts.incotermsDesc": "FOB (Free On Board) or CIF (Cost, Insurance & Freight) terms available, quoted by destination port.",
+    "home.quickFacts.incoterms": "Incoterms: FOB / EXW",
+    "home.quickFacts.incotermsDesc": "FOB (Free On Board) or EXW (Ex Works) terms available, quoted by destination port.",
     "home.quickFacts.port": "Port: Panjang, Lampung",
     "home.quickFacts.portDesc": "Primary loading port at Port Panjang, Lampung, Indonesia. Other ports can be arranged upon request.",
     "home.quickFacts.leadTime": "Lead time: 1–3 weeks",
@@ -100,9 +100,9 @@ const translations: Record<Language, Record<string, string>> = {
     "about.hero.imageAlt": "Berdine Terra Global team and sourcing network",
     "about.whoAreWe": "Who We Are",
     "about.whoAreWeText1":
-      "Berdine Terra Global is an exporter of premium commodities from Indonesia focusing on vanilla beans and black pepper. Based on the value 'Born from Earth, Built with Trust', we build a supply chain that connects international buyer needs with the welfare of local farmers.",
+      "Berdine Terra Global is a commodity exporter from Indonesia focusing on vanilla beans and black pepper. Based on the value 'Born from Earth, Built with Trust', we build a supply chain that connects international buyer needs with the welfare of local farmers.",
     "about.whoAreWeText2":
-      "We work through direct partnerships with farmers to ensure quality, traceability, and sustainability of every product. With controlled processing, standardized quality control, and complete export documentation, we provide consistent and reliable commodities.",
+      "Through direct partnerships with farmers, controlled processing, and standardized quality control, we ensure consistent products and guarantee that every batch meets export standards.",
     "about.whoAreWeText3":
       "Our goal is to deliver value to the global market while making a real impact on the farmers who are the main foundation of this company.",
     "about.byTheNumbers": "BERDINE TERRA GLOBAL",
@@ -441,8 +441,8 @@ const translations: Record<Language, Record<string, string>> = {
     "home.hero.badgeValue": "21-30 hari FOB",
     "home.quickFacts.pricing": "Harga: USD/kg",
     "home.quickFacts.pricingDesc": "Harga ekspor kompetitif dikuotasi dalam USD per kilogram. Tarif akhir bervariasi berdasarkan grade, volume, dan tujuan.",
-    "home.quickFacts.incoterms": "Incoterms: FOB / CIF",
-    "home.quickFacts.incotermsDesc": "Syarat FOB (Free On Board) atau CIF (Cost, Insurance & Freight) tersedia, dikuotasi berdasarkan pelabuhan tujuan.",
+    "home.quickFacts.incoterms": "Incoterms: FOB / EXW",
+    "home.quickFacts.incotermsDesc": "Syarat FOB (Free On Board) atau EXW (Ex Works) tersedia, dikuotasi berdasarkan pelabuhan tujuan.",
     "home.quickFacts.port": "Pelabuhan: Panjang, Lampung",
     "home.quickFacts.portDesc": "Pelabuhan loading utama di Port Panjang, Lampung, Indonesia. Pelabuhan lain dapat diatur berdasarkan permintaan.",
     "home.quickFacts.leadTime": "Lead time: 1–3 minggu",
@@ -501,9 +501,9 @@ const translations: Record<Language, Record<string, string>> = {
     "about.hero.imageAlt": "Tim dan jaringan sourcing Berdine Terra Global",
     "about.whoAreWe": "Siapa Kami",
     "about.whoAreWeText1":
-      "Berdine Terra Global adalah eksportir komoditas unggulan dari Indonesia dengan fokus pada vanilla beans dan black pepper. Berlandaskan nilai \"Lahir dari Bumi, Dibangun dengan Kepercayaan\", kami membangun rantai pasok yang menghubungkan kebutuhan buyer internasional dengan kesejahteraan petani lokal.",
+      "Berdine Terra Global adalah eksportir komoditas dari Indonesia dengan fokus pada vanilla beans dan black pepper. Berlandaskan nilai \"Lahir dari Bumi, Dibangun dengan Kepercayaan\", kami membangun rantai pasok yang menghubungkan kebutuhan buyer internasional dengan kesejahteraan petani lokal.",
     "about.whoAreWeText2":
-      "Kami bekerja melalui kemitraan langsung dengan petani untuk memastikan kualitas, ketelusuran, dan keberlanjutan setiap produk. Dengan proses pengolahan terkontrol, quality control terstandarisasi, dan dokumentasi ekspor lengkap, kami menyediakan komoditas yang konsisten dan dapat diandalkan.",
+      "Melalui kemitraan langsung dengan petani, pengolahan yang terkontrol, dan pengendalian kualitas yang terstandarisasi, kami memastikan produk yang konsisten dan menjamin bahwa setiap batch memenuhi standar ekspor.",
     "about.whoAreWeText3":
       "Tujuan kami yaitu menghadirkan nilai bagi pasar global sekaligus memberi dampak nyata bagi para petani yang menjadi fondasi utama perusahaan ini.",
     "about.byTheNumbers": "BERDINE TERRA GLOBAL",
@@ -786,7 +786,7 @@ const translations: Record<Language, Record<string, string>> = {
       "Biji Lada Hitam Indonesia memiliki aroma pedas yang kuat dan rasa pedas yang tajam, menjadikannya ideal untuk penggunaan kuliner, pengolahan makanan, dan produksi rempah-rempah. Dihasilkan melalui proses pengeringan dan pembersihan yang teliti untuk memenuhi standar kualitas ekspor.",
 
     // Product Specifications
-    "product.vanilla.origin": "Indonesia",
+    "product.vanilla.origin": "Lampung - Indonesia",
     "product.vanilla.varian": "Planifolia",
     "product.vanilla.gradeAPlus.grade": "Premium Gourmet A+",
     "product.vanilla.gradeAPlus.moisture": "30-35%",
@@ -804,7 +804,7 @@ const translations: Record<Language, Record<string, string>> = {
     "product.vanilla.gradeA.appearance": "Warna coklat gelap dan berminyak",
     "product.vanilla.gradeA.aroma": "Aroma vanila yang kaya dan kompleks",
     "product.vanilla.gradeA.packaging": "Dikemas vakum",
-    "product.pepper.origin": "Indonesia",
+    "product.pepper.origin": "Lampung - Indonesia",
     "product.pepper.grade": "Grade A",
     "product.pepper.type": "Biji lada utuh",
     "product.pepper.size": "3,5mm-4,5mm",
