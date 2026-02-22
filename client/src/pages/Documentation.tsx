@@ -1,6 +1,8 @@
 import { useState } from "react";
+import { Link } from "wouter";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { Button } from "@/components/ui/button";
 import { ChevronDown } from "@/components/icons";
 import { useLanguage } from "@/contexts/LanguageContext";
 
@@ -137,6 +139,59 @@ export default function Documentation() {
           </div>
         </section>
 
+        {/* Payment Terms Section */}
+        <section className="section bg-white dark:bg-slate-900">
+          <div className="container">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground dark:text-white">
+                {t("documentation.paymentTerms")}
+              </h2>
+              <p className="text-muted-foreground dark:text-slate-400 max-w-2xl mx-auto">
+                {t("documentation.paymentTermsSubtitle")}
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
+              {[
+                t("documentation.payment.tt3070"),
+                t("documentation.payment.tt5050"),
+                t("documentation.payment.ttFull"),
+                t("documentation.payment.lc"),
+              ].map((payment, idx) => (
+                <div
+                  key={idx}
+                  className="bg-white dark:bg-slate-800 p-6 rounded-lg border-2 border-border dark:border-slate-700 hover:border-primary dark:hover:border-primary hover:shadow-lg transition-all text-center"
+                >
+                  <div className="flex items-center justify-center w-12 h-12 bg-primary/10 dark:bg-primary/20 rounded-full mx-auto mb-4">
+                    <span className="text-2xl font-bold text-primary">{idx + 1}</span>
+                  </div>
+                  <p className="text-sm font-semibold text-foreground dark:text-white leading-relaxed">
+                    {payment}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Samples Section */}
+        <section className="section surface-muted">
+          <div className="container max-w-4xl">
+            <div className="bg-white dark:bg-slate-900 p-8 md:p-12 rounded-lg shadow-sm border border-border dark:border-slate-700">
+              <div className="text-center mb-6">
+                <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground dark:text-white">
+                  {t("documentation.samples")}
+                </h2>
+                <p className="text-sm text-muted-foreground dark:text-slate-400 mb-6">
+                  {t("documentation.samplesSubtitle")}
+                </p>
+              </div>
+              <p className="text-muted-foreground dark:text-slate-400 leading-relaxed text-center">
+                {t("documentation.samplesDesc")}
+              </p>
+            </div>
+          </div>
+        </section>
+
         {/* Guides Section */}
         <section className="section bg-white dark:bg-slate-900">
           <div className="container">
@@ -147,7 +202,7 @@ export default function Documentation() {
               {guides.map((guide, idx) => (
                 <div
                   key={idx}
-                  className="bg-white dark:bg-slate-800 p-8 rounded-lg shadow-sm border border-border dark:border-slate-700 hover:shadow-md transition-shadow"
+                  className="bg-white dark:bg-slate-800 p-8 rounded-lg shadow-sm border border-border dark:border-slate-700 hover:shadow-md transition-shadow flex flex-col"
                 >
                   <h3 className="text-xl font-bold mb-3 text-primary">
                     {guide.title}
@@ -155,7 +210,7 @@ export default function Documentation() {
                   <p className="text-muted-foreground dark:text-slate-400 mb-6">
                     {guide.description}
                   </p>
-                  <div className="space-y-2">
+                  <div className="space-y-2 mb-6 flex-grow">
                     <p className="text-sm font-semibold text-foreground dark:text-white mb-3">
                       {t("documentation.topicsCovered")}
                     </p>
@@ -172,6 +227,24 @@ export default function Documentation() {
                         </li>
                       ))}
                     </ul>
+                  </div>
+                  <div className="flex gap-3 mt-auto">
+                    <Button
+                      variant="outline"
+                      className="flex-1 border-primary text-primary hover:bg-primary/10"
+                    >
+                      {t("documentation.openGuide")}
+                    </Button>
+                    {/* TODO: Add actual PDF links when available */}
+                    <a 
+                      href={`/docs/${idx === 0 ? 'vanilla' : idx === 1 ? 'pepper' : 'ordering'}-guide.pdf`}
+                      download
+                      className="flex-1"
+                    >
+                      <Button className="w-full bg-primary hover:bg-primary/90">
+                        {t("documentation.downloadPdf")}
+                      </Button>
+                    </a>
                   </div>
                 </div>
               ))}
@@ -215,6 +288,36 @@ export default function Documentation() {
                   )}
                 </div>
               ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="section bg-primary dark:bg-primary/90">
+          <div className="container text-center">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
+              {t("documentation.cta.title")}
+            </h2>
+            <p className="text-lg text-white/90 mb-8 max-w-2xl mx-auto">
+              {t("documentation.cta.subtitle")}
+            </p>
+            <div className="flex flex-col sm:flex-row justify-center gap-4">
+              <Link href="/contact">
+                <Button className="bg-white text-primary hover:bg-white/90 px-8 py-3 text-lg font-semibold shadow-lg hover:shadow-xl transition-all">
+                  {t("documentation.cta.requestQuote")}
+                </Button>
+              </Link>
+              <a
+                href="mailto:Partner@berdineterraglobal.com"
+                className="inline-flex"
+              >
+                <Button
+                  variant="outline"
+                  className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-primary px-8 py-3 text-lg font-semibold"
+                >
+                  {t("documentation.cta.contactTeam")}
+                </Button>
+              </a>
             </div>
           </div>
         </section>
