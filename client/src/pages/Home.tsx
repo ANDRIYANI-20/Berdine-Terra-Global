@@ -166,8 +166,56 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Documents Section */}
+        {/* Featured Products Section */}
         <section className="py-16 md:py-24 bg-secondary/10 dark:bg-slate-800">
+          <div className="container">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground dark:text-white">
+                {t("home.products.title")}
+              </h2>
+              <p className="text-lg text-muted-foreground dark:text-slate-400 max-w-2xl mx-auto">
+                {t("home.products.subtitle")}
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {products.map((product) => (
+                <Link key={product.id} href={product.href}>
+                  <a className="group">
+                    <div className="bg-white dark:bg-slate-900 rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition-shadow duration-300">
+                      <div className="relative h-64 overflow-hidden bg-muted dark:bg-slate-700">
+                        {imageLoadErrors[product.id] ? (
+                          <div className="w-full h-full flex flex-col items-center justify-center bg-gradient-to-br from-primary/20 to-primary/5">
+                            <Leaf className="w-16 h-16 text-primary mb-2" />
+                            <p className="text-sm text-muted-foreground dark:text-slate-400 text-center px-4">
+                              {product.name}
+                            </p>
+                          </div>
+                        ) : (
+                          <img
+                            src={product.image}
+                            alt={product.name}
+                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                            onError={() => handleImageError(product.id)}
+                          />
+                        )}
+                      </div>
+                      <div className="p-6">
+                        <div className="flex items-center text-primary font-semibold group-hover:gap-2 transition-all">
+                          {t("home.products.learnMore")}
+                          <ArrowRight className="w-4 h-4 ml-2" />
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Documents Section */}
+        <section className="py-16 md:py-24 bg-white dark:bg-slate-900">
           <div className="container">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground dark:text-white">
@@ -230,54 +278,6 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Featured Products Section */}
-        <section className="py-16 md:py-24 bg-secondary/10 dark:bg-slate-800">
-          <div className="container">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground dark:text-white">
-                {t("home.products.title")}
-              </h2>
-              <p className="text-lg text-muted-foreground dark:text-slate-400 max-w-2xl mx-auto">
-                {t("home.products.subtitle")}
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {products.map((product) => (
-                <Link key={product.id} href={product.href}>
-                  <a className="group">
-                    <div className="bg-white dark:bg-slate-900 rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition-shadow duration-300">
-                      <div className="relative h-64 overflow-hidden bg-muted dark:bg-slate-700">
-                        {imageLoadErrors[product.id] ? (
-                          <div className="w-full h-full flex flex-col items-center justify-center bg-gradient-to-br from-primary/20 to-primary/5">
-                            <Leaf className="w-16 h-16 text-primary mb-2" />
-                            <p className="text-sm text-muted-foreground dark:text-slate-400 text-center px-4">
-                              {product.name}
-                            </p>
-                          </div>
-                        ) : (
-                          <img
-                            src={product.image}
-                            alt={product.name}
-                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                            onError={() => handleImageError(product.id)}
-                          />
-                        )}
-                      </div>
-                      <div className="p-6">
-                        <div className="flex items-center text-primary font-semibold group-hover:gap-2 transition-all">
-                          {t("home.products.learnMore")}
-                          <ArrowRight className="w-4 h-4 ml-2" />
-                        </div>
-                      </div>
-                    </div>
-                  </a>
-                </Link>
-              ))}
             </div>
           </div>
         </section>

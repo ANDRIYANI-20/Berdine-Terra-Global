@@ -662,7 +662,6 @@ const translations: Record<Language, Record<string, string>> = {
     "documentation.cta.title": "Butuh penawaran atau COA?",
     "documentation.cta.subtitle": "Tim ekspor kami siap memberikan penawaran terperinci dan sertifikat analisis.",
     "documentation.cta.requestQuote": "Minta Penawaran",
-    "documentation.cta.contactTeam": "Hubungi Tim Ekspor",
 
     // Documentation Guides
     "documentation.guide1.title": "Panduan Pemilihan Vanilla Beans",
