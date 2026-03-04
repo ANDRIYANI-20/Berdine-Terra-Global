@@ -24,12 +24,16 @@ const translations: Record<Language, Record<string, string>> = {
     "nav.skip": "Skip to content",
     "nav.tagline": "Indonesian Natural Produce Exporter",
 
+    // Common
+    "common.backToHome": "Back to Home",
+
     // Home Page
     "home.hero.eyebrow": "Trusted Indonesian Exporter",
     "home.hero.title": "Premium Indonesian Vanilla & Pepper for Global Buyers",
     "home.hero.subtitle":
       "Export-ready supply backed by traceable sourcing, quality assurance, and dependable logistics.",
     "home.hero.viewCatalog": "View Catalog",
+    "home.hero.viewProducts": "View Products",
     "home.hero.getQuote": "Request a Quote",
     "home.hero.downloadCatalog": "Download Catalog",
     "home.hero.trust1": "Export documentation ready",
@@ -37,15 +41,46 @@ const translations: Record<Language, Record<string, string>> = {
     "home.hero.trust3": "Verified source",
     "home.hero.imageAlt": "Export-ready vanilla and black pepper",
     "home.hero.badgeLabel": "Typical lead time",
-    "home.hero.badgeValue": "21-30 days FOB",
+    "home.hero.badgeValue": "21-30 days",
     "home.quickFacts.pricing": "Pricing: USD/kg",
-    "home.quickFacts.pricingDesc": "Competitive export pricing quoted in USD per kilogram. Final rates vary by grade, volume, and destination.",
-    "home.quickFacts.incoterms": "Incoterms: FOB / EXW",
-    "home.quickFacts.incotermsDesc": "FOB (Free On Board) or EXW (Ex Works) terms available, quoted by destination port.",
-    "home.quickFacts.port": "Port: Panjang, Lampung",
-    "home.quickFacts.portDesc": "Primary loading port at Port Panjang, Lampung, Indonesia. Other ports can be arranged upon request.",
-    "home.quickFacts.leadTime": "Lead time: 1–3 weeks",
-    "home.quickFacts.leadTimeDesc": "Typical processing and loading time 1-3 weeks from order confirmation, depending on product availability and volume.",
+    // quick stats custom
+    "home.quickStats.moq": "MOQ",
+    "home.quickStats.leadTime": "Lead Time",
+    "home.quickStats.shippingFrom": "Shipping From",
+    "home.quickStats.incoterms": "Warehouse",
+
+    // advantages
+    "home.advantages.qualityCertified": "Quality Certified",
+    "home.advantages.qualityCertifiedDesc": "Organic certified with full traceability and rigorous QC standards",
+    "home.advantages.reliableDelivery": "Reliable Delivery",
+    "home.advantages.reliableDeliveryDesc": "Fast shipping with optimized logistics to major ports globally",
+    "home.advantages.competitivePricing": "Competitive Pricing",
+    "home.advantages.competitivePricingDesc": "Direct from source pricing with flexible payment terms",
+    "home.advantages.globalNetwork": "Global Network",
+    "home.advantages.globalNetworkDesc": "Serving buyers across Asia, Europe, and North America",
+
+    "home.certifications.title": "International Certifications",
+    "home.certifications.subtitle": "Trusted by buyers worldwide with verified quality standards",
+    "home.certifications.organic.title": "Organic Certified",
+    "home.certifications.organic.desc": "International organic certification for all products",
+    "home.certifications.fairTrade.title": "Fair Trade",
+    "home.certifications.fairTrade.desc": "Committed to ethical sourcing and farmer welfare",
+    "home.certifications.iso.title": "ISO Compliant",
+    "home.certifications.iso.desc": "ISO 22000 certified for food safety management",
+
+    // FAQ preview
+    "home.faq.moq.question": "What is your minimum order quantity?",
+    "home.faq.moq.answer": "Our MOQ is 50 kg for most products. Custom quantities can be discussed based on your needs.",
+    "home.faq.payment.question": "What payment methods do you accept?",
+    "home.faq.payment.answer": "We accept TT (Telegraphic Transfer), L/C and other negotiable payment terms depending on order volume.",
+    "home.faq.leadTime.question": "How long is the lead time?",
+    "home.faq.leadTime.answer": "Standard lead time is 2-3 weeks from order confirmation, depending on product availability.",
+    "home.faq.samples.question": "Do you provide samples?",
+    "home.faq.samples.answer": "Yes, we offer product samples. Please contact us for sample availability and terms.",
+
+    // hero tagline
+    "home.hero.tagline": "🌿 Premium Spices & Vanilla from Indonesia",
+
     "home.documents.title": "Documents You'll Receive",
     "home.documents.subtitle": "Complete export documentation for hassle-free customs clearance",
     "home.documents.commercial": "Commercial Invoice & Packing List",
@@ -90,8 +125,54 @@ const translations: Record<Language, Record<string, string>> = {
       "Flexible shipping options with clear timelines and proactive communication.",
     "home.cta.title": "Ready to Partner With Us?",
     "home.cta.subtitle":
-      "Contact our team to discuss your requirements and get a customized quote for your business.",
+      "Contact our team to discuss your requirements and get a customized quote for your business 24/7.",
     "home.cta.getInTouch": "Contact Us Now",
+
+    // About Section (Home Page)
+    "home.about.title": "Who We Are",
+    "home.about.text1":
+      "Welcome to Berdine Terra Global, we are a specialist exporter of black pepper and vanilla from Indonesia. We connect international businesses with the best agricultural products from experienced farmers, producing products of the highest quality and excellence.",
+    "home.about.text2":
+      "Our commitment to sustainability is to implement fair and transparent trading practices, making us a trusted partner for importers around the world.",
+    "home.about.learnMore": "Learn Our Story",
+
+    // Why Choose Us Section (Home Page)
+    "home.whyChoose.title": "Why Choose Berdine Terra Global",
+    "home.whyChoose.subtitle":
+      "We deliver exceptional value through quality, reliability, and dedicated customer service",
+
+    // Process Section (Home Page)
+    "home.process.title": "Simple Ordering Process",
+    "home.process.subtitle":
+      "Get your products delivered with just a few simple steps",
+    "home.process.step1.title": "Contact Us",
+    "home.process.step1.desc": "Send inquiry or request quote",
+    "home.process.step2.title": "Get Quotation",
+    "home.process.step2.desc": "Receive detailed price & specs",
+    "home.process.step3.title": "Confirm Order",
+    "home.process.step3.desc": "Agree terms & make payment",
+    "home.process.step4.title": "Delivery",
+    "home.process.step4.desc": "Receive shipment at your port",
+
+    // Documentation Section (Home Page)
+    "home.documentation.title": "Complete Documentation Support",
+    "home.documentation.subtitle":
+      "All necessary documentation for seamless import transactions",
+    "home.documentation.doc1": "Commercial Invoice",
+    "home.documentation.doc2": "Certificate of Origin",
+    "home.documentation.doc3": "Phytosanitary Certificate",
+    "home.documentation.doc4": "Export License",
+    "home.documentation.doc5": "Certificate of Analysis",
+    "home.documentation.doc6": "Quality Assurance",
+
+    // Contact Info (Home Page)
+    "home.contact.phone": "+62 853-9321-0860",
+    "home.contact.location": "Jakarta, Indonesia",
+    "home.contact.getInTouch": "Get In Touch",
+    "home.contact.whatsappUs": "WhatsApp Us",
+
+    // FAQ Section (Home Page)
+    "home.faq.title": "Frequently Asked Questions",
 
     // About Page
     "about.hero.title": "About Berdine Terra Global",
@@ -170,7 +251,7 @@ const translations: Record<Language, Record<string, string>> = {
     // Key Capabilities
     "about.capabilities.title": "Key Capabilities",
     "about.capabilities.subtitle": "Essential information for procurement planning and logistics",
-    "about.capabilities.port": "FOB Port Panjang (Lampung)",
+    "about.capabilities.port": "Port Panjang (Lampung)",
     "about.capabilities.portDesc": "Main export gateway with efficient customs clearance and container handling",
     "about.capabilities.leadTime": "Lead time 1–3 weeks",
     "about.capabilities.leadTimeDesc": "Fast turnaround from order confirmation to shipment readiness",
@@ -178,7 +259,7 @@ const translations: Record<Language, Record<string, string>> = {
     "about.capabilities.coaDesc": "Certificate of Analysis provided per batch with detailed lab test results",
     "about.capabilities.payment": "T/T & L/C supported",
     "about.capabilities.paymentDesc": "Flexible payment terms including Telegraphic Transfer and Letter of Credit",
-    "about.capabilities.moq": "MOQ: Vanilla 50 kg, Pepper 100 kg",
+    "about.capabilities.moq": "MOQ : 50+ Kg",
     "about.capabilities.moqDesc": "Accessible minimum order quantities suitable for both trial and bulk orders",
 
     // Products Page
@@ -351,9 +432,9 @@ const translations: Record<Language, Record<string, string>> = {
     "contact.phone": "Phone",
     "contact.email": "Email",
     "contact.whatsapp": "Telephone",
-    "contact.businessHours": "Business Hours",
-    "contact.businessHours.monFri": "Monday - Friday : 9:00 AM - 6:00 PM",
-    "contact.businessHours.sat": "Saturday : 10:00 AM - 4:00 PM",
+    "contact.businessHours": "Office Hours",
+    "contact.businessHours.monFri": "Monday - Friday : 08:00 - 17:00",
+    "contact.businessHours.sat": "Saturday : 08:00 - 13:00",
     "contact.businessHours.sun": "Sunday : Closed",
     "contact.location": "Our Location",
     "contact.orContactVia": "Or contact us via",
@@ -379,13 +460,13 @@ const translations: Record<Language, Record<string, string>> = {
     // Product Names & Descriptions
     "product.vanilla.gradeAPlus": "Vanilla Beans Gourmet Premium A+",
     "product.vanilla.gradeAPlusDesc":
-      "The highest quality Indonesian Vanilla Planifolia (Gourmet A+) with an intense, creamy, sweet and very rich aroma. Hand-picked from the ripest fruits and put through a highly selective drying process. Each pod is manually selected based on length, oil content, texture and visual perfection. Longer drying and tighter moisture control results in a very oily, shiny and fleshy pod. Ideal for products that require high clarity of flavour and intensity of aroma.",
+      "Gourmet quality Indonesian Vanilla Planifolia, picked from the ripest fruits and undergoing a selective drying process to produce the highest quality product.",
     "product.vanilla.gradeA": "Vanilla Beans Grade A",
     "product.vanilla.gradeADesc":
-      "Grade A Indonesian Vanilla Planifolia is a premium quality export product processed through a professional drying process to produce a strong sweet and creamy aroma with a stable flavour character. The pods are long with an oily surface and a uniform dark brown-black colour. The texture is moist and pliable, making it ideal for the food and beverage industry, flavour extraction and other products.",
+      "Premium quality Indonesian Vanilla Planifolia, an export product processed through perfect drying to produce a sweet aroma and strong flavor.",
     "product.pepper.whole": "Black Pepper",
     "product.pepper.wholeDesc":
-      "Indonesian Black Pepper features a strong, spicy aroma and sharp pungent taste, making it ideal for culinary use, food processing, and spice manufacturing. Carefully dried and cleaned to meet export quality standards.",
+      "Selected Indonesian black peppercorns with a strong spicy aroma and distinctive sharp flavor for all food menus.",
     // Product Specifications
     "product.vanilla.varian": "Planifolia",
     "product.vanilla.gradeAPlus.grade": "Gourmet Premium A+",
@@ -424,12 +505,16 @@ const translations: Record<Language, Record<string, string>> = {
     "nav.skip": "Lewati ke konten",
     "nav.tagline": "Eksportir Hasil Alam Indonesia",
 
+    // Common
+    "common.backToHome": "Kembali ke Beranda",
+
     // Home Page
     "home.hero.eyebrow": "Eksportir Indonesia Tepercaya",
     "home.hero.title": "Vanilla & Lada Hitam Indonesia untuk Buyer Global",
     "home.hero.subtitle":
       "Pasokan siap ekspor dengan asal-usul terverifikasi, quality assurance, dan logistik yang andal.",
     "home.hero.viewCatalog": "Lihat Katalog",
+    "home.hero.viewProducts": "Lihat Product",
     "home.hero.getQuote": "Minta Penawaran",
     "home.hero.downloadCatalog": "Unduh Katalog",
     "home.hero.trust1": "Dokumen ekspor siap",
@@ -446,6 +531,43 @@ const translations: Record<Language, Record<string, string>> = {
     "home.quickFacts.portDesc": "Pelabuhan loading utama di Port Panjang, Lampung, Indonesia. Pelabuhan lain dapat diatur berdasarkan permintaan.",
     "home.quickFacts.leadTime": "Lead time: 1–3 minggu",
     "home.quickFacts.leadTimeDesc": "Waktu pemrosesan dan loading tipikal 1-3 minggu dari konfirmasi pesanan, tergantung ketersediaan produk dan volume.",
+    // quick stats custom
+    "home.quickStats.moq": "MOQ",
+    "home.quickStats.leadTime": "Lead Time",
+    "home.quickStats.shippingFrom": "Pengiriman Dari",
+    "home.quickStats.incoterms": "Gudang",
+
+    // advantages
+    "home.advantages.qualityCertified": "Kualitas Bersertifikat",
+    "home.advantages.qualityCertifiedDesc": "Organik bersertifikat dengan pelacakan penuh dan standar QC yang ketat",
+    "home.advantages.reliableDelivery": "Pengiriman Terpercaya",
+    "home.advantages.reliableDeliveryDesc": "Pengiriman cepat dengan logistik teroptimasi ke pelabuhan utama secara global",
+    "home.advantages.competitivePricing": "Harga Kompetitif",
+    "home.advantages.competitivePricingDesc": "Harga langsung dari sumber dengan syarat pembayaran fleksibel",
+    "home.advantages.globalNetwork": "Jaringan Global",
+    "home.advantages.globalNetworkDesc": "Melayani pembeli di Asia, Eropa, dan Amerika Utara",
+
+    "home.certifications.title": "Sertifikasi Internasional",
+    "home.certifications.subtitle": "Dipercaya oleh pembeli di seluruh dunia dengan standar kualitas terverifikasi",
+    "home.certifications.organic.title": "Organik Bersertifikat",
+    "home.certifications.organic.desc": "Sertifikasi organik internasional untuk semua produk",
+    "home.certifications.fairTrade.title": "Perdagangan Adil",
+    "home.certifications.fairTrade.desc": "Berkomitmen pada sumber etis dan kesejahteraan petani",
+    "home.certifications.iso.title": "Kepatuhan ISO",
+    "home.certifications.iso.desc": "Bersertifikat ISO 22000 untuk manajemen keamanan pangan",
+
+    // FAQ preview
+    "home.faq.moq.question": "Berapa kuantitas pesanan minimal Anda?",
+    "home.faq.moq.answer": "MOQ kami 50 kg untuk sebagian besar produk. Kuantitas khusus dapat dibahas sesuai kebutuhan Anda.",
+    "home.faq.payment.question": "Metode pembayaran apa yang Anda terima?",
+    "home.faq.payment.answer": "Kami menerima TT (Telegraphic Transfer), L/C dan syarat pembayaran negosiasi lainnya tergantung volume pesanan.",
+    "home.faq.leadTime.question": "Berapa lama lead time?",
+    "home.faq.leadTime.answer": "Lead time standar 2-3 minggu dari konfirmasi pesanan, tergantung ketersediaan produk.",
+    "home.faq.samples.question": "Apakah Anda menyediakan sampel?",
+    "home.faq.samples.answer": "Ya, kami menawarkan sampel produk. Silakan hubungi kami untuk ketersediaan dan ketentuan.",
+
+    // hero tagline
+    "home.hero.tagline": "🌿 Rempah & Vanila Premium dari Indonesia",
     "home.documents.title": "Dokumen yang Akan Anda Terima",
     "home.documents.subtitle": "Dokumentasi ekspor lengkap untuk bea cukai tanpa hambatan",
     "home.documents.commercial": "Commercial Invoice & Packing List",
@@ -490,7 +612,7 @@ const translations: Record<Language, Record<string, string>> = {
       "Opsi pengiriman fleksibel dengan timeline jelas dan komunikasi proaktif.",
     "home.cta.title": "Siap Bermitra Dengan Kami?",
     "home.cta.subtitle":
-      "Hubungi tim kami untuk mendiskusikan kebutuhan Anda dan temukan cara kami dapat melayani Anda.",
+      "Hubungi tim kami untuk mendiskusikan kebutuhan Anda dan temukan cara kami dapat melayani Anda 24/7.",
     "home.cta.getInTouch": "Hubungi Kami",
 
     // About Page
@@ -570,7 +692,7 @@ const translations: Record<Language, Record<string, string>> = {
     // Key Capabilities
     "about.capabilities.title": "Kemampuan Utama",
     "about.capabilities.subtitle": "Informasi penting untuk perencanaan pengadaan dan logistik",
-    "about.capabilities.port": "FOB Pelabuhan Panjang (Lampung)",
+    "about.capabilities.port": "Pelabuhan Panjang (Lampung)",
     "about.capabilities.portDesc": "Gerbang ekspor utama dengan bea cukai yang efisien dan penanganan kontainer",
     "about.capabilities.leadTime": "Lead time 1–3 minggu",
     "about.capabilities.leadTimeDesc": "Waktu penyelesaian cepat dari konfirmasi pesanan hingga kesiapan pengiriman",
@@ -580,6 +702,52 @@ const translations: Record<Language, Record<string, string>> = {
     "about.capabilities.paymentDesc": "Syarat pembayaran fleksibel termasuk Telegraphic Transfer dan Letter of Credit",
     "about.capabilities.moq": "MOQ: Vanilla 50 kg, Lada 100 kg",
     "about.capabilities.moqDesc": "Kuantitas pesanan minimum yang dapat diakses cocok untuk pesanan percobaan dan dalam jumlah besar",
+
+    // About Section (Home Page)
+    "home.about.title": "Siapa Kami",
+    "home.about.text1":
+      "Selamat datang di Berdine Terra Global, kami adalah eksportir spesialis lada hitam dan vanila dari Indonesia. Kami menghubungkan bisnis internasional dengan produk pertanian terbaik dari petani berpengalaman, menghasilkan produk dengan kualitas dan keunggulan terbaik.",
+    "home.about.text2":
+      "Komitmen kami terhadap keberlanjutan adalah menerapkan praktik perdagangan yang adil dan transparan, menjadikan kami mitra tepercaya bagi importir di seluruh dunia.",
+    "home.about.learnMore": "Pelajari Kisah Kami",
+
+    // Why Choose Us Section (Home Page)
+    "home.whyChoose.title": "Mengapa Memilih Berdine Terra Global",
+    "home.whyChoose.subtitle":
+      "Kami memberikan nilai luar biasa melalui kualitas, keandalan, dan layanan pelanggan yang berdedikasi",
+
+    // Process Section (Home Page)
+    "home.process.title": "Proses Pemesanan Sederhana",
+    "home.process.subtitle":
+      "Dapatkan produk Anda dengan beberapa langkah sederhana",
+    "home.process.step1.title": "Hubungi Kami",
+    "home.process.step1.desc": "Kirim pertanyaan atau minta penawaran",
+    "home.process.step2.title": "Dapatkan Penawaran",
+    "home.process.step2.desc": "Terima harga detail & spesifikasi",
+    "home.process.step3.title": "Konfirmasi Pesanan",
+    "home.process.step3.desc": "Setujui syarat & lakukan pembayaran",
+    "home.process.step4.title": "Pengiriman",
+    "home.process.step4.desc": "Terima pengiriman di pelabuhan Anda",
+
+    // Documentation Section (Home Page)
+    "home.documentation.title": "Dukungan Dokumentasi Lengkap",
+    "home.documentation.subtitle":
+      "Semua dokumentasi yang diperlukan untuk transaksi impor yang mulus",
+    "home.documentation.doc1": "Commercial Invoice",
+    "home.documentation.doc2": "Certificate of Origin",
+    "home.documentation.doc3": "Phytosanitary Certificate",
+    "home.documentation.doc4": "Export License",
+    "home.documentation.doc5": "Certificate of Analysis",
+    "home.documentation.doc6": "Quality Assurance",
+
+    // Contact Info (Home Page)
+    "home.contact.phone": "+62 853-9321-0860",
+    "home.contact.location": "Jakarta, Indonesia",
+    "home.contact.getInTouch": "Hubungi Kami",
+    "home.contact.whatsappUs": "WhatsApp Kami",
+
+    // FAQ Section (Home Page)
+    "home.faq.title": "Pertanyaan yang Sering Diajukan",
 
     // Products Page
     "products.hero.title": "Katalog Produk",
@@ -746,9 +914,9 @@ const translations: Record<Language, Record<string, string>> = {
     "contact.phone": "Telepon",
     "contact.email": "Email",
     "contact.whatsapp": "Telepon",
-    "contact.businessHours": "Jam Kerja",
-    "contact.businessHours.monFri": "Senin - Jumat : 9:00 AM - 6:00 PM",
-    "contact.businessHours.sat": "Sabtu : 10:00 AM - 4:00 PM",
+    "contact.businessHours": "Jam Operasional",
+    "contact.businessHours.monFri": "Senin - Jumat : 08:00 - 17:00",
+    "contact.businessHours.sat": "Sabtu : 08:00 - 13:00",
     "contact.businessHours.sun": "Minggu : Tutup",
     "contact.location": "Lokasi Kami",
     "contact.orContactVia": "Atau hubungi kami via",
@@ -774,13 +942,13 @@ const translations: Record<Language, Record<string, string>> = {
     // Product Names & Descriptions
     "product.vanilla.gradeAPlus": "Vanilla Utuh Premium Gourmet A+",
     "product.vanilla.gradeAPlusDesc":
-      "Vanilla Planifolia Indonesia berkualitas tertinggi (Gourmet A+) dengan aroma yang intens, creamy, manis, dan sangat kaya. Dipetik secara manual dari buah yang paling matang dan melalui proses pengeringan yang sangat selektif. Setiap pod dipilih secara manual berdasarkan panjang, kandungan minyak, tekstur, dan kesempurnaan visual. Pengeringan yang lebih lama dan pengendalian kelembapan yang lebih ketat menghasilkan pod yang sangat berminyak, berkilau, dan berdaging. Ideal untuk produk yang membutuhkan kejernihan rasa dan intensitas aroma yang tinggi.",
+      "Vanilla Planifolia Indonesia dengan kualitas Gourmet, yang dipetik dari buah paling matang dan melalui proses pengeringan selektif sehingga menghasilkan produk dengan kualitas terbaik.",
     "product.vanilla.gradeA": "Vanilla Utuh Grade A",
     "product.vanilla.gradeADesc":
-      "Vanilla Planifolia Indonesia Grade A merupakan produk ekspor berkualitas premium yang diolah melalui proses pengeringan profesional untuk menghasilkan aroma manis dan creamy yang kuat dengan karakter rasa yang stabil. Polongnya panjang dengan permukaan berminyak dan warna cokelat gelap-hitam yang seragam. Teksturnya lembap dan lentur, menjadikannya ideal untuk industri makanan dan minuman, ekstraksi rasa, serta produk lainnya.",
+      "Vanilla Planifolia Indonesia berkualitas premium, produk ekspor yang diolah melalui proses pengeringan yang sempurna untuk menghasilkan aroma manis dan rasa yang kuat.",
     "product.pepper.whole": "Lada Hitam",
     "product.pepper.wholeDesc":
-      "Biji Lada Hitam Indonesia memiliki aroma pedas yang kuat dan rasa pedas yang tajam, menjadikannya ideal untuk penggunaan kuliner, pengolahan makanan, dan produksi rempah-rempah. Dihasilkan melalui proses pengeringan dan pembersihan yang teliti untuk memenuhi standar kualitas ekspor.",
+      "Lada hitam Indonesia pilihan dengan aroma pedas yang kuat dan rasa tajam yang khas untuk semua menu makanan.",
 
     // Product Specifications
     "product.vanilla.origin": "Lampung - Indonesia",

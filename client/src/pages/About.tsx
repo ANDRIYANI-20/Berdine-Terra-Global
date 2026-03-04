@@ -2,6 +2,8 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { CheckCircle } from "@/components/icons";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { Button } from "@/components/ui/button";
+import { Link } from "wouter";
 
 /**
  * About Page - Company Profile
@@ -68,6 +70,20 @@ export default function About() {
                 {t("about.whoAreWe")}
               </h2>
             </div>
+            <div className="bg-secondary/20 dark:bg-slate-800 rounded-lg p-8 border border-border dark:border-slate-700 flex flex-col items-center justify-center">
+                <h3 className="text-2xl font-bold mb-6 text-primary text-center">
+                  {t("about.byTheNumbers")}
+                </h3>
+                <div className="flex justify-center w-full">
+                  <img
+                    src="/images/ha.png"
+                    alt={t("about.hero.imageAlt")}
+                    className="w-full max-w-sm rounded-lg object-cover shadow-lg"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+              </div>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
               <div className="space-y-6">
                 <div className="bg-secondary/10 dark:bg-slate-800 p-6 rounded-lg border-l-4 border-primary">
@@ -84,20 +100,6 @@ export default function About() {
                   <p className="text-base text-foreground dark:text-white leading-relaxed">
                     {t("about.whoAreWeText3")}
                   </p>
-                </div>
-              </div>
-              <div className="bg-secondary/20 dark:bg-slate-800 rounded-lg p-8 border border-border dark:border-slate-700 flex flex-col items-center justify-center">
-                <h3 className="text-2xl font-bold mb-6 text-primary text-center">
-                  {t("about.byTheNumbers")}
-                </h3>
-                <div className="flex justify-center w-full">
-                  <img
-                    src="/images/ba.jpeg"
-                    alt={t("about.hero.imageAlt")}
-                    className="w-full max-w-sm rounded-lg object-cover shadow-lg"
-                    loading="lazy"
-                    decoding="async"
-                  />
                 </div>
               </div>
             </div>
@@ -341,6 +343,17 @@ export default function About() {
             </div>
           </div>
         </section>
+
+        {/* Back to Home Button (below map) */}
+          <div className="container text-center py-8">
+            <Link href="/">
+              <a>
+                <Button variant="outline" className="border-2 border-primary text-primary hover:bg-primary/10 px-8 py-3">
+                  ← {t("common.backToHome")}
+                </Button>
+              </a>
+            </Link>
+          </div>
       </main>
 
       <Footer />

@@ -91,3 +91,10 @@ export const TrendingUp = ({ className = "w-6 h-6" }) => (
     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
   </svg>
 );
+
+// WhatsApp brand icon (simplified)
+export const WhatsApp = ({ className = "w-6 h-6" }) => (
+  <svg className={className} fill="currentColor" viewBox="0 0 24 24">
+    <path d="M20 2H4C2.9 2 2 2.9 2 4v16l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2.98 11.49c-.36.99-1.82 1.9-2.77 2.02-.75.1-1.51.15-2.27.05-.31-.03-.62-.03-.93-.1-.85-.16-1.7-.48-2.4-1.18-.7-.7-1.02-1.55-1.18-2.4-.07-.31-.07-.62-.1-.93-.1-.76-.05-1.52.05-2.27.12-.95 1.03-2.41 2.02-2.77.54-.2 1.15-.31 1.75-.31.56 0 1.09.07 1.6.2.48.12.9.5 1.02.98.12.5.2 1.03.2 1.6 0 .6-.1 1.21-.31 1.75z"/>
+  </svg>
+);

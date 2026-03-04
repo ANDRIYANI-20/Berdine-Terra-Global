@@ -41,7 +41,7 @@ export default function Header() {
         <Link href="/">
           <a className="flex items-center gap-3 hover:opacity-90 transition-opacity">
             <img
-              src="/images/ka.png"
+              src="/images/poo.png"
               alt="Berdine Terra Global Logo"
               className="h-9 w-9 sm:h-11 sm:w-11 align-middle"
               loading="eager"

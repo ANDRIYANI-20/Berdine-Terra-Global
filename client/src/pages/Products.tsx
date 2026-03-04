@@ -163,18 +163,6 @@ export default function Products() {
           <div className="container">
             <div className="grid grid-cols-1 gap-8">
               {filteredProducts.map((product) => {
-                const detailLabel =
-                  product.category === "pepper" || product.category === "coffee"
-                    ? t("products.grade")
-                    : t("products.origin");
-
-                const detailValue =
-                  product.category === "pepper" || product.category === "coffee"
-                    ? product.grade
-                    : product.specifications.origin;
-
-                const showDetail = product.category !== "vanilla";
-
                 return (
                 <div
                   key={product.id}
@@ -202,15 +190,7 @@ export default function Products() {
                       </p>
 
                       {/* Key Details */}
-                      <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-6 pb-6 border-b border-border dark:border-slate-700">
-                        <div>
-                          <p className="text-xs text-muted-foreground dark:text-slate-400 uppercase font-semibold mb-1">
-                            {t("products.price")}
-                          </p>
-                          <p className="text-lg font-bold text-primary">
-                            {product.pricePerKg}
-                          </p>
-                        </div>
+                      <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 mb-6 pb-6 border-b border-border dark:border-slate-700">
                         <div>
                           <p className="text-xs text-muted-foreground dark:text-slate-400 uppercase font-semibold mb-1">
                             {t("products.minOrder")}
@@ -227,22 +207,13 @@ export default function Products() {
                             {product.availability}
                           </p>
                         </div>
-                        {product.category === "vanilla" && product.variant ? (
+                        {product.variant ? (
                           <div>
                             <p className="text-xs text-muted-foreground dark:text-slate-400 uppercase font-semibold mb-1">
                               {t("products.varian")}
                             </p>
                             <p className="text-lg font-bold text-foreground dark:text-white">
                               {product.variant}
-                            </p>
-                          </div>
-                        ) : showDetail ? (
-                          <div>
-                            <p className="text-xs text-muted-foreground dark:text-slate-400 uppercase font-semibold mb-1">
-                              {detailLabel}
-                            </p>
-                            <p className="text-lg font-bold text-foreground dark:text-white">
-                              {detailValue}
                             </p>
                           </div>
                         ) : null}
@@ -279,23 +250,16 @@ export default function Products() {
           </div>
         </section>
 
-        {/* Documentation Link */}
-        <section className="section surface-muted">
-          <div className="container text-center">
-            <h2 className="text-3xl font-bold mb-6 text-foreground dark:text-white">
-              {t("products.priceList")}
-            </h2>
-            <p className="text-lg text-muted-foreground dark:text-slate-400 mb-8 max-w-2xl mx-auto">
-              {t("products.priceListSubtitle")}
-            </p>
-            <Link href="/documentation">
-              <Button className="bg-primary hover:bg-primary/90 text-white px-8 py-6">
-                <Info className="w-5 h-5 mr-2" />
-                {t("products.viewDocumentation")}
-              </Button>
+        {/* Back to Home Button (below map) */}
+          <div className="container text-center py-8">
+            <Link href="/">
+              <a>
+                <Button variant="outline" className="border-2 border-primary text-primary hover:bg-primary/10 px-8 py-3">
+                  ← {t("common.backToHome")}
+                </Button>
+              </a>
             </Link>
           </div>
-        </section>
       </main>
 
       <Footer />

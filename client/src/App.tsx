@@ -10,6 +10,7 @@ import About from "./pages/About";
 import Products from "./pages/Products";
 import Documentation from "./pages/Documentation";
 import Contact from "./pages/Contact";
+import WhatsAppFloating from "./components/WhatsAppFloating";
 
 function Router() {
   return (
@@ -40,6 +41,7 @@ function App() {
           <TooltipProvider>
             <Toaster />
             <Router />
+            <WhatsAppFloating />
           </TooltipProvider>
         </LanguageProvider>
       </ThemeProvider>

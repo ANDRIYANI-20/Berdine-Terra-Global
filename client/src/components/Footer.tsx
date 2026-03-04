@@ -139,21 +139,21 @@ export default function Footer() {
             <ul className="space-y-3 text-sm text-background/80">
               <li className="flex items-start gap-3">
                 <MapPin className="w-4 h-4 mt-1 flex-shrink-0" />
-                <span>Jl.H. Marzuki, Mampang Prapatan., Jakarta, Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12790</span>
+                <span>Jl. H. Marzuki, Mampang Prapatan, South Jakarta, Jakarta - Indonesia</span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="w-4 h-4 flex-shrink-0" />
-                <a href="tel:+62" className="hover:text-background transition-colors">
-                  +62 889-7574-2032
+                <a href="tel:+6285393210860" className="hover:text-background transition-colors">
+                  +62 853-9321-0860
                 </a>
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="w-4 h-4 flex-shrink-0" />
                 <a
-                  href="mailto:Partner@berdineterra.co.id"
+                  href="mailto:Partner@berdineterraglobal.com"
                   className="hover:text-background transition-colors"
                 >
-                  Partner@berdineterra.co.id
+                  Partner@berdineterraglobal.com
                 </a>
               </li>
             </ul>

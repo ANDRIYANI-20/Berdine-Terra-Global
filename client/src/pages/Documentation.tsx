@@ -338,6 +338,17 @@ export default function Documentation() {
           </div>
         </section>
 
+        {/* Back to Home Button (below map) */}
+          <div className="container text-center py-8">
+            <Link href="/">
+              <a>
+                <Button variant="outline" className="border-2 border-primary text-primary hover:bg-primary/10 px-8 py-3">
+                  ← {t("common.backToHome")}
+                </Button>
+              </a>
+            </Link>
+          </div>
+
         {/* CTA Section */}
         <section className="section bg-primary dark:bg-primary/90">
           <div className="container text-center">
@@ -357,56 +368,7 @@ export default function Documentation() {
           </div>
         </section>
 
-        {/* Ordering Process */}
-        <section className="section bg-white dark:bg-slate-900">
-          <div className="container">
-            <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center text-foreground dark:text-white">
-              {t("documentation.orderingProcess")}
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-              {orderingSteps.map((item) => (
-                <div key={item.step} className="relative">
-                  <div className="bg-white dark:bg-slate-800 p-6 rounded-lg shadow-sm border border-border dark:border-slate-700 text-center">
-                    <div className="inline-flex items-center justify-center w-12 h-12 bg-primary text-white rounded-full font-bold mb-4">
-                      {item.step}
-                    </div>
-                    <h3 className="font-bold mb-2 text-foreground dark:text-white">
-                      {item.title}
-                    </h3>
-                    <p className="text-sm text-muted-foreground dark:text-slate-400">
-                      {item.description}
-                    </p>
-                  </div>
-                  {item.step < 4 && (
-                    <div className="hidden md:block absolute top-1/2 -right-3 w-6 h-0.5 bg-border dark:bg-slate-700" />
-                  )}
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
 
-        {/* Support Section */}
-        <section className="section surface-muted">
-          <div className="container text-center">
-            <h2 className="text-3xl font-bold mb-6 text-foreground dark:text-white">
-              {t("documentation.needHelp")}
-            </h2>
-            <p className="text-lg text-muted-foreground dark:text-slate-400 mb-8 max-w-2xl mx-auto">
-              {t("documentation.needHelpText")}
-            </p>
-            <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <a
-                href="https://wa.me/6288975742032"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center px-8 py-3 border border-primary text-primary dark:text-primary rounded-lg hover:bg-primary/5 dark:hover:bg-primary/10 transition-colors font-semibold"
-              >
-                {t("documentation.callUs")}
-              </a>
-            </div>
-          </div>
-        </section>
       </main>
 
       <Footer />
